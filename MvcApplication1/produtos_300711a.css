@@ -1,0 +1,291 @@
+﻿/* Redes Sociais */
+#redesSociais{
+display:block;
+clear:both;
+padding-top:15px;
+}
+.comp1, .comp2, .comp3, .comp4, .comp5, .comp6, .comp7, .comp8, .comp9, .comp10, .comp11, .comp12 {
+width: 16px;
+height: 16px;
+float:left;
+margin-right:5px;
+}
+.comp1 { background:url(../../images/compartilhe.gif) -0px -0px no-repeat; }
+.comp2 { background:url(../../images/compartilhe.gif) -16px -0px no-repeat; }
+.comp3 { background:url(../../images/compartilhe.gif) -32px -0px no-repeat; }
+.comp4 { background:url(../../images/compartilhe.gif) -48px -0px no-repeat; }
+.comp5 { background:url(../../images/compartilhe.gif) -64px -0px no-repeat; }
+.comp6 { background:url(../../images/compartilhe.gif) -80px -0px no-repeat; }
+.comp7 { background:url(../../images/compartilhe.gif) -96px -0px no-repeat; }
+.comp8 { background:url(../../images/compartilhe.gif) -112px -0px no-repeat; }
+.comp9 { background:url(../../images/compartilhe.gif) -128px -0px no-repeat; }
+.comp10 { background:url(../../images/compartilhe.gif) -144px -0px no-repeat; }
+.comp11 { background:url(../../images/compartilhe.gif) -160px -0px no-repeat; }
+.comp12 { background:url(../../images/compartilhe.gif) -176px -0px no-repeat; }
+#produto-frete-gratis {
+display:block;
+clear:both;
+color:#009933;
+font-size:18px;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-weight:bold;
+margin:5px 0px 0px 0px;
+}
+/*****************************
+TAMANHOS DO PRODUTO
+**************************/
+.viewProdutoTamanhos{
+background:url(../../images/2011/passo2-produto.png) top right no-repeat #FAFBFB;
+border:1px solid #DDD;
+margin-top:10px;
+overflow:hidden;
+display:block;
+clear:both;
+display:block;
+height:55px;
+padding:7px 0px 7px 16px;
+}
+.naoSelecionado{
+width:26px;
+text-align:center;
+padding:4px 0px 4px 0px;
+float:left;
+font-weight:bold;
+border:1px solid #E9E9E9;
+margin:3px;
+background-color:#FFF;
+}
+.naoSelecionado a{
+color: #666666;
+font-weight:bold;
+font-size:12px;
+display:block;
+}
+.naoSelecionado:hover{
+background-color:#D90000;
+border:1px solid #ccc;
+color: #FFFFFF;
+}
+.naoSelecionado:hover a{
+color: #FFFFFF;
+}
+.selecionado{
+width:26px;
+text-align:center;
+padding:4px 0px 4px 0px;
+float:left;
+font-weight:bold;
+border:1px solid #E9E9E9;
+margin:3px;
+color: #FFFFFF;
+background-color:#D90000;
+border:1px solid #ccc;
+color: #FFFFFF;
+font-size:12px;
+}
+.selecionado a{
+color: #666666;
+font-weight:bold;
+font-size:12px;
+display:block;
+color: #FFFFFF;
+}
+.selecionado:hover{
+background-color:#D90000;
+border:1px solid #ccc;
+color: #FFFFFF;
+}
+.viewProdutoQuantidade select{
+border:1px solid;
+width:90px;
+}
+#btnComprar{
+background:url(../../images/2011/btn-comprar.png) no-repeat;
+height:41px;
+width:161px;
+cursor:pointer;
+float:left;
+margin:0px 7px 0px 0px;
+}
+#btnComprar:hover {
+}
+#trocaGratis {
+width:133px;
+height:23px;
+background:url(../../images/2010/trocaGratis.gif);
+float:left;
+margin-top:15px;
+}
+.view_produto_maisfotos{
+padding-top:5px;
+}
+.view_produto_maisfotos img{
+float:left;
+margin-right:6px;
+border:1px solid #F5F5F5;
+}
+.view_produto_maisfotos a:hover img{
+border:1px solid #CC0000;
+}
+.viewProdutoFoto{
+display:block;
+/* overflow:hidden; */
+}
+#navProduto {
+height:68px;
+margin-top:10px;
+overflow:hidden;
+float:left;
+}
+#navProduto div{
+float: left;
+list-style: none;
+cursor:pointer;
+}
+#navProduto div a img{
+border:0;
+width: 50px;
+height:50px;
+cursor:pointer;
+}
+#navProduto a.activeSlide {
+border:1px solid #CC0000;
+cursor:pointer;
+}
+#navProduto a {
+width: 50px;
+height:50px;
+padding: 0px;
+display: block;
+border: 1px solid #EAEAEA;
+cursor:pointer;
+margin-right:8px;
+}
+#fotoGrande {
+height:412px;
+width:412px;
+float:left;
+display:block;
+overflow:hidden;
+}
+#fotoGrande img{
+width:410px;
+height:410px;
+display:block;
+overflow:hidden;
+}
+/******* JQ ZOOM ***********/
+.jqzoom img{
+border:0
+}
+.jqvideo{
+background:url(../../images/2011/sprites-tudo.jpg) -505px -297px;
+background-repeat: no-repeat;
+height:50px;
+width:60px;
+cursor:pointer;
+border:1px solid #CCCCCC;
+float:left;
+margin:10px 0px 0px 10px;
+}
+.jqvideo:hover{
+border:1px solid #CC0000;
+}
+div.jqZoomTitle
+{
+z-index:5000;
+text-align:center;
+font-size:11px;
+font-family:Tahoma;
+height:16px;
+padding-top:2px;
+position:absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+color: #FFF;
+background: #CCCCCC;
+}
+.jqZoomPup{
+overflow:hidden;
+background-color: #FFF;
+-moz-opacity:0.2;
+opacity: 0.2;
+filter: alpha(opacity = 20);
+z-index:10;
+border-color:#c4c4c4;
+border-style: dotted;
+cursor:crosshair;
+}
+.jqZoomPup img
+{
+border: 1px solid #333333;
+}
+.preload{
+-moz-opacity:0.8;
+opacity: 0.8;
+filter: alpha(opacity = 80);
+color: #333;
+font-size: 12px;
+font-family: Tahoma;
+text-decoration: none;
+border: 1px solid #CCC;
+background-color: white;
+padding: 8px;
+text-align:center;
+background-image: url(../../images/zoomloader.gif);
+background-repeat: no-repeat;
+background-position: 43px 30px;
+width:90px;
+* width:100px;
+height:43px;
+*height:55px;
+z-index:10;
+position:absolute;
+top:3px;
+left:3px;
+}
+.jqZoomWindow
+{
+border: 1px solid #999;
+background-color: #FFF;
+}
+/*CALÃ‡ADO DISPLAY*/
+#fecharBox{
+position:absolute;
+top:5px;
+right:5px;
+background:white url(../../images/botao_fechar_box.gif) no-repeat;
+width:93px;
+height:43px;
+cursor:pointer;
+}
+/*HIDE DIVS*/
+.displayBox{
+display:none;
+position:absolute;
+top:150px;
+border:3px solid #CCCCCC;
+background:white;
+overflow:hidden;
+z-index:99999999999999999;
+}
+.displayBoxVideo{
+display: none;
+top:175px;
+border:0px solid #CCCCC;
+background-color: #FFFFFF;
+overflow:hidden;
+position: absolute;
+height:412px;
+}
+#fecharVideo{
+background:url(../../images/2011/sprites-tudo.jpg) -577px -299px;
+background-repeat: no-repeat;
+display:block;
+overflow:hidden;
+height:19px;
+border:0px solid #00CC00;
+width:412px;
+}
+#contentDescricao a { color:#F00; } 

@@ -1,0 +1,2895 @@
+﻿/* CSS Document */
+* {
+margin:0;
+padding:0;
+border:none;
+}
+img {
+border:0px;
+border:none;
+}
+input[type="text"], input[type="password"] {
+border:1px solid #CCC;
+}
+select {
+font-size:11px;
+color:#999999;
+border:1px solid #E0E0E0;
+}
+textarea{
+font-size:11px;
+color:#999999;
+border:1px solid #E0E0E0;
+}
+#giftPrice {
+font-weight:bold;
+font-size:12px;
+padding-top:3px;
+display:block;
+}
+option {
+font-size:11px;
+}
+form {
+margin:0;
+padding:0;
+display:block;
+height:100%;
+border:none;
+border:0;
+}
+.sprite {
+overflow:hidden;
+text-indent:-999px;
+}
+.sprite a {
+display:block;
+height:999px;
+}
+.clear {
+clear:both;
+overflow:hidden;
+}
+/****************************************
+TAGS GENERICAS
+******************************************/
+body, td, div, span, h1, h2, h3, h4, h5, p{
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+}
+body{
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+font-size:11px;
+padding:0px;
+margin:0px;
+min-width:970px;
+/*background:url(../../images/2011/bg-natal.jpg) center top no-repeat;*/
+}
+a, a:visited, a:link{
+text-decoration:none;
+color:#333333;
+}
+/****************************************
+PRINCIPAIS
+******************************************/
+#principal{
+overflow:hidden;
+margin-left:auto;
+margin-right:auto;
+top:0px;
+width:999px;
+display:block;
+height:100%;
+background:#fff;
+}
+#topo2009{
+width:999px;
+height:140px;
+display:block;
+background:url(../../images/2011/sprites-topo.png) 0px 0px;
+background-repeat: no-repeat;
+}
+#logoNovo{
+float:left;
+height:76px;
+width:186px;
+overflow:hidden;
+display:block;
+border:0px solid;
+margin:10px 0px 0px 7px;
+padding:0px;
+}
+#logoNovo a{
+display:block;
+overflow:hidden;
+display:block;
+height:76px;
+text-indent:-9999px;
+}
+/********************************************
+MENU
+********************************************/
+/************************************
+MENU PRINCIPAL
+*************************************/
+#menuPrincipal{
+width:999px;
+height:31px;
+clear:both;
+display:block;
+z-index:99999;
+position:absolute;
+top:109px;
+/*top:198px;*/
+}
+#navMenu{
+width:999px;
+height:31px;
+}
+#navItemMasculino {
+background:url(../../images/menu_sprites.gif) 0px 0px;
+width:100px; height:30px;
+cursor:pointer; overflow:hidden;
+display:block;
+text-indent:-300px;
+}
+#navItemMasculinoOver {
+position:absolute;
+z-index:10;
+background:url(../../images/menu_sprites.gif) 0px -30px;
+width:100px; height:30px;
+cursor:pointer; overflow:hidden;
+}
+#navItemMasculinoOver span {
+display:block;
+overflow:hidden;
+height:100%;
+}
+#navItemFeminino {
+background:url(../../images/menu_sprites.gif) -100px 0px;
+width:90px; height:30px;
+cursor:pointer; overflow:hidden;
+text-indent:-300px;
+}
+#navItemFemininoOver {
+position:absolute;
+z-index:10;
+background:url(../../images/menu_sprites.gif) -100px -30px;
+width:90px; height:30px;
+cursor:pointer; overflow:hidden;
+}
+#navItemFemininoOver span {
+display:block;
+overflow:hidden;
+height:100%;
+}
+#navItemEsporte {
+background:url(../../images/menu_sprites.gif) -190px 0px;
+width:135px; height:30px;
+cursor:pointer; overflow:hidden;
+}
+#navItemEsporte {
+text-indent:-300px;
+}
+#navItemEsporteOver {
+position:absolute;
+z-index:10;
+background:url(../../images/menu_sprites.gif) -190px -30px;
+width:135px; height:30px;
+cursor:pointer; overflow:hidden;
+}
+#navItemEsporteOver span{
+display:block;
+overflow:hidden;
+height:100%;
+}
+#navItemKids {
+background:url(../../images/menu_sprites.gif) -530px 0px;
+width:52px; height:30px;
+cursor:pointer; overflow:hidden;
+text-indent:-300px;
+}
+#navItemKidsOver {
+position:absolute;
+z-index:10;
+background:url(../../images/menu_sprites.gif) -530px -30px;
+width:52px; height:30px;
+cursor:pointer; overflow:hidden;
+}
+#navItemKidsOver span{
+display:block;
+overflow:hidden;
+height:100%;
+}
+#navItemNovidades {
+background:url(../../images/menu_sprites.gif) -325px 0px;
+width:100px; height:30px;
+cursor:pointer; overflow:hidden;
+text-indent:-500px;
+}
+#navItemNovidades:hover {
+background:url(../../images/menu_sprites.gif) -325px -30px;
+width:100px; height:30px;
+cursor:pointer; overflow:hidden;
+}
+#navItemNovidades span {
+display:block;
+overflow:hidden;
+height:100%;
+}
+#navItemPromocoes {
+background:url(../../images/menu_sprites.gif) -425px 0px;
+width:105px; height:30px;
+cursor:pointer; overflow:hidden;
+text-indent:-500px;
+}
+#navItemPromocoes:hover {
+background:url(../../images/menu_sprites.gif) -425px -30px;
+width:105px;
+height:30px;
+cursor:pointer;
+overflow:hidden;]
+}
+#navItemPromocoes span {
+display:block;
+overflow:hidden;
+height:100%;
+}
+#navMenu, #navMenu ul{
+margin:0;
+padding:0;
+list-style-type:none;
+list-style-position:outside;
+position:relative;
+line-height:1.5em;
+}
+#navMenu li{
+float:left;
+position:relative;
+}
+.navSpace {
+width:59px;
+height:10px;
+overflow:hidden;
+}
+#navMenu ul {
+position:absolute;
+display:none;
+width:160px;
+top:1.5em;
+}
+#navMenu li ul {
+height:auto;
+float:left;
+margin-top:-24px;
+}
+#navMenu ul ul{
+top:auto;
+}
+#navMenu li ul ul {
+left:12em;
+margin:0px 0px 0px 10px;
+padding:5px 0px 0px 0px;
+}
+#navMenu liOver ul ul, #navMenu liOver ul ul ul, #navMenu liOver ul ul ul ul{
+display:none;
+}
+#navMenu liOver ul, #navMenu li liOver ul, #navMenu li li liOver ul, #navMenu li li li liOver ul{
+display:block;
+}
+.navContainerMaster {
+position:absolute;
+top:7px;
+}
+.navContainer {
+z-index:9;
+position:absolute;
+top:28px;
+background:url(../../images/menu_bg.jpg) repeat-x #fff;
+border:#C9C9C9 solid 1px;
+}
+.navListagem {
+}
+.navListagem li {
+position:relative;
+clear:both;
+width:160px;
+}
+.navListagem .last li {
+position:relative;
+clear:both;
+width:50px;
+}
+.navListagem span {
+color:#3A5A67;
+background: url(../../images/bullets.gif) 0px -20px no-repeat;
+}
+.navListagem span:hover {
+text-decoration:underline;
+color:#3A5A67;
+}
+.navListagemNormal span{
+padding:2px 0px 2px 11px;
+margin-left:10px;
+font-weight: normal;
+color:#3A5A67;
+background: url(../../images/bullets.gif) 0px -19px no-repeat;
+cursor:pointer;
+}
+.navListagemDestaque span{
+padding:2px 0px 2px 11px;
+font-weight:bold;
+color:#3A5A67;
+background: url(../../images/bullets.gif) 0px 4px no-repeat;
+cursor:pointer;
+}
+.navListagemTitulo{
+padding:8px 0px 2px 11px;
+font-weight:bold;
+color:#3A5A67;
+}
+.navShadow {
+z-index:8;
+position:absolute;
+top:36px;
+left:8px;
+background:#666;
+zoom:1;
+filter:alpha(opacity=10);
+-moz-opacity:.10;
+opacity:.10;
+}
+.navBorder {
+border-top:solid 1px #F7F7F7;
+border-left:solid 1px #F7F7F7;
+height:100%;
+}
+/**********************************
+MENU AUXILIAR TOPO
+************************************/
+#menuAuxiliar{
+height:20px;
+overflow:hidden;
+display:block;
+float:right;
+width:570px;
+margin:5px 0px 0px 0px;
+}
+#menuAuxiliar ul li {
+background-image:url(../../images/2011/sprites-topo.png);
+height:20px;
+margin:0px 1px;
+}
+#menuAuxiliar1 { background-position:0px -153px; width:135px; float:left; }
+#menuAuxiliar2 { background-position:-148px -153px; width:117px; float:right; }
+#menuAuxiliar3 { background-position:-265px -153px; width:111px; float:right; }
+#menuAuxiliar4 { background-position:-376px -153px; width:83px; float:right; }
+#menuAuxiliar5 { background-position:-135px -255px; width:125px; float:right; }
+#menuAuxiliar6 { background-position:-523px -168px; width:74px;float:right; }
+#menuAuxiliar1:hover {
+position:absolute;
+height:62px;
+background-position:0px -233px;
+}
+#menuAuxiliar2:hover { background-position:-148px -173px; }
+#menuAuxiliar3:hover { background-position:-265px -173px; }
+#menuAuxiliar4:hover { background-position:-376px -173px; }
+#menuAuxiliar5:hover { background-position: -135px -275px; }
+#menuAuxiliar6:hover { background-position:-523px -153px; }
+#contentRight {
+float:right;
+width:852px;
+*width:845px;
+}
+#usuario {
+float:left;
+font-size:12px;
+color:#97A5AA;
+padding:5px 0px 0px 18px;
+}
+#usuario a {
+font-weight:bold;
+color:#D80000;
+}
+#usuario a:hover {
+text-decoration:underline;
+}
+#topoBotoes {
+float:right;
+width:240px;
+list-style:none;
+}
+#meusPedidos {
+background:url(../../images/2011/sprites-topo.png) 0px -193px;
+width:109px;
+height:25px;
+float:left;
+}
+#minhaConta {
+background:url(../../images/2011/sprites-topo.png) -109px -193px;
+width:100px;
+height:25px;
+float:left;
+margin:0px 6px 0px 12px;
+}
+#meuAtendimento {
+background:url(../../images/2011/sprites-topo.png) -219px -193px;
+width:102px;
+height:25px;
+float:left;
+}
+#meusPedidos a, #minhaConta a, #meuAtendimento a {
+display:block;
+color:#D80000;
+font-weight:bold;
+font-size:12px;
+padding:5px 0px 0px 23px;
+}
+#meusPedidos a:hover, #minhaConta a:hover, #meuAtendimento a:hover {
+color:#000;
+text-decoration:underline;
+}
+/*************************************
+BARRA VERMELHA
+**************************************/
+#barraVermelha{
+width:792px;
+height:40px;
+float:right;
+margin-top:5px;
+}
+#carrinho {
+width:190px;
+height:38px;
+background:url(../../images/2011/sprites-topo.png) -627px -181px;
+margin-left:20px;
+margin-top:1px;
+float:left;
+}
+#carrinho a {
+display:block;
+height:24px;
+padding:12px 0px 0px 130px;
+color:#D80000;
+font-size:12px;
+font-weight:Bold;
+}
+/**********************************
+BOTOES TOPO
+************************************/
+/************************************
+BUSCA DO TOPO
+*************************************/
+#busca{
+display:block;
+width:475px;
+height:32px;
+float:right;
+overflow:hidden;
+padding:8px 0px 0px 5px;
+}
+#buscaFildset{
+clear:both;
+display:block;
+padding:0px;
+}
+#buscaFildset #departamentos{
+height:24px;
+padding:2px 3px 3px 3px;
+font-size:12px;
+color:#666;
+width:121px;
+float:left;
+}
+#buscaFildset #texto{
+float:left;
+width:270px;
+height:18px;
+padding:2px 3px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+margin:0px 5px;
+}
+#buscaFildset #botaoBuscar {
+width:59px;
+height:25px;
+background:url(../../images/2011/sprites-topo.png) -754px -153px;
+cursor:pointer;
+}
+#buscaFildset #botaoBuscar:hover {
+background:url(../../images/2011/sprites-topo.png) -813px -153px;
+}
+#buscaFildset #botaoBuscar:active {
+background:url(../../images/2011/sprites-topo.png) -872px -153px;
+}
+/************************************
+DIREITA
+*************************************/
+#contDireita{
+FLOAT: right;
+width:145px;
+height:100%;
+margin-right:5px;
+}
+#bannersDireita{
+text-align:center;
+padding-top:10px;
+}
+/************************************
+ESQUERDA
+*************************************/
+#contEsquerda2009{
+float:left;
+WIDTH:145px;
+display:block;
+overflow:hidden;
+z-index:7;
+padding-left:2px;
+}
+#contEsquerda2009 #menuEsquerdo{
+border:1px solid #E6E6E6;
+margin-top:10px;
+}
+#contEsquerda2009 #menuEsquerdo #tituloDepartamentos{
+border:1px solid #FFFFFF;
+height:20px;
+display:block;
+background:url(../../images/2011/sprites-tudo.jpg) -791px -170px;
+background-repeat: no-repeat;
+}
+/************************************
+MENU ESQUERDO
+*************************************/
+.nivel2 .menuSelecionado a{
+font-weight:bold;
+}
+.menuCategoriasTitulo{
+padding:2px 0px 2px 5px;
+background:url(../../images/bgs.png) ;
+background-repeat: repeat-x ;
+display:block;
+font-size:12px;
+color:#990000;
+}
+.menuCategoriasTitulo a{
+font-size:12px;
+color: #990000;
+}
+#contEsquerda2009 #menuEsquerdo #menuDepartamentos{
+border-top:0px solid #E6E6E6;
+}
+#contEsquerda2009 #menuEsquerdo .nivel1{
+margin:0px 0px 0px 0px;
+list-style:none;
+padding:0;
+margin:0;
+font-weight:bold;
+}
+.nivel1 li{
+padding:2px 0px 2px 1px;
+}
+.nivel1 li a{
+text-decoration:none;
+color: #999;
+font-size:12px;
+}
+.nivel1 li a:hover{
+text-decoration: underline;
+color:#333333;
+}
+.nivel1 .titulos {
+padding:4px 0px 5px 7px;
+display:block;
+font-size:13px;
+background:url(../../images/2011/bg-titulo.gif) no-repeat bottom #EEE;
+margin:0px 2px 5px 1px;
+color:#C10000;
+overflow:hidden;
+}
+.nivel1 .titulosSel {
+padding:4px 0px 5px 7px;
+display:block;
+font-size:13px;
+background:url(../../images/2011/bg-titulo-sel.gif) no-repeat bottom #EEE;
+margin:0px 2px 5px 1px;
+color:#555;
+overflow:hidden;
+}
+.remove-filtro {
+padding:0px 0px 7px 5px;
+}
+.remove-filtro a {
+font-weight:normal;
+color:#666;
+font-size:11px;
+}
+.remove-filtro a:hover {
+color:#C10000;
+text-decoration:underline;
+}
+.nivel1 .titulos a {
+font-size:13px;
+color:#C10000;
+}
+.nivel1 .menuDestaque{
+font-weight:bold;
+}
+.nivel1 .menuDestaque a{
+color:#000;
+}
+#contEsquerda2009 #menuEsquerdo #menuDepartamentos .nivel2{
+margin:0px 0px 0px 0px;
+list-style:none;
+padding:0 0 0 3px;;
+margin:0;
+font-weight:bold;
+}
+.nivel2 li{
+padding:0;
+padding:2px 0 2px 5px;
+}
+.nivel2 li a{
+text-decoration:none;
+color: #666;
+font-size:12px;
+font-weight: normal;
+}
+.nivel2 li a:hover{
+text-decoration: underline;
+color:#333333;
+}
+.nivel2 .menuDestaque{
+font-weight:bold;
+font-size:12px;
+border-bottom:1px solid #FFFFFF;
+text-indent:5px;
+margin-left:-5px;
+}
+.nivel2 .menuDestaque a{
+font-weight:bold;
+font-size:12px;
+}
+/************************************
+MENU TAMANHOS
+*************************************/
+.menuTamanhos{
+list-style: none;
+height:100%;
+overflow: hidden;
+display:block;
+}
+.menuTamanhos li{
+padding:4px 0 0 4px;
+display: block;
+float:left;
+margin-left:3px;
+margin-bottom:3px;
+}
+.menuTamanhos li a{
+width:20px;
+height:20px;
+padding:5px 0 0 5px;
+display: block;
+border:1px solid #EEE;
+font-size:11px;
+color: #999999;
+font-size:12px;
+}
+.menuTamanhos li a:hover{
+background-color: #EEE;
+color:#CC0000;
+display: block;
+}
+/************************************
+MENU PREÇOS
+*************************************/
+.menuPrecos{
+list-style: none;
+height:100%;
+overflow: hidden;
+display:block;
+margin-bottom:5px;
+}
+.menuPrecos li{
+margin:0;
+padding:0;
+margin-left:8px;
+}
+.menuPrecos li a{
+font-size:11px;
+color: #999999;
+font-weight:normal;
+}
+.menuPrecos li a:hover{
+text-decoration:underline;
+}
+#bannersEsquerda{
+text-align:center;
+}
+/************************************
+CHAT AO VIVO BANNER
+*************************************/
+#chatAoVivo{
+text-align:center;
+}
+/************************************
+recebaNovidades
+*************************************/
+#recebaNovidades{
+border:0px solid #000033;
+height:89px;
+display:block;
+background:url(../../images/2011/sprites-tudo.jpg) -850px -326px;
+background-repeat: no-repeat;
+margin:10px 0px 10px 0px ;
+}
+#recebaNovidades .formText{
+border:0;
+font-size:11px;
+margin:47px 0px 0px 7px;;
+width:130px;
+}
+#recebaNovidades .formButton{
+border:0px solid;
+font-size:11px;
+width:80px;
+height:20px;
+color:none;
+cursor:pointer;
+clear:both;
+display:block;
+float:right;
+margin-top:2px;
+}
+/************************************
+LINHAS DE PRODUTOS
+*************************************/
+.linhaProdutos {
+border:1px solid #E6E6E6;
+height:345px;
+clear:both;
+margin-bottom:15px;
+}
+#recomendamosTambem .linhaProdutos {
+height:290px;
+}
+.linhaProdutos ul{
+list-style:none;
+margin:0;
+padding:0;
+margin-bottom:20px;
+height:100%;
+}
+.linhaProdutos li{
+display:block;
+text-align:center;
+border:0px solid;
+float:left;
+width:24%;
+margin:0 auto 0 auto;
+padding:0;
+margin:2px 2px 2px 4px;
+}
+.linhaProdutos a{
+text-decoration:none;
+border:none;
+}
+.linhaProdutos a:hover{
+text-decoration: underline;
+color:#000000;
+}
+.linhaProdutos .fotoVitrine{
+display:block;
+text-align:center;
+border:none;
+height:120px;
+margin:5px 10px;
+overflow:hidden;
+}
+.newlink {
+width:120px;
+height:120px;
+margin:0 auto 0 auto;
+}
+.linhaProdutos .titulo{
+display:block;
+overflow:hidden;
+text-align:center;
+font-size:12px;
+font-weight:bold;
+color:#CC0000;
+padding:4px 5px 0px 5px;
+text-align:center;
+}
+.linhaProdutos a:hover .titulo {
+text-decoration:underline;
+}
+.linhaProdutos .de{
+font-size:12px;
+color: #999999;
+margin:0px;
+padding:4px 0px 0px 0px;
+display:block;
+}
+.linhaProdutos .preco{
+font-size:12px;
+color: #666;
+margin:0px;
+padding:4px 0px 0px 0px;
+display:block;
+font-weight:bold;
+}
+.linhaProdutos .semjuros {
+display:block;
+width:96px;
+height:11px;
+background:url(../../images/2011/sem-juros.gif);
+margin:3px auto 2px auto;
+}
+.linhaProdutos .parcelamento{
+font-size:12px;
+color:#000;
+margin:0px;
+padding:3px 5px 0px 5px;
+display:block;
+}
+.linhaProdutos .vejamaistitle {
+display:block;
+width:96px;
+height:15px;
+background:url(../../images/2011/sem-juros.gif) 0px -15px;
+margin:3px auto 2px auto;
+}
+.linhaProdutos .vejamais{
+font-size:10px;
+color:#666666;
+margin:0px;
+padding:0px;
+display:block;
+}
+.linhaProdutosSimples {
+border:0;
+}
+/************************************
+ICONES VITRINE
+************************************/
+.iconDica{
+display:block;
+background:url(../../images/2011/sprites-tudo.jpg) -389px -248px;
+background-repeat: no-repeat;
+overflow:hidden;
+height:37px;
+width:98px;
+margin-left:auto;
+margin-right:auto;
+margin-top:3px;
+}
+.iconDica a{
+display:block;
+height:37px;
+}
+.iconPromocao{
+display:block;
+background:url(../../images/2011/sprites-tudo.jpg) -489px -248px;
+background-repeat: no-repeat;
+overflow:hidden;
+height:37px;
+width:88px;
+margin-left:auto;
+margin-right:auto;
+margin-top:3px;
+text-indent:-999px;
+}
+.iconPromocao a{
+display:block;
+height:37px;
+}
+.iconLancamento{
+display:block;
+background:url(../../images/2011/sprites-tudo.jpg) -586px -248px;
+background-repeat: no-repeat;
+overflow:hidden;
+height:37px;
+width:98px;
+margin-left:auto;
+margin-right:auto;
+margin-top:3px;
+text-indent:-999px;
+}
+.iconLancamento a{
+display:block;
+height:37px;
+}
+.iconFrete {
+display:block;
+overflow:hidden;
+text-align:center;
+text-transform:uppercase;
+padding-top:4px;
+}
+.iconFrete a {
+font-size:12px;
+color:#CC0000;
+}
+.iconFrete a:hover {
+color:#CC0000;
+}
+/************************************
+DIVISÂO DE CATEGORIAS
+************************************/
+.titCategorias{
+display:block;
+background:url(../../images/bgs.png) 0px -21px;
+background-repeat: no-repeat;
+overflow:hidden;
+height:25px;
+margin-bottom:5px;
+}
+.titCategorias h2{
+font-size:14px;
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+font-weight:bold;
+color:#CC0000;
+padding:5px 22px 0px 6px;
+margin:0px 0px 0px 6px;
+text-decoration:none;
+height:22px;
+float:left;
+background:url(../../images/tit.png) right no-repeat;
+}
+.titCategorias a{
+color:#CC0000;
+}
+/************************************
+CONT MEIO
+*************************************/
+#contMeio{
+VERTICAL-ALIGN:top;
+float:left;
+overflow:hidden;
+padding-left:11px;
+*padding-left:5px;
+margin-bottom:20px;
+width:680px;
+margin-top:10px;
+}
+/************************************
+CONT MEIO
+*************************************/
+#meios_pagamentos{
+clear:both;
+}
+#creditos{
+text-align:right;
+font-size:11px;
+padding:30px 0px 10px 0px;
+clear:both;
+}
+#creditos a{
+color:#999999;
+text-decoration:none;
+}
+#mais_servicos a{color:#777;}
+#mais_servicos a:hover{color:white;background:#c00;}
+/************************************
+MARCAS
+*************************************/
+#marcas{
+display:block;
+clear:both;
+overflow:hidden;
+height:80px;
+border:0px solid;
+}
+#marcas #topoMarcas{
+background:url(../../images/bgs.png) 0px -49px;
+background-repeat: repeat-x;
+height:15px;
+}
+#marcas #imglogos {
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+}
+#marcas #imglogos img {
+padding:14px 4px 4px 4px;
+border:none;
+}
+/************************************
+RODAPE
+*************************************/
+#rodape2009{
+display:block;
+clear:both;
+background:url(../../images/2011/bg-rodape.png) top repeat-x;
+overflow:hidden;
+height:611px;
+}
+#ebit {
+width:88px;
+height:95px;
+float:right;
+margin:3px 0px 0px 3px;
+}
+#rodape2009 #menuRodape {
+display:block;
+margin:22px 0px 20px 20px;
+color:#CC0000;
+font-weight:bold;
+width:600px;
+float:left;
+height:95px;
+border:0px solid;
+}
+#rodape2009 #menuRodape a {
+color: #333333;
+font-weight: normal;
+}
+#rodape2009 #menuRodape a:hover {
+color: #CC0000;
+font-weight: normal;
+}
+#rodape2009 #atendimentoRodape {
+display:block;
+float:right;
+background:url(../../images/transparentes.png) 0px 0px;
+background-repeat: no-repeat;
+width:322px;
+height:90px;
+margin:22px 10px 0px 0px;
+border:0px solid;
+}
+#rodape2009 #rodapeBottom{
+clear:both;
+height:100%;
+overflow:hidden;
+display:block;
+background:#FFF;
+}
+#rodape2009 #meiosPagamento{
+background:url(../../images/2011/meios-pagamento.gif);
+overflow:hidden;
+height:80px;
+width:295px;
+margin-top:16px;
+float:left;
+text-indent:-999px;
+}
+#rodape2009 #siteSeguro{
+background:url(../../images/2011/site-seguro.gif);
+overflow:hidden;
+height:81px;
+width:217px;
+margin-top:16px;
+margin-right:10px;
+float: right;
+text-indent:-999px;
+}
+#siteSeguro a {
+display:block;
+width:66px;
+height:56px;
+float:right;
+margin-top:23px;
+margin-right:88px;
+}
+#containerRodapeNovo {
+width:999px;
+margin:0px auto;
+}
+#buscaNovo {
+background:url(../../images/2011/bg-busca-rodape.png) no-repeat;
+margin:11px auto 5px auto;
+overflow:hidden;
+width:592px;
+height:47px;
+padding-left:65px;
+position:relative;
+}
+.buscaInputNovo {
+width:400px;
+height:40px;
+margin-top:2px;
+font-size:16px;
+}
+#botaoBuscarNovo {
+background:url(../../images/2011/btn-buscar-novo.png) no-repeat;
+width:114px;
+height:41px;
+position:absolute;
+top:3px;
+left:535px;
+cursor:pointer;
+}
+#maisBuscadosNovo {
+width:657px;
+margin:0px auto;
+list-style:none;
+}
+#maisBuscadosNovo li {
+float:left;
+margin-right:3px;
+}
+#maisBuscadosNovo li a:hover {
+text-decoration:underline;
+}
+#maisBuscadosNovo li span {
+font-weight:bold;
+}
+#containerEsquerdaRodape {
+width:323px;
+clear:left;
+overflow:hidden;
+border-right:1px solid #F3F3F3;
+float:left;
+padding-bottom:57px;
+}
+#blocoBaixoRodapeNovo {
+clear:both;
+display:block;
+margin-top:50px;
+overflow:hidden;
+border-bottom:1px solid #F3F3F3;
+padding-bottom:10px;
+}
+#rodapeNovoAtencdimento {
+background:url(../../images/2011/rodape-fone-ouvido.png) no-repeat;
+display:block;
+padding-left:60px;
+}
+#rodapeNovoAtencdimento span {
+display:block;
+}
+#rodapeNovoAtencdimento strong {
+font-size:16px;
+font-family:Arial, Helvetica, sans-serif;
+color:#333;
+padding-right:10px;
+padding-top:5px;
+}
+#rodapeNovoAtencdimento p {
+font-size:11px;
+font-family:Arial, Helvetica, sans-serif;
+color:#666;
+padding-right:10px;
+padding-top:5px;
+}
+#rodapeNovoOutrosAtt {
+background:url(../../images/2011/rodape-atendimento-2.png) no-repeat;
+display:block;
+padding-left:60px;
+margin-top:20px;
+}
+#rodapeNovoOutrosAtt h3 {
+color:#333;
+font-size:16px;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal;
+}
+#rodapeNovoOutrosAtt ul {
+list-style:none;
+display:block;
+}
+#rodapeNovoOutrosAtt ul li {
+padding:2px 0px 2px 0px;
+}
+#rodapeNovoOutrosAtt ul li a {
+color:#D4352D;
+font-size:13px;
+font-family:Arial, Helvetica, sans-serif;
+text-decoration:underline;
+}
+#containerMeioRodape {
+width:350px;
+padding-left:32px;
+overflow:hidden;
+float:left;
+border-right:1px solid #F3F3F3;
+padding-bottom:32px;
+}
+#rodapeNovoInstitucional {
+display:block;
+overflow:hidden;
+clear:both;
+}
+#rodapeNovoInstitucional h3 {
+color:#333;
+font-size:16px;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal
+}
+#rodapeNovoInstitucional ul {
+list-style:none;
+width:129px;
+float:left;
+margin-top:10px;
+}
+#rodapeNovoInstitucional ul li {
+padding:2px 0px 2px 0px;
+}
+#rodapeNovoInstitucional ul li a {
+color:#D4352D;
+font-size:13px;
+font-family:Arial, Helvetica, sans-serif;
+text-decoration:underline;
+}
+#rodapeNovoNewsletter {
+background:url(../../images/2011/rodape-newsletter.png) no-repeat;
+padding-left:65px;
+margin-top:30px;
+}
+#rodapeNovoNewsletter h3 {
+color:#333;
+font-size:16px;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal
+}
+#rodapeNovoNewsletter ul {
+list-style:none;
+display:block;
+}
+#rodapeNovoNewsletter ul li {
+padding:2px 0px 2px 0px;
+}
+#rodapeNovoNewsletter ul li a {
+color:#D4352D;
+font-size:13px;
+font-family:Arial, Helvetica, sans-serif;
+text-decoration:underline;
+}
+#containerDireitaRodape {
+float:right;
+overflow:hidden;
+}
+#blocoBaixoRodapeNovo2 {
+display:block;
+clear:both;
+overflow:hidden;
+margin-top:15px;
+font-size:11px;
+color:#666;
+padding-bottom:10px;
+}
+#rodapeRedeSocialNovo {
+float:left;
+width:365px;
+overflow:hidden;
+clear:left;
+}
+#rodapeRedeSocialNovo h3 {
+color:#333;
+font-size:16px;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal
+}
+#rodapeRedeSocialNovo ul {
+display:block;
+list-style:none;
+margin-top:5px;
+}
+#rodapeRedeSocialNovo ul li {
+float:left;
+margin-right:5px;
+}
+#twitterNovo {
+background:url(../../images/2011/rodape-midia-social.png) 0px 0px no-repeat;
+width:35px;
+height:36px;
+}
+#facebookNovo {
+background:url(../../images/2011/rodape-midia-social.png) -35px 0px no-repeat;
+width:35px;
+height:36px;
+}
+#youtubeNovo {
+background:url(../../images/2011/rodape-midia-social.png) -70px 0px no-repeat;
+width:35px;
+height:36px;
+}
+#orkutNovo {
+background:url(../../images/2011/rodape-midia-social.png) -105px 0px no-repeat;
+width:35px;
+height:36px;
+}
+#blogNovo {
+background:url(../../images/2011/rodape-midia-social.png) -140px 0px no-repeat;
+width:154px;
+height:38px;
+}
+#rodapeFormasNovo {
+background:url(../../images/2011/rodape-formas.png) bottom no-repeat;
+width:206px;
+height:81px;
+float:left;
+overflow:hidden;
+}
+#rodapeFormasNovo h3 {
+color:#333;
+font-size:16px;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal
+}
+#rodapeSegurancaNovo {
+background:url(../../images/2011/rodape-seguranca.png) bottom no-repeat;
+width:233px;
+height:75px;
+float:left;
+overflow:hidden;
+margin-left:45px;
+}
+#rodapeSegurancaNovo h3 {
+color:#333;
+font-size:16px;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal
+}
+#rodapeEmpresaAmigoNovo {
+background:url(../../images/2011/empresa-amiga.png) no-repeat;
+width:86px;
+height:66px;
+float:right;
+margin-top:13px;
+}
+.formRodapeNovo {
+color:#000;
+width:186px;
+height:22px;
+padding-left:5px;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:bold;
+font-size:12px;
+margin-bottom:5px;
+}
+/************************************
+NUVEM DE TAGS
+*************************************/
+/***** CLOUD LATERAL *****/
+#cloudLateral a.tag1 { font-size:9px; line-height:9px }
+#cloudLateral a.tag2 { font-size:10px; line-height:10px }
+#cloudLateral a.tag3 { font-size:11px; line-height:11px }
+#cloudLateral a.tag4 { font-size:12px; line-height:12px}
+#cloudLateral a.tag5 { font-size:13px; line-height:13px}
+#cloudLateral a.tag6 { font-size:14px; line-height:14px}
+#cloudLateral a.tag7 { font-size:15px; line-height:15px}
+#cloudLateral a.tag8 { font-size:16px; line-height:16px}
+#cloudLateral a.tag9 { font-size:18px; line-height:18px}
+#cloudLateral a.tag10 { font-size:20px; line-height:20px}
+#cloudLateral { padding: 10px 4px 0px 4px; text-align: center; margin: 0;}
+#cloudLateral a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color:#999999}
+#cloudLateral a:hover { background-color:#CC0000; color:#FFFFFF }
+#cloudLateral li { display: inline; }
+/***** CLOUD RODAPE *****/
+#tagCloud {
+clear:both;
+}
+#tagCloud #topoCloud{
+background:url(../../images/bgs.png) 0px -49px;
+background-repeat: repeat-x;
+height:15px;
+}
+#tagCloud #linhatag {
+display:block;
+height:0px;
+overflow:hidden;
+margin-top:1px;
+border-top:solid 1px #DDD;
+}
+#cloud a.tag1 { font-size:10px; line-height:10px }
+#cloud a.tag2 { font-size:11px; line-height:11px }
+#cloud a.tag3 { font-size:12px; line-height:12px }
+#cloud a.tag4 { font-size:16px; line-height:16px}
+#cloud a.tag5 { font-size:18px; line-height:18px}
+#cloud a.tag6 { font-size:21px; line-height:21px}
+#cloud a.tag7 { font-size:25px; line-height:25px}
+#cloud a.tag8 { font-size:27px; line-height:27px}
+#cloud a.tag9 { font-size:31px; line-height:31px}
+#cloud a.tag10 { font-size:32px; line-height:32px}
+#cloud { padding: 5px 4px 0px 4px; text-align: center; border:0px solid; }
+#cloud a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color: #999999 }
+#cloud a:hover { background-color:#CC0000; color:#FFFFFF }
+#cloud { margin: 0; }
+#cloud li { display: inline; }
+/************************************
+PAGINA DO PRODUTO
+*************************************/
+#contProdutoMeio{
+VERTICAL-ALIGN:top;
+display:block;
+margin-bottom:20px;
+margin-top:10px;
+height:100%;
+width:838px;
+float:right;
+overflow:hidden;
+}
+.destaque_categoria_cont img{
+border:none;
+}
+#bgfreteref {
+display:block;
+overflow:hidden;
+padding-bottom:5px;
+}
+.viewProdutoReferencia{
+font-size:10px;
+color:#333;
+text-align:center;
+text-shadow: 1px 1px 0px #eeeeee;
+filter: dropshadow(color=#eeeeee, offx=1, offy=1);
+float:left;
+width:92px;
+height:18px;
+margin:0px 0px 0px 8px;
+padding-top:4px;
+background:url(../../images/2011/bg-referencia.gif);
+}
+.viewProdutoTitulo{
+font-size:19px;
+padding:0px 5px 5px 0px;
+color:#333;
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+margin-top:0px;
+clear:both;
+display:block;
+border-bottom:solid 1px #DDD;
+}
+.viewProdutoInfo{
+clear:both;
+display:block;
+padding:5px;
+padding-left:0px;
+background-color:#FFF;
+overflow:hidden;
+}
+.containerPrecos {
+display:block;
+clear:both;
+overflow:hidden;
+}
+.viewProdutoDe{
+font-size:16px;
+color: #999999;
+padding:2px 3px 0px 0px;
+text-decoration:line-through;
+float:left;
+}
+.viewProdutoPor{
+font-size:16px;
+color: #333;
+font-weight:bold;
+margin:0px;
+padding:0px;
+float:left;
+display:block;
+}
+.viewProdutoPor .preco{
+font-size:16px;
+font-weight:bold;
+color: #333;
+}
+.viewProdutoParcelas{
+font-size:13px;
+color:#333;
+margin:0px;
+padding:4px 5px 4px 0px;
+}
+.viewProdutoParcelas strong {
+font-size:13px;
+color:#BA1B00;
+font-weight:bold;
+}
+.produtoSemPasso {
+background-color: #FAFBFB;
+display:block;
+clear:both;
+height:auto;
+border:1px solid #DDDDDD;
+margin-top:10px;
+padding:10px 0px 10px 16px;
+overflow:hidden;
+}
+.produtoPassoUm {
+background:url(../../images/2011/passo1-produto.png) no-repeat top right #FAFBFB;
+display:block;
+clear:both;
+height:auto;
+border:1px solid #DDDDDD;
+padding:10px 0px 10px 16px;
+overflow:hidden;
+}
+#produtoAbas {
+margin-top:10px;
+display:block;
+clear:both;
+overflow:hidden;
+background:url(../../images/bg_abas.gif) bottom repeat-x;
+}
+#produtoAbas a {
+display:block;
+float:left;
+overflow:hidden;
+padding:5px 10px 5px; 10px;
+margin-left:10px;
+border-top:solid 1px #ccc;
+border-left:solid 1px #ccc;
+border-right:solid 2px #ccc;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+cursor:pointer;
+}
+#abaDescricao {
+background:#fff;
+}
+#abaParcelamento {
+background:url(../../images/bg_abas.gif) bottom repeat-x #E6E6E6;
+}
+.abaContent {
+padding:15px;
+border-left:solid 1px #ccc;
+border-bottom:solid 2px #ccc;
+border-right:solid 2px #ccc;
+font-size:12px;
+margin-bottom:10px;
+overflow:hidden;
+color:#222;
+font-family:Arial, Helvetica, sans-serif;
+}
+#contentParcelamento {
+display:none;
+}
+.produtoPassoTres {
+background:url(../../images/2011/passo3-produto.png) top right no-repeat #FAFBFB;
+border:1px solid #DDD;
+clear:both;
+display:block;
+margin-top:10px;
+padding:10px 0px 7px 23px;
+overflow:hidden;
+}
+.semProdutoSpan {
+font-size:16px;
+font-family:Arial, Helvetica, sans-serif;
+color:#333;
+font-weight:bold;
+}
+#btnAviseme {
+background:url(../../images/2011/btn-aviseme.png) no-repeat;
+width:229px;
+height:36px;
+cursor:pointer;
+display:block;
+margin-top:5px;
+}
+.linkBlocosProduto {
+display:block;
+overflow:hidden;
+clear:both;
+color:#666;
+font-size:11px;
+text-decoration:underline;
+padding-top:5px;
+}
+/*****************************
+BLOCO PARCELAMENTO
+**************************/
+.viewProdutoParcelamento{
+font-size:10px;
+color:#666666;
+margin:0px;
+padding:2px 5px 4px 0px;
+font-weight:bold;
+}
+.viewProdutoParcelamento a{
+color:#666666;
+font-weight:normal;
+display:block;
+width:128px;
+padding:3px;
+}
+.viewProdutoParcelamento a:HOVER {
+color:#cc0000;
+}
+/*****************************
+OPÇÔES DO PRODUTO
+**************************/
+.produtoPassoDois {
+background:url(../../images/2011/passo2-produto.png) top right no-repeat #FAFBFB;
+border:1px solid #DDD;
+clear:both;
+display:block;
+margin-top:10px;
+padding:10px 0px 7px 23px;
+overflow:hidden;
+}
+.viewProdutoOpcoes{
+display:block;
+clear:both;
+color:#666;
+font-size:12px;
+font-weight:bold;
+}
+.viewProdutoOpcoesFotos{
+display:block;
+overflow:hidden;
+}
+.viewProdutoOpcoesFotos img{
+border:none;
+float:left;
+margin-right:6px;
+border:1px solid #ddd;
+/*width:60px;*/
+}
+.viewProdutoOpcoesFotos a:hover img{
+border:1px solid #CC0000;
+}
+.viewProdutoOpcoes .descricao{
+margin-left:15px;
+padding-top:15px;
+font-size:14px;
+}
+.cada-opcao-cor {
+background-color:#FFF;
+margin-right:4px;
+}
+/************************************
+FORMULARIOS
+*************************************/
+.formpadrao{
+display:block;
+border:1px solid #CCCCCC;
+font-size:11px;
+height:18px;
+}
+.formpadrao:focus {
+border:solid 1px #F30;
+}
+.formpadrao2{
+display:block;
+border:1px solid #CCCCCC;
+font-size:14px;
+height:18px;
+padding:2px;
+}
+.formpadrao2:focus {
+border:solid 1px #F30;
+}
+.payment{
+float:left;
+vertical-align:middle;
+}
+.cadastro_label{
+float:left;
+display:block;
+width:150px;
+height:16px;
+color:#333;
+text-transform:none;
+}
+.cadastro_label_dentro{
+float:left;
+display:block;
+height:16px;
+overflow:hidden;
+margin-right:20px;
+vertical-align: middle;
+padding-bottom:3px;
+}
+.formpadrao_radio{
+float:left;
+margin-right:3px;
+}
+.formpadrao_grande{
+float:left;
+display:block;
+width:300px;
+border:1px solid #CCC;
+height:18px;
+}
+.payment{
+width:100px;
+}
+.cadastro_linhas{
+display:block;
+border:0px solid;
+padding:5px;
+overflow:hidden;
+overflow:hidden;
+height:100%;
+}
+.formMsgValidacao{
+}
+.formMsgValidacao .avisos_cadastro{
+border:2px solid #FFCC00;
+color:#FF0000;
+font-weight:bold;
+padding:3px;
+margin:5px 3px 3px 150px ;
+overflow:hidden;
+}
+.avisos_cadastro{
+color:#cc0000;
+font-weight:bold;
+padding:3px;
+margin-top:0px;
+overflow:hidden;
+}
+.cadastroTitle {
+padding:15px;
+border-bottom:dotted 1px #ccc;
+font-size:20px;
+font-family:Arial, Helvetica, sans-serif;
+color:#cc0000;
+letter-spacing:1px;
+}
+.cadastroTitle strong {
+color:#999;
+font-weight:normal;
+}
+#ofertaRelampago {
+overflow:hidden;
+}
+#ofertaRelampago a {
+margin-left:-500px;
+display:block;
+height:280px;
+}
+/************************************
+JQZOOM.CSS
+*************************************/
+div.jqZoomTitle{
+z-index:5000;
+text-align:center;
+font-size:11px;
+font-family:Tahoma;
+height:16px;
+padding-top:2px;
+position:absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+color: #FFF;
+background: #999;
+}
+.jqZoomPup{
+overflow:hidden;
+background-color: #FFF;
+-moz-opacity:0.6;
+opacity: 0.6;
+filter: alpha(opacity = 60);
+z-index:10;
+border-color:#c4c4c4;
+border-style: solid;
+cursor:crosshair;
+}
+.jqZoomPup img{
+border: 0px;
+}
+.preload{
+-moz-opacity:0.8;
+opacity: 0.8;
+filter: alpha(opacity = 80);
+color: #333;
+font-size: 12px;
+font-family: Tahoma;
+text-decoration: none;
+border: 1px solid #CCC;
+background-color: white;
+padding: 8px;
+text-align:center;
+background-image: url(../../images/zoomloader.gif);
+background-repeat: no-repeat;
+background-position: 43px 30px;
+width:90px;
+* width:100px;
+height:43px;
+*height:55px;
+z-index:10;
+position:absolute;
+top:3px;
+left:3px;
+}
+.jqZoomWindow{
+border: 1px solid #999;
+background-color: #FFF;
+}
+/************MODIFICAÇÕES ATUAIS 05/07/2011 ***********/
+/************topo**********/
+#topo2011{
+width:999px;
+height:70px;
+display:block;
+padding:6px 0px 12px 0px;
+}
+#menuTopo2011Vantagens {
+float:right;
+margin-top:23px;
+font-family:Tahoma, Geneva, sans-serif;
+font-size:10px;
+}
+#menuTopo2011Vantagens li {
+float:left;
+list-style:none;
+font-size:10px;
+font-family:Arial, Helvetica, sans-serif;
+}
+#menuTopo2011Vantagens li strong {
+display:block;
+color:#FF0000;
+font-size:11px;
+font-weight:bold;
+}
+#sprite-primeira-troca-2011 {
+width:160px;
+background:url(../../images/2011/sprite-topo-payment.png) 0px 0px no-repeat;
+height:42px;
+margin:3px 0px 7px 0px;
+padding-left:50px;
+padding-right:5px;
+}
+#sprite-frete-gratis-2011 {
+width:140px;
+background:url(../../images/2011/sprite-topo-payment.png) 0px -42px no-repeat;
+height:42px;
+margin:3px 0px 7px 0px;
+padding-left:50px;
+padding-right:5px;
+}
+#sprite-desconto-2011 {
+width:145px;
+background:url(../../images/2011/sprite-topo-payment.png) 0px -84px no-repeat;
+height:42px;
+margin:3px 0px 7px 0px;
+padding-left:50px;
+padding-right:5px;
+}
+#sprite-10x-2011 {
+width:125px;
+background:url(../../images/2011/sprite-topo-payment.png) 0px -126px no-repeat;
+height:42px;
+margin:3px 0px 7px 0px;
+padding-left:50px;
+padding-right:5px;
+padding-top:-8px;
+}
+#logo26Anos {
+background:url(../../images/2011/anitalogo-26anos.gif) no-repeat;
+width:199px;
+height:90px;
+overflow:hidden;
+float:left;
+}
+/*************MEIO**********/
+#contTitle {
+clear:both;
+overflow:hidden;
+border-top:1px solid #F3F3F3;
+}
+#titleCarrinho {
+background:url(../../images/2011/title-carrinho.png) no-repeat;
+width:125px;
+height:15px;
+margin:20px 0px 20px 12px;
+float:left;
+}
+.separador1 {
+background:url(../../images/2011/sprite-passos-novo.png) -480px -38px no-repeat;
+width:21px;
+height:33px;
+float:left;
+}
+.separador2 {
+background:url(../../images/2011/sprite-passos-novo.png) -478px 0px no-repeat;
+width:19px;
+height:33px;
+float:left;
+}
+.FaseCarrinho1 {
+background:url(../../images/2011/sprite-passos-novo.png) 0px -38px no-repeat;
+width:480px;
+height:33px;
+float:left;
+}
+.FaseCarrinho1Sel {
+background:url(../../images/2011/sprite-passos-novo.png) 0px 0px no-repeat;
+}
+.FaseCarrinho2 {
+background:url(../../images/2011/sprite-passos-novo.png) -503px 0px no-repeat;
+width:495px;
+height:33px;
+float:left;
+}
+.FaseCarrinho2Sel {
+background:url(../../images/2011/sprite-passos-novo.png) -501px -38px no-repeat;
+}
+.boxFormaPagamento {
+background-color:#FFF;
+border:1px solid #ccc;
+width:214px;
+height:37px;
+padding:2px 4px 0px 14px;
+overflow:hidden;
+margin-right:22px;
+}
+.boxFormaPagamentoSelect {
+-webkit-box-shadow: 0px 0px 0px 4px #D9F3DB;
+-moz-box-shadow: 0px 0px 0px 4px #D9F3DB;
+box-shadow: 0px 0px 0px 4px #D9F3DB;
+border:1px solid #009933;
+width:214px;
+height:37px;
+padding:2px 4px 0px 14px;
+overflow:hidden;
+margin-right:22px;
+background-color:#FFF;
+}
+#formaPagamentoLabel {
+font-size:14px;
+color:#333;
+font-weight:bold;
+float:left;
+}
+#formaPagamentoLabel span {
+float:left;
+margin-left:7px;
+margin-top:10px;
+}
+#carrinhoExpresso {
+background:url(../../images/2011/carrinho-expresso.png);
+width:35px;
+height:35px;
+float:left;
+margin-left:10px;
+margin-top:0px;
+}
+#carrinhoPac {
+background:url(../../images/2011/carrinho-pac.png);
+width:35px;
+height:35px;
+float:left;
+margin-left:10px;
+}
+#sedex {
+float:left;
+margin-top:12px;
+}
+#SEDEX {
+float:left;
+margin-top:5px;
+}
+#PAC {
+float:left;
+margin-top:12px;
+}
+#idRadioSedex {
+position:relative;
+margin-top:-10px;
+}
+#recomendadoForma {
+float:left;
+top:-20px;
+clear:both;
+}
+#containerBaixoCart {
+clear:both;
+padding:15px 0px 10px 0px;
+display:block;
+overflow:hidden;
+}
+#prazoEntrega {
+font-family:Tahoma, Geneva, sans-serif;
+}
+#btnCalcularCep {
+background:url(../../images/2011/btn-cep-ok.gif) no-repeat;
+width:101px;
+height:27px;
+cursor:pointer;
+float:left;
+}
+#btnComprarMais {
+background:url(../../images/2011/btn-comprar-mais.png) no-repeat;
+width:158px;
+height:15px;
+float:left;
+overflow:hidden;
+}
+/**********RODAPE*******/
+#rodape2011{
+display:block;
+clear:both;
+overflow:hidden;
+height:128px;
+border:1px solid #ccc;
+border-left:0px;
+border-right:0px;
+margin-top:20px;
+}
+#rodape2011 #menuRodape {
+display:block;
+margin:12px 0px 20px 20px;
+color:#CC0000;
+font-weight:bold;
+width:600px;
+float:left;
+height:95px;
+border:0px solid;
+}
+#rodape2011 #menuRodape a {
+color: #333333;
+font-weight: normal;
+}
+#rodape2011 #menuRodape a:hover {
+color: #CC0000;
+font-weight: normal;
+}
+#rodape2011 #atendimentoRodape {
+display:block;
+float:left;
+background:url(../../images/2011/bg-central.png) 0px 0px;
+background-repeat: no-repeat;
+width:344px;
+height:90px;
+margin:12px 10px 0px 0px;
+border:0px solid;
+}
+#rodape2011 #rodapeBottom{
+clear:both;
+height:100%;
+overflow:hidden;
+display:block;
+background:#FFF;
+}
+#rodape2011 #meiosPagamento{
+background:url(../../images/2011/meios-pagamento.png) no-repeat;
+overflow:hidden;
+height:75px;
+width:206px;
+margin-top:11px;
+margin-left:20px;
+float:left;
+text-indent:-999px;
+}
+#rodape2011 #siteSeguro{
+background:url(../../images/2011/bg-seguranca.png);
+overflow:hidden;
+height:71px;
+width:239px;
+margin-top:11px;
+margin-left:40px;
+float: left;
+text-indent:-999px;
+}
+#btnCompreJunto {
+background:url(../../images/2011/add-to-cart.gif) no-repeat;
+width:160px;
+height:34px;
+cursor:pointer;
+}
+#empresaAmiga {
+background:url(../../images/2011/empresa-amiga.png) no-repeat;
+width:86px;
+height:66px;
+float:right;
+margin-top:20px;
+}
+#shoppingCart #shoppingCartHeader {
+background-color:#F5F5F5;
+height:22px;
+display:block;
+padding:4px 0px 0px 10px;
+border:1px solid #eee;
+}
+#shoppingCartHeader .cartTitleHeader {
+color:#000;
+font-family:Tahoma, Geneva, sans-serif;
+font-size:13px;
+float:left;
+}
+#productCartTitle {
+width:330px;
+font-weight:bold;
+}
+#sizeCartTitle {
+width:130px;
+}
+#amountCartTitle {
+width:130px;
+}
+#giftCartTitle {
+width:130px;
+}
+#priceCartTitle {
+width:130px;
+}
+#allpriceCartTitle {
+width:130px;
+}
+#shoppingCart .shoppingCartBody {
+border:1px solid #eee;
+border-top:0px;
+height:25px;
+padding:5px 0px 10px 0px;
+clear:both;
+display:block;
+overflow:hidden;
+}
+.productBody {
+width:340px;
+float:left;
+}
+.productBody .productBodyDescription {
+float:left;
+margin-left:10px;
+width:330px;
+font-size:11px;
+}
+.productBodyDescription h3 {
+padding-top:10px;
+color:#000;
+font-weight:bold;
+font-family:Tahoma, Geneva, sans-serif;
+}
+.productBodyDescription h4 {
+color:#000;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal;
+}
+.productBodyDescription h5 {
+color:#999;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal;
+}
+.sizeBody {
+float:left;
+width:130px;
+position:relative;
+}
+.amountBody {
+float:left;
+width:130px;
+position:relative;
+}
+.amountBody span {
+text-align:right;
+font-size:11px;
+color:#666;
+font-weight:bold;
+float:left;
+padding-top:10px;
+}
+.giftBody {
+float:left;
+width:130px;
+position:relative;
+}
+.priceBody {
+float:left;
+width:130px;
+position:relative;
+}
+.allpriceBody {
+width:130px;
+float:left;
+}
+.priceCartStyle {
+color:#999;
+float:left;
+font-weight:bold;
+padding-top:10px;
+}
+.CartStyle {
+color:#999;
+float:left;
+font-weight:bold;
+padding-top:10px;
+}
+#containerMeioPagamento {
+clear:both;
+overflow:hidden;
+display:block;
+margin-top:10px;
+}
+#blocoEnderecoVerde {
+background-color:#D9F3DB;
+border:1px solid #039A35;
+width:447px;
+height:120px;
+font-family:Arial, Helvetica, sans-serif;
+padding:14px 10px 10px 20px;
+overflow:hidden;
+clear:left;
+float:left;
+}
+#blocoEnderecoVerde strong {
+font-size:14px;
+font-weight:bold;
+color:#006600;
+padding-bottom:10px;
+display:block;
+}
+.clearEndereco {
+font-weight:normal;
+font-size:14px;
+padding-top:2px;
+}
+#nomeEndereco {
+font-size:16px;
+font-weight:bold;
+}
+.btnEditarEndereco {
+background-color:#EEE;
+float:right;
+width:67px;
+height:20px;
+text-align:center;
+padding-top:6px;
+font-weight:bold;
+border:1px solid #DDD;
+-webkit-box-shadow: inset 0px 0px 1px 2px #fff;
+-moz-box-shadow: inset 0px 0px 1px 2px #fff;
+box-shadow: inset 0px 0px 1px 2px #fff;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}
+#blocoEnderecoBotao {
+width:477px;
+clear:left;
+overflow:hidden;
+margin-top:10px;
+float:left;
+}
+.btnCadastrarEndereco {
+background:url(../../images/2011/btn-cadastrar-novo.gif) no-repeat;
+float:left;
+width:197px;
+height:26px;
+}
+.btnUsarEndereco {
+background:url(../../images/2011/btn-usarendereco.gif) no-repeat;
+float:right;
+width:169px;
+height:28px;
+}
+#blocoFormasPagamento {
+float:left;
+overflow:hidden;
+margin-left:22px;
+width:244px;
+}
+#containerEndereco {
+float:left;
+clear:left;
+}
+.textoFretePagamento {
+float:left;
+clear:both;
+padding:10px 0px 10px 0px;
+}
+#blocoTabelaFrete {
+float:right;
+width:234px;
+list-style:none;
+border-bottom:1px solid #ccc;
+}
+#blocoTabelaFrete li {
+background:url(../../images/2011/bg-tabela-preco.jpg) repeat-x;
+border:1px solid #CCC;
+border-bottom:0px;
+display:block;
+overflow:hidden;
+height:29px;
+padding:6px 6px 0px 11px;
+}
+.tabelaFreteTitle {
+font-weight:bold;
+font-family:Arial, Helvetica, sans-serif;
+color:#666;
+font-size:13px;
+margin-top:3px;
+float:left;
+}
+#freteVerde {
+color:#039A35;
+}
+#freteMaior {
+font-size:20px;
+}
+.tabelaFreteValor {
+color:#333;
+font-size:15px;
+float:right;
+font-family:Arial, Helvetica, sans-serif;
+}
+#blocoCadastrarNovo {
+background-color:#F7F7F7;
+border:1px solid #ddd;
+clear:both;
+display:block;
+overflow:hidden;
+margin-top:11px;
+}
+#cadastroNovoEsquerda {
+width:428px;
+float:left;
+overflow:hidden;
+padding:0px 0px 0px 25px;
+border-right:1px solid #DDD;
+margin-top:10px;
+}
+.cadastroNovoCadaLinha {
+clear:both;
+display:block;
+margin-top:10px;
+}
+.cadastroNovoCadaLinha label {
+font-weight:bold;
+display:block;
+clear:both;
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+}
+.cadastroNovoCadaLinha .cadastroNovoForm {
+height:24px;
+border:1px solid #999;
+margin-top:2px;
+}
+.cadastroNovoCadaLinha #titulo {
+width:312px;
+}
+.cadastroNovoCadaLinha #destinatario {
+width:312px;
+}
+.cadastroNovoCadaLinha #cep {
+width:136px;
+}
+.cadastroNovoCadaLinha .btnVerCep {
+background:url(../../images/2011/img-cep.gif) no-repeat;
+color:#0072F4;
+font-size:11px;
+text-decoration:underline;
+height:16px;
+overflow:hidden;
+margin-left:20px;
+padding:3px 0px 3px 25px;
+}
+#cadastroNovoDireita {
+width:515px;
+float:right;
+padding:0px 0px 0px 25px;
+margin-top:10px;
+}
+.cadastroNovoCadaLinha #endereco {
+width:300px;
+}
+.cadastroNovoCadaLinha #complemento {
+width:169px;
+}
+.cadastroNovoCadaLinha #bairro {
+width:169px;
+}
+.cadastroNovoCadaLinha #estado {
+width:169px;
+}
+.cadastroNovoCadaLinha #cidade {
+width:169px;
+}
+.subCadaLinha {
+float:left;
+margin-right:35px;
+}
+.btnCadastrarUsarEndereco {
+background:url(../../images/2011/btn-submitcadastro.gif) no-repeat;
+float:right;
+width:169px;
+height:28px;
+margin-top:6px;
+}
+#containerFormasPagamento {
+clear:both;
+display:block;
+margin-top:10px;
+position:relative;
+}
+#containerFormasPagamento #pagamentoContainerMenu {
+clear:both;
+overflow:hidden;
+display:block;
+float:left;
+}
+#containerFormasPagamento #pagamentoContainerTitle {
+background:url(../../images/2011/bg-forma-pagamento.jpg) repeat-x;
+border:1px solid #ddd;
+width:476px;
+height:39px;
+padding:25px 0px 0px 25px;
+float:left;
+margin-top:5px;
+}
+#containerFormasPagamento #pagamentoContainerTitle h3 {
+font-size:16px;
+font-family:Arial, Helvetica, sans-serif;
+}
+#pagamentoMenu {
+float:right;
+}
+#pagamentoMenu li {
+background-color:#F4F4F4;
+width:79px;
+height:70px;
+float:left;
+margin-left:8px;
+list-style:none;
+padding:4px 0px 0px 4px;
+cursor:pointer;
+}
+.cadaCartaoContainer {
+background-color:#F4F4F4;
+border:1px solid #DDD;
+width:69px;
+height:58px;
+float:left;
+list-style:none;
+-webkit-box-shadow: inset 0px 0px 0px 1px #ffffff;
+-moz-box-shadow: inset 0px 0px 0px 1px #ffffff;
+box-shadow: inset 0px 0px 0px 1px #ffffff;
+padding-top:6px;
+padding-left:4px;
+}
+.cadaCartaoContainer span {
+text-align:center;
+display:block;
+font-weight:bold;
+}
+.cadaCartaoContainer .boleto {
+background:url(../../images/2011/sprite-cartoes.gif) 0px 0px no-repeat;
+width:39px;
+height:26px;
+margin-left:15px;
+}
+.cadaCartaoContainer .visa {
+background:url(../../images/2011/sprite-cartoes.gif) -39px 0px no-repeat;
+width:39px;
+height:26px;
+margin-left:15px;
+}
+.cadaCartaoContainer .mastercard {
+background:url(../../images/2011/sprite-cartoes.gif) -78px 0px no-repeat;
+width:39px;
+height:26px;
+margin-left:15px;
+}
+.cadaCartaoContainer .american {
+background:url(../../images/2011/sprite-cartoes.gif) -117px 0px no-repeat;
+width:39px;
+height:26px;
+margin-left:15px;
+}
+.cadaCartaoContainer .hipercard {
+background:url(../../images/2011/sprite-cartoes.gif) -156px 0px no-repeat;
+width:39px;
+height:26px;
+margin-left:15px;
+}
+/*BLOCO DAS PARCELAS */
+.tipoParcelaTitulo {
+font-size:14px;
+clear:both;
+overflow:hidden;
+display:block;
+}
+.parcelamentoCss {
+font-size:14px;
+margin-top:15px;
+clear:both;
+overflow:hidden;
+display:block;
+}
+#listaParcelas {
+width:360px;
+overflow:hidden;
+clear:both;
+}
+#listaParcelas li {
+list-style:none;
+float:left;
+font-size:12px;
+margin:10px 30px 0px 0px;
+}
+#listaParcelas li input {
+margin:1px 5px 0px 0px;
+float:left;
+}
+#listaParcelas li label {
+float:left;
+}
+.titularCartao {
+width:401px;
+}
+.duvidaInput {
+background:url(../../images/2011/img-cep.gif) no-repeat;;
+height:16px;
+width:16px;
+float:left;
+margin-top:6px;
+margin-left:10px;
+}
+#boletoTexto {
+font-size:14px;
+display:block;
+text-align:center;
+margin-top:15px;
+}
+#superdestaque {
+overflow:hidden;
+padding-top:8px;
+}
+#vantagens {
+width:189px;
+float:left;
+}
+#vantagensFreteGratis, #vantagensDesconto , #vantagensTrocaFacil , #vantagensSemJuros {
+display:block;
+background-image:url(../../images/2011/diferencial.jpg);
+}
+#vantagensFreteGratis {
+background-position:0px 0px;
+height:59px;
+}
+#vantagensDesconto {
+background-position:0px -59px;
+height:56px;
+}
+#vantagensTrocaFacil {
+background-position:0px -115px;
+height:60px;
+}
+#vantagensSemJuros {
+background-position:0px -175px;
+height:55px;
+}
+#superbanner {
+float:right;
+width:810px;
+height:230px;
+overflow:hidden;
+}
+/*--Main Container--*/
+.main_view {
+float: left;
+position: relative;
+}
+/*--Window/Masking Styles--*/
+.window {
+height:230px; width:810px;
+overflow: hidden; /*--Hides anything outside of the set width/height--*/
+position: relative;
+}
+.image_reel {
+position: absolute;
+top: 0; left: 0;
+}
+.image_reel img {float: left;}
+/*--Paging Styles--*/
+.paging {
+position: absolute;
+bottom: 10px; right:10px;
+width: 120px; height:26px;
+z-index: 100; /*--Assures the paging stays on the top layer--*/
+/*background: url(../../images/2011/paging_bg2.png) no-repeat;*/
+display: none; /*--Hidden by default, will be later shown with jQuery--*/
+}
+.paging a {
+display:block;
+float:right;
+width:27px;
+height:21px;
+padding-top:5px;
+text-decoration: none;
+text-align:center;
+color: #000;
+background:url(../../images/2011/btnFullbanner.png);
+overflow:hidden;
+font-size:12px;
+font-weight:bold;
+margin:1px;
+}
+.paging a.active {
+background:url(../../images/2011/btnFullbanner.png) 0px -26px;
+}
+/******* CENTRAL DE ATENDIMENTO **********/
+#containerCentralAtendimento {
+display:block;
+overflow:hidden;
+clear:both;
+margin-top:10px;
+padding-bottom:20px;
+}
+#containerCentralAtendimento h1 {
+font-family:Tahoma, Geneva, sans-serif;
+font-size:20px;
+}
+#containerBuscaAtt {
+background:url(../../images/2011/sprites-central-atendimento.png) 0px 0px no-repeat;
+display:block;
+height:79px;
+clear:both;
+overflow:hidden;
+margin-top:10px;
+padding:17px 0px 0px 20px;
+}
+#containerBuscaAtt form {
+margin:0px;
+padding:0px;
+height:auto;
+}
+#containerBuscaAtt .buscarAtt {
+height:47px;
+width:710px;
+background:none;
+border:none;
+outline:none;
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:15px;
+color:#999;
+padding:0px 0px 0px 10px;
+overflow:hidden;
+float:left;
+margin-left:57px;
+}
+#containerBuscaAtt .btnPerguntar {
+margin:5px 0px 0px 20px;
+}
+#containerBuscaAtt span {
+clear:both;
+display:block;
+margin-top:5px;
+}
+#containerFormasAtt {
+width:1020px;
+clear:both;
+padding-top:10px;
+overflow:hidden;
+}
+#containerFormasAtt .containerCadaForma {
+width:353px;
+float:left;
+margin-right:23px;
+margin-top:20px;
+}
+#containerFormasAtt .containerCadaFormaMenor {
+width:298px;
+float:left;
+margin-right:20px;
+margin-top:20px;
+}
+#containerFormasAtt .containerTitleVermelho {
+background:url(../../images/2011/sprites-central-atendimento.png) 0px -153px no-repeat;
+height:32px;
+display:block;
+padding:11px 0px 0px 25px;
+position:relative;
+}
+#containerFormasAtt .containerTitle {
+background:url(../../images/2011/sprites-central-atendimento.png) -304px -153px no-repeat;
+width:328px;
+height:32px;
+display:block;
+padding:11px 0px 0px 25px;
+position:relative;
+}
+#containerFormasAtt .containerTitleMenor {
+background:url(../../images/2011/sprites-central-atendimento.png) -664px -153px no-repeat;
+width:273px;
+height:32px;
+display:block;
+padding:11px 0px 0px 25px;
+position:relative;
+}
+#containerFormasAtt .textoTitle {
+font-family:Tahoma, Geneva, sans-serif;
+font-size:16px;
+color:#000000;
+font-weight:normal;
+}
+#containerFormasAtt .iconeCadaAtt {
+background:url(../../images/2011/sprites-icones.png);
+width:53px;
+height:53px;
+position:absolute;
+z-index:999;
+top:-14px;
+left:290px;
+}
+#containerFormasAtt .icon1 {
+background-position:0px 0px;
+}
+#containerFormasAtt .icon2 {
+background-position: -53px 0px;
+}
+#containerFormasAtt .icon3 {
+background-position: -106px 0px;
+}
+#containerFormasAtt .icon4 {
+background-position: -159px 0px;
+}
+#containerFormasAtt .icon5 {
+background-position: -212px 0px;
+}
+#containerFormasAtt .icon6 {
+background-position: -265px 0px;
+}
+#containerFormasAtt .cadaForma {
+height:135px;
+border:1px solid #F1F1F1;
+display:block;
+overflow:hidden;
+padding:0px 0px 0px 0px;
+}
+#containerFormasAtt .cadaForma ul {
+margin-left:17px;
+display:block;
+}
+#containerFormasAtt .cadaForma ul li {
+margin-left:17px;
+font-family:Tahoma, Geneva, sans-serif;
+font-size:14px;
+padding-top:3px;
+}
+#containerFormasAtt .cadaForma ul li a:hover {
+text-decoration:underline;
+}
+#chatAoVivoAtt {
+background:url(../../images/2011/sprites-central-atendimento.png) 0px -102px no-repeat;
+height:45px;
+display:block;
+clear:both;
+overflow:hidden;
+margin-top:20px;
+}
+#blocoTelEmailAtt {
+background:#F7FCFF;
+width:977px;
+padding:24px 0px 10px 17px;
+border:1px dashed #E9F1FF;
+overflow:hidden;
+clear:both;
+}
+#blocoTelEmailEsq {
+width:485px;
+overflow:hidden;
+float:left;
+}
+#blocoTelEmailDir {
+background:url(../../images/2011/bg-email.png) no-repeat;
+float:left;
+overflow:hidden;
+width:400px;
+padding-left:80px;
+}
+#blocoTelEmailDir span {
+font-size:17px;
+}
+#blocoTelEmailDir p {
+font-size:12px;
+color:#666;
+}
+#blocoTelEmailDir a {
+color:#000;
+font-weight:bold;
+}
+#containerLojaTexto {
+overflow:hidden;
+clear:both;
+display:block;
+margin-top:20px;
+padding-top:20px;
+}
+#containerLojaTextoTitle {
+background-color:#FAFAFA;
+height:45px;
+border:1px solid #F1F1F1;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0px 0px 2px 2px #ffffff;
+-moz-box-shadow: inset 0px 0px 2px 2px #ffffff;
+box-shadow: inset 0px 0px 2px 2px #ffffff;
+position:relative;
+}
+#containerLojaTextoTitle h3 {
+display:block;
+margin-left:110px;
+font-size:18px;
+font-family:Tahoma, Geneva, sans-serif;
+font-weight:normal;
+margin-top:8px;
+}
+#bgImgLoja {
+background:url(../../images/2011/img-loja.png) no-repeat;
+width:60px;
+height:51px;
+position:absolute;
+top:-20px;
+left:25px;
+}
+#containerLojaTextoBloco {
+background-color:#F7FCFF;
+border:1px dashed #91BAFF;
+border-top:none;
+padding:13px 28px 13px 28px;
+overflow:hidden;
+clear:both;
+display:block;
+}
+#containerLojaTextoBloco p {
+font-size:14px;
+}
+#containerBuscarLojas {
+overflow:hidden;
+display:block;
+clear:both;
+}
+#blocoBuscarLojas {
+display:block;
+overflow:hidden;
+margin-top:10px;
+}
+.btnBuscarCampoGrande {
+background:url(../../images/2011/sprites-central-atendimento.png)no-repeat;
+width:499px;
+height:62px;
+float:left;
+cursor:pointer;
+background-position: -2px -273px ;
+}
+.btnBuscarCuiba {
+background:url(../../images/2011/sprites-central-atendimento.png) -500px -203px no-repeat;
+width:500px;
+height:62px;
+float:left;
+cursor:pointer;
+}
+.btnBuscarCampoGrandeSemMarca {
+background:url(../../images/2011/sprites-central-atendimento.png) -2px -203px no-repeat;
+width:499px;
+height:62px;
+float:left;
+cursor:pointer;
+}
+.btnBuscarCuibaMarcado {
+background:url(../../images/2011/sprites-central-atendimento.png) -500px -273px no-repeat;
+width:500px;
+height:62px;
+float:left;
+cursor:pointer;
+}
+#blocoLojasBuscadas {
+display:block;
+overflow:hidden;
+clear:both;
+background-color:#FBFBFB;
+border:1px solid #F1F1F1;
+padding:0px 0px 22px 0px;
+margin-top:-1px;
+}
+.containerCadaLoja {
+background-color:#F8F8F8;
+border:1px dashed #D9D9D9;
+width:252px;
+height:154px;
+padding:10px 20px 10px 28px;
+overflow:hidden;
+float:left;
+margin:20px 0px 0px 24px;
+}
+.containerCadaLoja h5 {
+font-family:Tahoma, Geneva, sans-serif;
+font-size:18px;
+color:#666;
+font-weight:normal;
+}
+.containerCadaLoja p {
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#666;
+padding-top:10px;
+}

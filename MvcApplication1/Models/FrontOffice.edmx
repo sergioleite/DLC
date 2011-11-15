@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlServerCe.3.5" ProviderManifestToken="3.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="CategoriaSet" EntityType="Model.Store.CategoriaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProdutoSet" EntityType="Model.Store.ProdutoSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProdutoCorSet" EntityType="Model.Store.ProdutoCorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CorSet" EntityType="Model.Store.CorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProdutoTamanhoSet" EntityType="Model.Store.ProdutoTamanhoSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CategoriaProduto" Association="Model.Store.CategoriaProduto">
+      <End Role="Categoria" EntitySet="CategoriaSet" />
+      <End Role="Produto" EntitySet="ProdutoSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProdutoProdutoCor" Association="Model.Store.ProdutoProdutoCor">
+      <End Role="Produto" EntitySet="ProdutoSet" />
+      <End Role="ProdutoCor" EntitySet="ProdutoCorSet" />
+    </AssociationSet>
+    <AssociationSet Name="ProdutoCorProdutoTamanho" Association="Model.Store.ProdutoCorProdutoTamanho">
+      <End Role="ProdutoCor" EntitySet="ProdutoCorSet" />
+      <End Role="ProdutoTamanho" EntitySet="ProdutoTamanhoSet" />
+    </AssociationSet>
+    <AssociationSet Name="CorProdutoCor" Association="Model.Store.CorProdutoCor">
+      <End Role="Cor" EntitySet="CorSet" />
+      <End Role="ProdutoCor" EntitySet="ProdutoCorSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CategoriaSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProdutoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" Nullable="false" />
+    <Property Name="CategoriaId" Type="int" Nullable="false" />
+    <Property Name="PrecoVenda" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="ProdutoCorSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProdutoId" Type="int" Nullable="false" />
+    <Property Name="CorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CorSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProdutoTamanhoSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tamanho" Type="smallint" Nullable="false" />
+    <Property Name="EstoqueCorrente" Type="smallint" Nullable="false" />
+    <Property Name="ProdutoCorId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CategoriaProduto">
+    <End Role="Categoria" Type="Model.Store.CategoriaSet" Multiplicity="1" />
+    <End Role="Produto" Type="Model.Store.ProdutoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Produto">
+        <PropertyRef Name="CategoriaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProdutoProdutoCor">
+    <End Role="Produto" Type="Model.Store.ProdutoSet" Multiplicity="1" />
+    <End Role="ProdutoCor" Type="Model.Store.ProdutoCorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Produto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProdutoCor">
+        <PropertyRef Name="ProdutoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ProdutoCorProdutoTamanho">
+    <End Role="ProdutoCor" Type="Model.Store.ProdutoCorSet" Multiplicity="1" />
+    <End Role="ProdutoTamanho" Type="Model.Store.ProdutoTamanhoSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProdutoCor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProdutoTamanho">
+        <PropertyRef Name="ProdutoCorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CorProdutoCor">
+    <End Role="Cor" Type="Model.Store.CorSet" Multiplicity="1" />
+    <End Role="ProdutoCor" Type="Model.Store.ProdutoCorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cor">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProdutoCor">
+        <PropertyRef Name="CorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CategoriaSet" EntityType="Model.Categoria" />
+          <EntitySet Name="ProdutoSet" EntityType="Model.Produto" />
+          <AssociationSet Name="CategoriaProduto" Association="Model.CategoriaProduto">
+            <End Role="Categoria" EntitySet="CategoriaSet" />
+            <End Role="Produto" EntitySet="ProdutoSet" />
+          </AssociationSet>
+          <EntitySet Name="ProdutoCorSet" EntityType="Model.ProdutoCor" />
+          <AssociationSet Name="ProdutoProdutoCor" Association="Model.ProdutoProdutoCor">
+            <End Role="Produto" EntitySet="ProdutoSet" />
+            <End Role="ProdutoCor" EntitySet="ProdutoCorSet" />
+          </AssociationSet>
+          <EntitySet Name="CorSet" EntityType="Model.Cor" />
+          <EntitySet Name="ProdutoTamanhoSet" EntityType="Model.ProdutoTamanho" />
+          <AssociationSet Name="ProdutoCorProdutoTamanho" Association="Model.ProdutoCorProdutoTamanho">
+            <End EntitySet="ProdutoCorSet" Role="ProdutoCor" />
+            <End EntitySet="ProdutoTamanhoSet" Role="ProdutoTamanho" />
+          </AssociationSet>
+          <AssociationSet Name="CorProdutoCor" Association="Model.CorProdutoCor">
+            <End EntitySet="CorSet" Role="Cor" />
+            <End EntitySet="ProdutoCorSet" Role="ProdutoCor" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Categoria">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" Nullable="false" />
+          <NavigationProperty Name="Produto" Relationship="Model.CategoriaProduto" FromRole="Categoria" ToRole="Produto" />
+        </EntityType>
+        <EntityType Name="Produto">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nome" Nullable="false" />
+          <NavigationProperty Name="Categoria" Relationship="Model.CategoriaProduto" FromRole="Produto" ToRole="Categoria" />
+          <Property Type="Int32" Name="CategoriaId" Nullable="false" />
+          <NavigationProperty Name="ProdutoCor" Relationship="Model.ProdutoProdutoCor" FromRole="Produto" ToRole="ProdutoCor" />
+          <Property Type="Decimal" Name="PrecoVenda" Nullable="false" Scale="2" />
+        </EntityType>
+        <Association Name="CategoriaProduto">
+          <End Type="Model.Categoria" Role="Categoria" Multiplicity="1" />
+          <End Type="Model.Produto" Role="Produto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Categoria">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Produto">
+              <PropertyRef Name="CategoriaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ProdutoCor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Produto" Relationship="Model.ProdutoProdutoCor" FromRole="ProdutoCor" ToRole="Produto" />
+          <Property Type="Int32" Name="ProdutoId" Nullable="false" />
+          <NavigationProperty Name="ProdutoTamanho" Relationship="Model.ProdutoCorProdutoTamanho" FromRole="ProdutoCor" ToRole="ProdutoTamanho" />
+          <NavigationProperty Name="Cor" Relationship="Model.CorProdutoCor" FromRole="ProdutoCor" ToRole="Cor" />
+          <Property Name="CorId" Nullable="false" Type="Int32" />
+        </EntityType>
+        <Association Name="ProdutoProdutoCor">
+          <End Type="Model.Produto" Role="Produto" Multiplicity="1" />
+          <End Type="Model.ProdutoCor" Role="ProdutoCor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Produto">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProdutoCor">
+              <PropertyRef Name="ProdutoId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Cor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <Property Name="Nome" Nullable="false" Type="String" />
+          <NavigationProperty Name="ProdutoCor" Relationship="Model.CorProdutoCor" FromRole="Cor" ToRole="ProdutoCor" />
+        </EntityType>
+        <EntityType Name="ProdutoTamanho">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int16" Name="Tamanho" Nullable="false" />
+          <Property Type="Int16" Name="EstoqueCorrente" Nullable="false" />
+          <NavigationProperty Name="ProdutoCor" Relationship="Model.ProdutoCorProdutoTamanho" FromRole="ProdutoTamanho" ToRole="ProdutoCor" />
+          <Property Type="Int32" Name="ProdutoCorId" Nullable="false" />
+        </EntityType>
+        <Association Name="ProdutoCorProdutoTamanho">
+          <End Type="Model.ProdutoCor" Multiplicity="1" Role="ProdutoCor" />
+          <End Type="Model.ProdutoTamanho" Multiplicity="*" Role="ProdutoTamanho" />
+          <ReferentialConstraint>
+            <Principal Role="ProdutoCor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProdutoTamanho">
+              <PropertyRef Name="ProdutoCorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CorProdutoCor">
+          <End Type="Model.Cor" Multiplicity="1" Role="Cor" />
+          <End Type="Model.ProdutoCor" Multiplicity="*" Role="ProdutoCor" />
+          <ReferentialConstraint>
+            <Principal Role="Cor">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProdutoCor">
+              <PropertyRef Name="CorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CategoriaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Categoria)">
+        <MappingFragment StoreEntitySet="CategoriaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdutoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Produto)">
+        <MappingFragment StoreEntitySet="ProdutoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CategoriaId" ColumnName="CategoriaId" />
+          <ScalarProperty Name="PrecoVenda" ColumnName="PrecoVenda" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdutoCorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.ProdutoCor)">
+        <MappingFragment StoreEntitySet="ProdutoCorSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProdutoId" ColumnName="ProdutoId" />
+          <ScalarProperty Name="CorId" ColumnName="CorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.Cor)">
+        <MappingFragment StoreEntitySet="CorSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProdutoTamanhoSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model.ProdutoTamanho)">
+        <MappingFragment StoreEntitySet="ProdutoTamanhoSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tamanho" ColumnName="Tamanho" />
+          <ScalarProperty Name="EstoqueCorrente" ColumnName="EstoqueCorrente" />
+          <ScalarProperty Name="ProdutoCorId" ColumnName="ProdutoCorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="FrontOffice">
+        <EntityTypeShape EntityType="Model.Categoria" Width="1.5" PointX="1.875" PointY="1.125" Height="1.2636116536458335" />
+        <EntityTypeShape EntityType="Model.Produto" Width="1.5" PointX="4.5" PointY="1.25" Height="1.9210009765625" />
+        <AssociationConnector Association="Model.CategoriaProduto">
+          <ConnectorPoint PointX="3.375" PointY="1.9014794921875" />
+          <ConnectorPoint PointX="4.5" PointY="1.9014794921875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.ProdutoCor" Width="1.5" PointX="7.25" PointY="1.25" Height="1.5923063151041665" />
+        <AssociationConnector Association="Model.ProdutoProdutoCor">
+          <ConnectorPoint PointX="6" PointY="2.0461531575520833" />
+          <ConnectorPoint PointX="7.25" PointY="2.0461531575520833" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Model.Cor" PointX="10.125" PointY="1.125" Width="1.5" Height="1.2636116536458335" />
+        <EntityTypeShape EntityType="Model.ProdutoTamanho" Width="1.5" PointX="9.625" PointY="3.25" Height="1.4279589843749996" />
+        <AssociationConnector Association="Model.ProdutoCorProdutoTamanho">
+          <ConnectorPoint PointX="8.75" PointY="2.646708984375" />
+          <ConnectorPoint PointX="9.84375" PointY="2.646708984375" />
+          <ConnectorPoint PointX="9.84375" PointY="3.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="Model.CorProdutoCor">
+          <ConnectorPoint PointX="10.125" PointY="1.9014794921874998" />
+          <ConnectorPoint PointX="8.75" PointY="1.9014794921874998" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

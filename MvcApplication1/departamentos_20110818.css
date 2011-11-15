@@ -1,0 +1,364 @@
+#categoriaDescricao {
+	display:block;
+	border:solid 1px #E6E6E6;
+	margin-top:25px;
+	padding-bottom:8px;
+}
+	#categoriaDescricao p {
+		display:block;
+		padding:13px;
+		color:#999;
+		font-size:12px;
+		padding:5px 13px;
+	}
+	#categoriaDescricao h2, #categoriaDescricao h3 {
+		padding:5px 13px 0px 13px;
+	}
+		#categoriaDescricao p a {
+			color:#EA0000;
+			text-decoration:none;
+		}
+		#categoriaDescricao p a:hover {
+			color:#09F;
+			text-decoration:underline;	
+		}
+
+
+
+		
+#paginacao{
+	background:url(../../images/2011/sprites-title.gif) 0px -73px no-repeat;
+	display:block;
+	overflow:hidden;
+	padding:5px;
+	color:#999;
+}
+		
+	.paginaAtiva, .paginaInativa {
+		float:left;
+		background:#FFF;
+		overflow:hidden;
+		margin:0px 5px 0px 0px;	
+	}
+		.paginaAtiva, .paginaInativa a {
+			display:block;
+			width:23px;
+			text-align:center;
+			padding:4px 0px;
+			font-size:12px;
+			color:#777;
+			border:solid 1px #DDD;
+		}
+			.paginaInativa a:hover {
+				border:solid 2px #EA0000;
+				padding:3px 0px;
+				width:21px;
+				background:#F9F9F9;
+				color:#333;
+			}
+		.paginaAtiva {
+			border:solid 1px #DDD;
+			background:#CCC;
+			color:#FFF;
+		}
+		.paginaAnterior, .proximaPagina {
+			float:right;
+			font-size:12px;
+			padding:4px 4px;
+		}
+		.paginaAnterior a, .proximaPagina a {
+			color:#666;
+		}
+			.paginaAnterior a:hover, .proximaPagina a:hover {
+				color:#EA0000;
+				text-decoration:underline;
+			}
+		.paginaAnterior {
+			padding-right:6px;	
+		}
+		#paginaSeparador {
+			color:#CCC;
+			float:right;
+			font-size:16px;
+			font-weight:normal;
+			padding:0px 2px;
+		}
+		
+		
+#mensagem {
+	border-bottom:solid 1px #EEE;
+	border-left:solid 1px #EEE;
+	border-right:solid 1px #EEE;
+	margin:-25px 0px 35px 0px;
+	font-size:16px;
+	color:#000;
+	padding:20px 15px 15px 15px;
+	display:none;
+}
+#mensagem strong {
+	font-weight:bold;
+}
+
+
+
+
+
+/************************************
+				MIGALHAS
+*************************************/
+
+#migalhas{
+	border:solid 1px #E6E6E6;
+	padding:0px 2px 0px 156px;
+	margin-bottom:8px;
+	background:url(../../images/2011/filtros-selecionados.gif) left center no-repeat;
+	overflow:hidden;
+}
+
+		.cada-filtro {
+			float:left;
+			overflow:hidden;
+			height:30px;
+			margin:2px 6px 2px 7px;	
+		}
+			.cada-filtro-fechar {
+				float:left;
+				overflow:hidden;
+			}
+				.cada-filtro-fechar a {
+					height:30px;
+					width:18px;
+					background:url(../../images/2011/sprites-title.gif) -180px 0px;	
+				}
+				.cada-filtro-fechar a:hover {
+					background:url(../../images/2011/sprites-title.gif) -198px 0px;
+				}
+			.cada-filtro-nome {
+				height:16px;
+				float:left;
+				margin-left:1px;
+				padding:8px 0px 0px 0px;
+				font-size:11px;
+				color:#666;
+			}
+				.cada-filtro-nome a {
+					color:#666;	
+				}
+				.cada-filtro-nome a:hover {
+					color:#EA0000;
+					text-decoration:underline;	
+				}
+
+
+
+
+	
+/************************************
+		MIGALHAS PRODUTO
+*************************************/
+	
+#migalhasProduto{
+	font-size:11px;
+	font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+	color:#666666;
+	display:block;
+	overflow:hidden;
+	height:100%;
+	border:0px solid;
+	margin:1px 0px 15px 0px;
+	}
+	#migalhasProduto a{	
+		color:#666666;		
+	}	
+	#migalhasProduto a:hover{
+		text-decoration: underline;
+	}
+	
+
+#tituloCatalogo, #tituloDepartamento {
+	display: block;
+	overflow:hidden;
+	margin:0px;
+	border-top:0px solid  #DADADA;
+	background:url(../../images/2011/sprites-title.gif) 0px -30px;
+	margin-bottom:15px;
+	height:43px;
+}
+#tituloDepartamento {
+	background:url(../../images/2011/sprites-title.gif) 0px -108px;
+	height:33px;
+}
+	
+	#tituloCatalogo h2, #tituloCatalogo h1, #tituloDepartamento h1, #tituloDepartamento h2 {
+		display: block;
+		overflow:hidden;
+		float:left;
+		border:0px solid;
+		color:#CC0000;
+		font-size:16px;
+		padding:6px 0px 0px 8px
+		}
+	#tituloCatalogo #ordenacao{
+		display: block;
+		overflow:hidden;
+		float: right;
+		padding:7px;
+		}	
+
+
+/************************************
+		BARRA TITULOS
+*************************************/
+
+.barraTitulos{
+	background:url(../../images/2011/bg-titulo.gif) repeat-x;
+	margin-top:10px;
+	padding:6px 0px 3px 6px;
+	border-top:solid 1px #DDD;
+	}
+#mais_historicos{
+	margin:5px 10px 5px 10px;	
+	}
+	#mais_historicos ul{
+		list-style: url(../../images/bullet_pequeno.gif);
+		margin:5px 0px 5px 20px;
+		padding:5px 0px 5px 10px;
+		}	
+		#mais_historicos li{
+			margin:0;
+			padding:0;
+			margin-bottom:5px;	
+			}	
+			
+			
+/************************************
+		RECOMENDAMOS TAMBEM
+*************************************/		
+
+#recomendamosTambem{
+	overflow:hidden;
+	display:block;
+	height:100%;
+}
+
+
+/************************************
+		BOX COMPRE JUNTO
+*************************************/		
+
+#compreJunto{
+	border:solid 1px #DDD;
+	_height:160px;
+	margin:20px 0px;
+	overflow:hidden;
+	display:block;
+	}
+#compreJunto select{
+	border:1px solid #CCCCCC;
+	}
+		
+.compre_junto_titulo{
+	font-size:12px;
+	color:#CC0000;	
+}
+
+.compre_junto_preco{
+	font-size:10px;
+	color: #999999;
+	margin:0px;
+	padding:2px 0px 0px 0px;	
+}
+
+.compre_junto_economize{
+	font-size:11px;
+	color: #999999;
+	margin:0px;
+	padding:2px 0px 0px 0px;	
+}
+
+.compre_junto_preco_junto{
+	font-size:11px;
+	color: #0066CC;
+	margin:0px;
+	padding:2px 0px 0px 0px;
+	}
+	
+.compre_junto_parcelamento{			
+	font-size:11px;
+	color:#666666;
+	padding:2px 5px 0px 0px;	
+	}
+	
+	.compre_junto_parcelamento strong{			
+		font-size:14px;
+		color:#666666;
+		font-weight:bold;
+		padding:2px 5px 0px 0px;	
+	}
+	
+	
+#carrinho-vazio {
+	display:block;text-align:center;padding:30px;font-size:14px;color:#777	
+}
+	#carrinho-vazio a {
+		color:#F00;
+		text-decoration:underline;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+.maisBuscadas-cadaItem {
+	display:block;
+	overflow:hidden;
+	padding:10px 0px 10px 0px;
+}
+	.maisBuscadas-cadaItem img {
+		float:left;	
+	}
+	.maisBuscadas-cadaItem h2 {
+		float:right;
+		width:545px;
+		padding-bottom:5px;
+	}
+		.maisBuscadas-cadaItem h2 a {
+			color:#E80000;
+		}
+	.maisBuscadas-cadaItem h3 {
+		float:right;
+		width:545px;
+		font-weight:normal;
+		color:#666;
+		font-size:14px;
+		line-height:19px;
+	}
+		.maisBuscadas-cadaItem h3 a {
+			color:#0081E6;	
+		}
+		.maisBuscadas-cadaItem h3 a:hover {
+			text-decoration:underline;	
+		}
+		
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		

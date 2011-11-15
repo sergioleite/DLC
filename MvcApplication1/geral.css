@@ -1,0 +1,188 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/************************************
+CONT MEIO
+*************************************/
+#cont_meio{
+/*MARGIN:0px 145px;*/
+VERTICAL-ALIGN:top;
+display:block;
+overflow:hidden;
+/*border:1px solid;*/
+padding-left:12px;
+*padding-left:5px;
+margin-bottom:20px;
+width:690px;
+/*height:100%;*/
+}
+/************************************
+CONT MEIO PRODUTO
+*************************************/
+#cont_produto_meio{
+MARGIN:0px 11px 0px 21px;
+VERTICAL-ALIGN:top;
+display:block;
+margin-bottom:20px;
+height:100%;
+width:828px;
+border:0px solid #006699;
+}
+/************************************
+CONT MEIO CARRINHO
+*************************************/
+#cont_meio_carrinho{
+MARGIN:20px 0px 20px 0px;
+VERTICAL-ALIGN:top;
+height:100%;
+}
+/************************************
+CONT MEIO Payment RETONRO
+*************************************/
+#cont_meio_payment_retorno{
+MARGIN:0px auto 11px auto;
+VERTICAL-ALIGN:top;
+margin-bottom:20px;
+height:100%;
+}
+/************************************
+CONT MEIO INSTITUCIONAIS
+*************************************/
+#cont_meio_institucionais{
+MARGIN:20px auto 11px auto;
+VERTICAL-ALIGN:top;
+width:980px;
+padding-left:12px;
+margin-bottom:20px;
+height:100%;
+}
+/************************************
+CONT MEIO LOGIN
+*************************************/
+#cont_meio_login{
+MARGIN:20px auto 11px auto;
+VERTICAL-ALIGN:top;
+width:980px;
+padding-left:12px;
+margin-bottom:20px;
+height:100%;
+}
+/************************************
+BOX BORDAS COM GLOW
+*************************************/
+.box_borda{
+background-image:url(../images/box_marcas_fundo.jpg);
+background-repeat:repeat-x;
+margin-top:10px;
+overflow:hidden;
+}
+/************************************
+BOX BORDAS COM GLOW 2
+*************************************/
+.box_borda2{
+background-image: url(../images/box_glow2_dir.jpg);
+background-position:right bottom;
+background-repeat:no-repeat;
+display:block;
+overflow:hidden;
+}
+.box_borda2_dentro{
+background-image:url(../images/box_glow2_esq.jpg);
+background-position:left bottom;
+background-repeat:no-repeat;
+display:block;
+overflow:hidden;
+}
+/************************************
+FONTES
+*************************************/
+.cinza_9{
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+font-size:9px;
+color:#666666;
+text-decoration:none;
+}
+.cinza_11{
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+font-size:11px;
+color:#666666;
+text-decoration:none;
+}
+.cinza_12{
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+font-size:12px;
+color:#666666;
+text-decoration:none;
+}
+.cinza_14{
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+font-size:14px;
+color:#666666;
+text-decoration:none;
+}
+.busca_avancada_campo{
+font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
+font-size:10px;
+color: #FFFFFF;
+text-decoration:none;
+}
+/*
+Nuvem de tags
+*/
+#cloudLateral a.tag1 { font-size:9px; line-height:9px }
+#cloudLateral a.tag2 { font-size:10px; line-height:10px }
+#cloudLateral a.tag3 { font-size:11px; line-height:11px }
+#cloudLateral a.tag4 { font-size:12px; line-height:12px}
+#cloudLateral a.tag5 { font-size:13px; line-height:13px}
+#cloudLateral a.tag6 { font-size:14px; line-height:14px}
+#cloudLateral a.tag7 { font-size:15px; line-height:15px}
+#cloudLateral a.tag8 { font-size:16px; line-height:16px}
+#cloudLateral a.tag9 { font-size:18px; line-height:18px}
+#cloudLateral a.tag10 { font-size:20px; line-height:20px}
+#cloudLateral { padding: 0px 4px 0px 4px; text-align: center; }
+#cloudLateral a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color:#0066CC }
+#cloudLateral a:hover { background-color:#CC0000; color:#FFFFFF }
+#cloudLateral { margin: 0; }
+#cloudLateral li { display: inline; }
+#cloud a.tag1 { font-size:10px; line-height:10px }
+#cloud a.tag2 { font-size:11px; line-height:11px }
+#cloud a.tag3 { font-size:12px; line-height:12px }
+#cloud a.tag4 { font-size:16px; line-height:16px}
+#cloud a.tag5 { font-size:18px; line-height:18px}
+#cloud a.tag6 { font-size:21px; line-height:21px}
+#cloud a.tag7 { font-size:25px; line-height:25px}
+#cloud a.tag8 { font-size:27px; line-height:27px}
+#cloud a.tag9 { font-size:31px; line-height:31px}
+#cloud a.tag10 { font-size:32px; line-height:32px}
+#cloud { padding: 0px 4px 0px 4px; text-align: center; }
+#cloud a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color:#0066CC }
+#cloud a:hover { background-color:#CC0000; color:#FFFFFF }
+#cloud { margin: 0; }
+#cloud li { display: inline; }
+/* ALTERAï¿½ï¿½ES PRODUTOS IMAGENS */
+.fotoMiniatura
+{
+border:1px solid #eaeaea;
+cursor:pointer;
+}
+.fotoMiniaturaSelect
+{
+border:1px solid #cc0000;
+cursor:pointer;
+}
+div.zoomdiv {
+z-index : 100;
+position : absolute;
+top:0px;
+left:px;
+width : 420px;
+height : 420px;
+background: #ffffff;
+border:1px solid #CCCCCC;
+display:none;
+text-align: center;
+overflow: hidden;
+}
+img.jqzoom{
+cursor:crosshair;
+position:relative;
+} 
