@@ -82,49 +82,50 @@
 
     Public Function PathTo_ComFiltro(ByRef oFiltro As cmFiltro) As String
         Dim path As New StringBuilder()
-        path.Append("""")
+
+        path.Append("/Vitrine/")
         path.Append(oFiltro.categoria_param)
         path.Append("/")
         path.Append(oFiltro.tamanho_param)
         path.Append("/")
         path.Append(oFiltro.cor_param)
-        path.Append("""")
+
         Return path.ToString()
     End Function
 
     Public Function PathTo_FiltroPorTamanho(ByVal tamanho As String) As String
         Dim path As New StringBuilder()
-        path.Append("""")
+        path.Append("/Vitrine/")
         path.Append(Me.Filtro.categoria_param)
         path.Append("/")
         path.Append(tamanho)
         path.Append("/")
         path.Append(Me.Filtro.cor_param)
-        path.Append("""")
+
         Return path.ToString()
     End Function
 
     Public Function PathTo_FiltroPorCategoria(ByVal categoria As String) As String
         Dim path As New StringBuilder()
-        path.Append("""")
+        path.Append("/Vitrine/")
         path.Append(categoria)
         path.Append("/")
         path.Append(Me.Filtro.tamanho_param)
         path.Append("/")
         path.Append(Me.Filtro.cor_param)
-        path.Append("""")
+
         Return path.ToString()
     End Function
 
     Public Function PathTo_FiltroPorCor(ByVal cor As String) As String
         Dim path As New StringBuilder()
-        path.Append("""")
+        path.Append("/Vitrine/")
         path.Append(Me.Filtro.categoria_param)
         path.Append("/")
         path.Append(Me.Filtro.tamanho_param)
         path.Append("/")
         path.Append(cor)
-        path.Append("""")
+
         Return path.ToString()
     End Function
 
@@ -164,18 +165,23 @@
     Private Function HTML_MigalhaFiltro_Categoria() As StringBuilder
         Dim html As New StringBuilder()
 
-        html.Append("<span class=""""cada-filtro"""">")
+        If Me.Filtro.isFiltradoPorCategoria() Then
+            html.Append("<!-- HTML_MigalhaFiltro_Categoria -->")
+            html.Append("<span class=""cada-filtro"">")
 
-        'Cria link para retirar o filtro
-        html = HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorCategoria(kFiltro_TodasCategorias))
+            'Cria link para retirar o filtro
+            html.Append(HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorCategoria(kFiltro_TodasCategorias)))
 
-        'Cria link para filtrar somente por 1 critério
-        Dim novoFiltro As New cmFiltro(Me.Filtro.categoria_param, kFiltro_TodosTamanhos, kFiltro_TodasCores)
+            'Cria link para filtrar somente por 1 critério
+            Dim novoFiltro As New cmFiltro(Me.Filtro.categoria_param, kFiltro_TodosTamanhos, kFiltro_TodasCores)
 
-        'Concatena os dois links
-        html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.categoria_Label))
+            'Concatena os dois links
+            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.categoria_Label))
 
-        html.Append("</span>")
+            html.Append("</span>")
+            html.Append("<!-- HTML_MigalhaFiltro_Categoria FIM -->")
+        End If
+
 
         Return html
     End Function
@@ -183,18 +189,22 @@
     Private Function HTML_MigalhaFiltro_Tamanho() As StringBuilder
         Dim html As New StringBuilder()
 
-        html.Append("<span class=""""cada-filtro"""">")
+        If Me.Filtro.isFiltradoPorTamanho Then
+            html.Append("<!-- HTML_MigalhaFiltro_Tamanho -->")
+            html.Append("<span class=""cada-filtro"">")
 
-        'Cria link para retirar o filtro
-        html = HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorTamanho(kFiltro_TodosTamanhos))
+            'Cria link para retirar o filtro
+            html.Append(HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorTamanho(kFiltro_TodosTamanhos)))
 
-        'Cria link para filtrar somente por 1 critério
-        Dim novoFiltro As New cmFiltro(kFiltro_TodasCategorias, Me.Filtro.tamanho_param, kFiltro_TodasCores)
+            'Cria link para filtrar somente por 1 critério
+            Dim novoFiltro As New cmFiltro(kFiltro_TodasCategorias, Me.Filtro.tamanho_param, kFiltro_TodasCores)
 
-        'Concatena os dois links
-        html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.categoria_Label))
+            'Concatena os dois links
+            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.tamanho_Label))
 
-        html.Append("</span>")
+            html.Append("</span>")
+            html.Append("<!-- HTML_MigalhaFiltro_Tamanho FIM -->")
+        End If
 
         Return html
     End Function
@@ -202,18 +212,22 @@
     Private Function HTML_MigalhaFiltro_Cor() As StringBuilder
         Dim html As New StringBuilder()
 
-        html.Append("<span class=""""cada-filtro"""">")
+        If Me.Filtro.isFiltradoPorCor Then
+            html.Append("<!-- HTML_MigalhaFiltro_Cor -->")
+            html.Append("<span class=""cada-filtro"">")
 
-        'Cria link para retirar o filtro
-        html = HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorCor(kFiltro_TodasCores))
+            'Cria link para retirar o filtro
+            html.Append(HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorCor(kFiltro_TodasCores)))
 
-        'Cria link para filtrar somente por 1 critério
-        Dim novoFiltro As New cmFiltro(kFiltro_TodasCategorias, kFiltro_TodosTamanhos, Me.Filtro.cor_param)
+            'Cria link para filtrar somente por 1 critério
+            Dim novoFiltro As New cmFiltro(kFiltro_TodasCategorias, kFiltro_TodosTamanhos, Me.Filtro.cor_param)
 
-        'Concatena os dois links
-        html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.categoria_Label))
+            'Concatena os dois links
+            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.cor_Label))
 
-        html.Append("</span>")
+            html.Append("</span>")
+            html.Append("<!-- HTML_MigalhaFiltro_Cor FIM -->")
+        End If
 
         Return html
     End Function
@@ -221,11 +235,14 @@
     '=================================================================================================================
     '=================================================================================================================
 
-    Private Function HTML_MigalhaFiltro_RetirarFiltro(ByVal path As String) As StringBuilder
+    Private Function HTML_MigalhaFiltro_RetirarFiltro(ByVal path As String, title As String) As StringBuilder
         Dim html As New StringBuilder()
-        html.Append("<span class=""""cada-filtro-fechar sprite"""">")
-        html.Append("   <a title=""""Retirar este filtro"""" href=""" & path & """>x</a>")
+        html.Append("<!-- HTML_MigalhaFiltro_RetirarFiltro -->")
+        html.Append("<span class=""cada-filtro-fechar sprite"">")
+        html.Append("   <a title=""Retirar este filtro"" href=""" & path & """>x</a>")
         html.Append("</span>")
+        html.Append("<!-- HTML_MigalhaFiltro_RetirarFiltro FIM-->")
+        Return html
     End Function
 
     '=================================================================================================================
@@ -237,9 +254,11 @@
         path = PathTo_ComFiltro(oFiltro)
 
         Dim html As New StringBuilder()
-        html.Append("<span class=""""cada-filtro-nome"""">")
-        html.Append("   <a title=""""Filtrar apenas por este"""" href=""" & path & """>" & label & "</a>")
+        html.Append("<!-- HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio -->")
+        html.Append("<span class=""cada-filtro-nome"">")
+        html.Append("   <a title=""Filtrar apenas por este"" href=""" & path & """>" & label & "</a>")
         html.Append("</span>")
+        html.Append("<!-- HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio FIM -->")
         Return html.ToString()
     End Function
 
@@ -260,12 +279,22 @@
 
 #If CONFIG = "Simulacao 1" Then
             Me.categoria_Label = "Minha categoria filtro"
-            Me.tamanho_Label = Me.tamanho_param
-            Me.cor_Label = Me.cor_param
+            Me.tamanho_Label = "Número " & Me.tamanho_param
+            Me.cor_Label = "Cor:" & Me.cor_param
 #End If
         End Sub
 
+        Public Function isFiltradoPorCategoria() As Boolean
+            Return Me.categoria_param <> kFiltro_TodasCategorias
+        End Function
 
+        Public Function isFiltradoPorCor() As Boolean
+            Return Me.cor_param <> kFiltro_TodasCores
+        End Function
+
+        Public Function isFiltradoPorTamanho() As Boolean
+            Return Me.tamanho_param <> kFiltro_TodosTamanhos
+        End Function
 
     End Class
 End Class
