@@ -1,6 +1,8 @@
 ﻿Public Class cmVitrineCategoria
     Public Categorias As Collection
     Public TamanhosDisponiveis As Collection
+    Public CoresDisponiveis As Collection
+
     Private Filtro As cmFiltro
 
     Const kFiltro_TodasCategorias As String = "todas-categorias"
@@ -11,6 +13,8 @@
     Public Sub New(ByVal categoria As String, ByVal tamanho As String, ByVal cor As String)
 
         Categorias = New Collection()
+        TamanhosDisponiveis = New Collection
+        CoresDisponiveis = New Collection
 
         'Registra os filtro utilizados na página
         Filtro = New cmFiltro(categoria, tamanho, cor)
@@ -19,7 +23,7 @@
 
 #If CONFIG = "Simulacao 1" Then
         'Simula tamanhos disponíveis para o filtro selecionado
-        TamanhosDisponiveis = New Collection
+
         TamanhosDisponiveis.Add(New cmTamanho("33"))
         TamanhosDisponiveis.Add(New cmTamanho("34"))
         TamanhosDisponiveis.Add(New cmTamanho("35"))
@@ -28,6 +32,24 @@
         TamanhosDisponiveis.Add(New cmTamanho("38"))
         TamanhosDisponiveis.Add(New cmTamanho("39"))
         'TamanhosDisponiveis.Add(New cmTamanho("40"))
+
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Amarelos", "cores-amarelas", "cores_amarelos.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Azuis", "cores-azuis", "cores_azuis.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Beges", "cores-beges", "cores_beges.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Brancos", "cores-brancas", "cores_brancos.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Caques", "cores-caques", "cores_caques.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Cinzas", "cores-cinzas", "cores_cinzas.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Coloridos", "cores-coloridos", "cores_coloridos.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Dourados", "cores-douradas", "cores_dourados.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Laranjas", "cores-laranhas", "cores_laranjas.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Lilás", "cores-lilases", "cores_lilases.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Marrons", "cores-marrons", "cores_marrons.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Pratas", "cores-pratas", "cores_pratas.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Pretos", "cores-pretos", "cores_pretos.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Rosas", "cores-rosas", "cores_rosas.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Verdes", "cores-verdes", "cores_verdes.gif"))
+        Me.CoresDisponiveis.Add(New cmProduto_Cor("Vermelhos", "cores-vermelhos", "cores_vermelhos.gif"))
+
 #End If
 
     End Sub
@@ -73,6 +95,31 @@
             html.Append(">")
             html.Append(t.Sigla)
             html.Append("</a></li>")
+            html.Append(Chr(13))
+        Next
+
+        Return html.ToString()
+
+    End Function
+
+    Public Function HTML_CoresDisponiveis() As String
+        Dim c As cmProduto_Cor
+        Dim html As New StringBuilder()
+
+        For Each c In Me.CoresDisponiveis
+            html.Append("<li>")
+            html.Append(Chr(13))
+            html.Append("<a href=""")
+            html.Append(PathTo_FiltroPorCor(c.Id))
+            html.Append("""")
+            html.Append(" title=""" & c.Nome_Cor & """")
+            html.Append(">")
+            html.Append(Chr(13))
+            html.Append("<img border=""0"" src=""/images/cores/" & c.Nome_Arquivo_Amostra & """ alt=""" & c.Nome_Cor & """/>")
+            html.Append(Chr(13))
+            html.Append("</a>")
+            html.Append(Chr(13))
+            html.Append("</li>")
             html.Append(Chr(13))
         Next
 
@@ -235,7 +282,7 @@
     '=================================================================================================================
     '=================================================================================================================
 
-    Private Function HTML_MigalhaFiltro_RetirarFiltro(ByVal path As String, title As String) As StringBuilder
+    Private Function HTML_MigalhaFiltro_RetirarFiltro(ByVal path As String) As StringBuilder
         Dim html As New StringBuilder()
         html.Append("<!-- HTML_MigalhaFiltro_RetirarFiltro -->")
         html.Append("<span class=""cada-filtro-fechar sprite"">")
@@ -278,7 +325,7 @@
             Me.cor_param = cor
 
 #If CONFIG = "Simulacao 1" Then
-            Me.categoria_Label = "Minha categoria filtro"
+            Me.categoria_Label = Me.categoria_param
             Me.tamanho_Label = "Número " & Me.tamanho_param
             Me.cor_Label = "Cor:" & Me.cor_param
 #End If

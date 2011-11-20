@@ -292,22 +292,12 @@
                         <li>
                             <span class="titulos">Cores</span>
 			                    <ul class="menuTamanhos">
-		        		            		                                    <li><a href="peep-toe/49-16-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_vermelhos.gif" alt="Vermelhos" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-13-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_pretos.gif" alt="Pretos" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-7-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_coloridos.gif" alt="Coloridos" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-2-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_azuis.gif" alt="Azuis" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-6-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_cinzas.gif" alt="Cinzas" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-9-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_laranjas.gif" alt="Laranjas" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-11-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_marrons.gif" alt="Marrons" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-12-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_pratas.gif" alt="Pratas" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-4-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_brancos.gif" alt="Brancos" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-3-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_beges.gif" alt="Beges" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-10-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_lilases.gif" alt="Lilases" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-8-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_dourados.gif" alt="Dourados" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-15-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_verdes.gif" alt="Verdes" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-14-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_rosas.gif" alt="Rosas" border="0"></a></li>
-		            		        		            		                                    <li><a href="peep-toe/49-1-0-0-0-0-0"><img src="http://static.anitaonline.com.br/images/cores/cores_amarelos.gif" alt="Amarelos" border="0"></a></li>
-		            		        	                            </ul>
+                                <%
+                                    
+                                    v = ViewData.Model
+                                    Response.Write(v.HTML_CoresDisponiveis)
+                                %>
+ 		            		    </ul>
                         </li>
                         </ul>
     
