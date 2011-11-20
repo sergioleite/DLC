@@ -87,22 +87,11 @@
             	    <!-- MEIO -->
                     <div id="contMeio">
                         <div id="migalhas" style="display:block">
-                            <span class="cada-filtro">
-                                <span class="cada-filtro-fechar sprite">
-                                    <a title="Retirar este filtro" href="">x</a>
-                                </span>
-                                <span class="cada-filtro-nome">
-                                    <a title="Filtrar apenas por este" href="calcados-femininos">Feminino</a>
-                                </span>
-                            </span>
-                            <span class="cada-filtro">
-    	               	        <span class="cada-filtro-fechar sprite">
-                                    <a title="Retirar este filtro" href="calcados-femininos">x</a>
-                                </span>
-	                            <span class="cada-filtro-nome">
-                                    <a title="Filtrar apenas por este" href="peep-toe">Peep Toe</a>
-                                </span>
-        	                </span>
+                        <%
+                            Dim v As cmVitrineCategoria
+                            v = ViewData.Model
+                            Response.Write(v.HTML_MigalhasDeManipulacaoDeFiltro())
+                         %>
                         </div>
 
                         <div id="tituloCatalogo">
@@ -279,7 +268,6 @@
                                 <ul class="menuTamanhos">
                                 <%
                                     
-                                    Dim v As cmVitrineCategoria
                                     v = ViewData.Model
                                     Response.Write(v.HTML_TamanhosDisponiveis)
                                 %>
