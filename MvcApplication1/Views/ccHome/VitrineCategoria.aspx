@@ -94,142 +94,64 @@
                          %>
                         </div>
 
+                	    <!-- Divisão de Categorias -->
+                    <% 
+                        For Each c As cmCategoria In v.Categorias
+                    %>
                         <div id="tituloCatalogo">
-        					<h1>Peep Toe</h1>
-
-            	    		<!-- ORDENAÇÂO-->
-	                        <div id="ordenacao">
-	                            <select style="width:100px" class="formpadrao" name="ordenar" onchange="document.location.href = 'http://www.anitaonline.com.br/'+this.value">
-	                                <option selected="" value="peep-toe/49-0-0-0-0-0-0-0+40+data">Mais novos</option>
-	                                <option value="peep-toe/49-0-0-0-0-0-0-0+40+valor">Menor preço</option>
-	                                <option value="peep-toe/49-0-0-0-0-0-0-0+40+vendas">Mais vendidos</option>
-	                                <option value="peep-toe/49-0-0-0-0-0-0-0+40+vistos">Mais vistos</option>
-	                             </select>
-		                    </div>
-		                    <!-- //ORDENAÇÂO-->
-	    	
-	                    </div>
-
-                        <div id="mensagem" style="display: none;">
-					        <strong>Tudo isso!</strong> Utilizando alguns filtros ficará mais fácil de encontrar o que procura.<br>Que tal filtrar pelo seu <b>número</b>?
-			            </div>
-
-                        <!-- Faz slide down da mensagem -->
-<%--                        <script type="text/javascript">
-                            $(document).ready(function () {
-                                $("#mensagem").slideDown();
-                            });
-                        </script>--%>
-
-                        <!---------------------------- -->
+                        	<h1>
+							    <a href="<%= v.PathTo_Categorias(c.href)%>" title="<%= c.Title%>"><%=c.Title%></a>
+                            </h1>
+                        </div>
                         <div class="linhaProdutos linhaProdutosSimples">
                             <ul>
-                                <li>
-                                    <h3 class="newlink sprite" style="background-image:url(http://static.anitaonline.com.br/arquivos/peep-toe-carmim-vermelho-site_produtos-619844015_pequena.jpg);">
-    	                                <a href="peep-toe-carmim-vermelho-coral-120052" title="Peep Toe Carmim Vermelho">Peep Toe Carmim Vermelho</a>
-                                    </h3>
-    
-	                                <a href="peep-toe-carmim-vermelho-coral-120052" title="Peep Toe Carmim Vermelho">
-		                                <div class="titulo">Peep Toe Carmim Vermelho</div>
-	                                </a>
-				                    <span class="preco">R$ 379,99</span>
-            		    		        <span class="parcelamento">ou 10X de <b>R$ 37,99</b></span>
-    		                        <span class="semjuros"></span>
-                        
-        
-		                            <span class="vejamaistitle"></span>
-        		                    <div class="vejamais">
-							            + <a href="carmim" class="cinza_9" title="Mais produtos da marca Carmim">Carmim</a>
-                                        <br>+ <a href="peep-toe/49-0-100-0-0-0-0" class="cinza_9" title="Mais da marca Carmim na categoria Peep Toe">Peep Toe nesta marca</a>
-					                </div>
-		                            <!-- Botoes--> 
-                                    <!-- dica -->
-        		                    <!-- Frete Gratis -->
+                            <%
+                                For Each p As cmProduto In c.Produtos%>
+                        	    <li>
+                        		    <h3 class="newlink sprite" style="background-image:url(<%= v.PathToFolder_Images(p.BackgroundImageUrl) %>);">
+                        			    <a href="<%= v.PathTo_Produto(p.href) %>" title="<%= p.Title %>"><%= p.Title%></a>
+    							    </h3>
+    							    <a href="<%= v.PathTo_Produto(p.href) %>" title="<%= p.Title %>">
+									    <div class="titulo"><%= p.Title %></div>
+								    </a>
+                                    <%If p.isEmPromocao() Then%>
+								    <span class="de">De: R$ <del><%= FormatNumber(p.PrecoDe, 2)%></del></span>
+								    <span class="preco">Por: R$ <%= FormatNumber(p.PrecoPor, 2)%></span>
+                                    <%Else%>
+								    <span class="preco">R$ <%= FormatNumber(p.PrecoPor, 2)%></span>
+                                    <%End If%>
+								    <span class="parcelamento">ou <%= p.ParcelasQtde%>X de <b>R$ <%= FormatNumber(p.ParcelaValor, 2)%></b></span>
+								    <span class="semjuros"></span>
+    <%--								<span class="vejamaistitle"></span>
+								    <div class="vejamais">
+									    + <a href="umbro" class="cinza_9" title="Mais produtos da marca Umbro">Umbro</a>
+									    + <a href="futebol" class="cinza_9" title="Mais produtos da categoria Futebol">Futebol</a>
+									    <br>
+									    + <a href="futebol/54-0-14-0-0-0-0" class="cinza_9" title="Mais da marca Umbro na categoria Futebol">Futebol nesta marca</a>
+								    </div>--%>
+								    <!-- Botoes-->
+								    <!-- dica -->
+                                    <%If p.isEmPromocao() Then%>
+								    <div class="iconPromocao">
+           							    <a href="<%= v.PathTo_Produto(p.Href) %>" title="Item em Promoção">Promoção</a>
+        						    </div>
+                                    <%End If%>
+                                    <%If p.isFreteGratis() Then%>
                                     <div class="iconFrete">
-                                        <a href="peep-toe-carmim-vermelho-coral-120052" title="Frete Grátis">Frete Grátis</a>
+                                        <a title="Frete Grátis" href="<%= v.PathTo_Produto(p.href) %>">Frete Grátis</a>
                                     </div>
+                                    <% End If%>
                                 </li>
-
-                                <li>
-                                    <h3 class="newlink sprite" style="background-image:url(http://static.anitaonline.com.br/arquivos/peep-toe-carmim-vermelho-site_produtos-619844015_pequena.jpg);">
-    	                                <a href="peep-toe-carmim-vermelho-coral-120052" title="Peep Toe Carmim Vermelho">Peep Toe Carmim Vermelho</a>
-                                    </h3>
-    
-	                                <a href="peep-toe-carmim-vermelho-coral-120052" title="Peep Toe Carmim Vermelho">
-		                                <div class="titulo">Peep Toe Carmim Vermelho</div>
-	                                </a>
-				                    <span class="preco">R$ 379,99</span>
-            		    		        <span class="parcelamento">ou 10X de <b>R$ 37,99</b></span>
-    		                        <span class="semjuros"></span>
-                        
-        
-		                            <span class="vejamaistitle"></span>
-        		                    <div class="vejamais">
-							            + <a href="carmim" class="cinza_9" title="Mais produtos da marca Carmim">Carmim</a>
-                                        <br>+ <a href="peep-toe/49-0-100-0-0-0-0" class="cinza_9" title="Mais da marca Carmim na categoria Peep Toe">Peep Toe nesta marca</a>
-					                </div>
-		                            <!-- Botoes--> 
-                                    <!-- dica -->
-        		                    <!-- Frete Gratis -->
-                                    <div class="iconFrete">
-                                        <a href="peep-toe-carmim-vermelho-coral-120052" title="Frete Grátis">Frete Grátis</a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <h3 class="newlink sprite" style="background-image:url(http://static.anitaonline.com.br/arquivos/peep-toe-carmim-vermelho-site_produtos-619844015_pequena.jpg);">
-    	                                <a href="peep-toe-carmim-vermelho-coral-120052" title="Peep Toe Carmim Vermelho">Peep Toe Carmim Vermelho</a>
-                                    </h3>
-    
-	                                <a href="peep-toe-carmim-vermelho-coral-120052" title="Peep Toe Carmim Vermelho">
-		                                <div class="titulo">Peep Toe Carmim Vermelho</div>
-	                                </a>
-				                    <span class="preco">R$ 379,99</span>
-            		    		        <span class="parcelamento">ou 10X de <b>R$ 37,99</b></span>
-    		                        <span class="semjuros"></span>
-                        
-        
-		                            <span class="vejamaistitle"></span>
-        		                    <div class="vejamais">
-							            + <a href="carmim" class="cinza_9" title="Mais produtos da marca Carmim">Carmim</a>
-                                        <br>+ <a href="peep-toe/49-0-100-0-0-0-0" class="cinza_9" title="Mais da marca Carmim na categoria Peep Toe">Peep Toe nesta marca</a>
-					                </div>
-		                            <!-- Botoes--> 
-                                    <!-- dica -->
-        		                    <!-- Frete Gratis -->
-                                    <div class="iconFrete">
-                                        <a href="peep-toe-carmim-vermelho-coral-120052" title="Frete Grátis">Frete Grátis</a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <h3 class="newlink sprite" style="background-image:url(http://static.anitaonline.com.br/arquivos/peep-toe-carmim-vermelho-site_produtos-619844015_pequena.jpg);">
-    	                                <a href="peep-toe-carmim-vermelho-coral-120052" title="Peep Toe Carmim Vermelho">Peep Toe Carmim Vermelho</a>
-                                    </h3>
-    
-	                                <a href="peep-toe-carmim-vermelho-coral-120052" title="Peep Toe Carmim Vermelho">
-		                                <div class="titulo">Peep Toe Carmim Vermelho</div>
-	                                </a>
-				                    <span class="preco">R$ 379,99</span>
-            		    		        <span class="parcelamento">ou 10X de <b>R$ 37,99</b></span>
-    		                        <span class="semjuros"></span>
-                        
-        
-		                            <span class="vejamaistitle"></span>
-        		                    <div class="vejamais">
-							            + <a href="carmim" class="cinza_9" title="Mais produtos da marca Carmim">Carmim</a>
-                                        <br>+ <a href="peep-toe/49-0-100-0-0-0-0" class="cinza_9" title="Mais da marca Carmim na categoria Peep Toe">Peep Toe nesta marca</a>
-					                </div>
-		                            <!-- Botoes--> 
-                                    <!-- dica -->
-        		                    <!-- Frete Gratis -->
-                                    <div class="iconFrete">
-                                        <a href="peep-toe-carmim-vermelho-coral-120052" title="Frete Grátis">Frete Grátis</a>
-                                    </div>
-                                </li>
+                                <%
+                                Next
+                                %>
 
                             </ul>
+                            <!--// PRODUTOS DA CATEGORIA -->
                         </div>
+                    <%
+                    Next
+                    %>
 
 
                     </div>
@@ -247,47 +169,37 @@
                     <div id="menuEsquerdo">	
                       <!-- MENU DEPARTAMENTOS -->
                       <!-- FILTROS --> 
-                          <ul class="nivel1">
-        		                    <li>
-    	    		        		                     <h2 class="titulos"><a href="peep-toe">Peep Toe</a></h2>
-
-                                        <ul class="nivel2">
-                           						                    
-                    						                    </ul>
-								                    </li>
-			 				 			                    </ul>
-	 			                    <ul class="nivel2">
-	 			                    <li><a href="calcados-femininos">Voltar para Feminino</a></li>
-	 			                    </ul>
-
-	 			                    <ul class="nivel1">
- 			                     </ul>          <ul class="nivel1">
+                          <!-- Categoria --->
+                        <% For Each c As cmCategoria In v.Categorias%>
+                        <ul class="nivel1">
+       		                <li>
+        		      	        <h2 class="titulos"> <a href="<%= v.PathTo_Categorias(c.href)%>" title="<%= c.Title%>"><%=c.Title%></a></h2>
+                                <ul class="nivel2">
+                                </ul>
+						    </li>
+	                    </ul>
+	                    <ul class="nivel2">
+		                    <li><a href="/">Voltar para Feminino</a></li>
+	 			        </ul>
+                        <% Next%>
+                        <!-- TAMANHO -->
+                        <ul class="nivel1">
+                        </ul>
+                        <ul class="nivel1">
                             <li>
                                 <span class="titulos">Tamanho</span>
     
                                 <ul class="menuTamanhos">
                                 <%
-                                    
                                     v = ViewData.Model
                                     Response.Write(v.HTML_TamanhosDisponiveis)
                                 %>
-<%--                                    <li><a href="peep-toe/49-0-0-33-0-0-0">33</a></li>
-                                    <li><a href="peep-toe/49-0-0-34-0-0-0">34</a></li>
-                                    <li><a href="peep-toe/49-0-0-35-0-0-0">35</a></li>
-                                    <li><a href="peep-toe/49-0-0-36-0-0-0">36</a></li>
-                                    <li><a href="peep-toe/49-0-0-37-0-0-0">37</a></li>
-                                    <li><a href="peep-toe/49-0-0-38-0-0-0">38</a></li>
-                                    <li><a href="peep-toe/49-0-0-39-0-0-0">39</a></li>
-                                    <li><a href="peep-toe/49-0-0-40-0-0-0">40</a></li>
-                                    <li><a href="peep-toe/49-0-0-41-0-0-0">41</a></li>
-                                    <li><a href="peep-toe/49-0-0-42-0-0-0">42</a></li>
-                                    <li><a href="peep-toe/49-0-0-43-0-0-0">43</a></li>--%>
                                 </ul>
                             </li>
                         </ul>
     
     
-                          <!-- MENU CORES -->
+                        <!-- MENU CORES -->
                         <ul class="nivel1">
                         <li>
                             <span class="titulos">Cores</span>
@@ -300,74 +212,8 @@
  		            		    </ul>
                         </li>
                         </ul>
-    
-                        <!-- /MENU CORES -->          <ul class="nivel1">
-                            <li>
-                                <span class="titulos">Faixa de preço</span>
-                                 <ul class="menuPrecos">
-                                                                     <li><a href="peep-toe/49-0-0-0-0-1-0"> até R$ 99,90</a></li>
-                                                                                     <li><a href="peep-toe/49-0-0-0-0-100-0">de R$ 100 até R$ 199,90</a></li>
-                                                                                     <li><a href="peep-toe/49-0-0-0-0-200-0">de R$ 200 até R$ 299,90</a></li>
-                                                                                     <li><a href="peep-toe/49-0-0-0-0-300-0">de R$ 300 até R$ 399,90</a></li>
-                                                                                     <li><a href="peep-toe/49-0-0-0-0-400-0">de R$ 400 até R$ 499,90</a></li>
-                                                             </ul>
-                            </li>
-                        </ul>
-    
-    
-                          <!-- MENU TAGS -->
-                    <!-- /MENU TAGS -->      <!-- MENU MARCAS -->
-	                    <ul class="nivel1">
-                            <li>
-                                <span class="titulos">Marcas</span>
-                                <ul class="nivel2">
-                                                            <li><a href="peep-toe/49-0-441-0-0-0-0" title="Amuleto">Amuleto</a></li>
-                                                                        <li><a href="peep-toe/49-0-106-0-0-0-0" title="Anzetutto">Anzetutto</a></li>
-                                                                        <li><a href="peep-toe/49-0-416-0-0-0-0" title="Azaleia">Azaleia</a></li>
-                                                                        <li><a href="peep-toe/49-0-244-0-0-0-0" title="Beira Rio">Beira Rio</a></li>
-                                                                        <li><a href="peep-toe/49-0-456-0-0-0-0" title="Belmira Mattos">Belmira Mattos</a></li>
-                                                                        <li><a href="peep-toe/49-0-158-0-0-0-0" title="Bottero">Bottero</a></li>
-                                                                        <li><a href="peep-toe/49-0-99-0-0-0-0" title="Capodarte">Capodarte</a></li>
-                                                                        <li><a href="peep-toe/49-0-100-0-0-0-0" title="Carmim">Carmim</a></li>
-                                                                        <li><a href="peep-toe/49-0-248-0-0-0-0" title="Cecconello">Cecconello</a></li>
-                                                                        <li><a href="peep-toe/49-0-139-0-0-0-0" title="Charmant">Charmant</a></li>
-                                                                        <li><a href="peep-toe/49-0-16-0-0-0-0" title="Claudina">Claudina</a></li>
-                                                                        <li><a href="peep-toe/49-0-89-0-0-0-0" title="Dakota">Dakota</a></li>
-                                                                        <li><a href="peep-toe/49-0-327-0-0-0-0" title="De Fiore">De Fiore</a></li>
-                                                                        <li><a href="peep-toe/49-0-366-0-0-0-0" title="Di Mariotti">Di Mariotti</a></li>
-                                                                        <li><a href="peep-toe/49-0-113-0-0-0-0" title="Ferrette">Ferrette</a></li>
-                                                                        <li><a href="peep-toe/49-0-427-0-0-0-0" title="Firezzi">Firezzi</a></li>
-                                                                        <li><a href="peep-toe/49-0-74-0-0-0-0" title="Jorge Bischoff">Jorge Bischoff</a></li>
-                                                                        <li><a href="peep-toe/49-0-208-0-0-0-0" title="Julia Mezzetti">Julia Mezzetti</a></li>
-                                                                        <li><a href="peep-toe/49-0-22-0-0-0-0" title="Laura Porto">Laura Porto</a></li>
-                                                                        <li><a href="peep-toe/49-0-108-0-0-0-0" title="Lorraci">Lorraci</a></li>
-                                                                        <li><a href="peep-toe/49-0-30-0-0-0-0" title="Luz da Lua">Luz da Lua</a></li>
-                                                                        <li><a href="peep-toe/49-0-365-0-0-0-0" title="Mariotti">Mariotti</a></li>
-                                                                        <li><a href="peep-toe/49-0-59-0-0-0-0" title="Marlinês">Marlinês</a></li>
-                                                                        <li><a href="peep-toe/49-0-43-0-0-0-0" title="Masiero">Masiero</a></li>
-                                                                        <li><a href="peep-toe/49-0-69-0-0-0-0" title="Mezzo Punto">Mezzo Punto</a></li>
-                                                                        <li><a href="peep-toe/49-0-234-0-0-0-0" title="Moleca">Moleca</a></li>
-                                                                        <li><a href="peep-toe/49-0-145-0-0-0-0" title="Naturezza">Naturezza</a></li>
-                                                                        <li><a href="peep-toe/49-0-37-0-0-0-0" title="Piccadilly">Piccadilly</a></li>
-                                                                        <li><a href="peep-toe/49-0-28-0-0-0-0" title="Ramarim">Ramarim</a></li>
-                                                                        <li><a href="peep-toe/49-0-131-0-0-0-0" title="Renata Moraes">Renata Moraes</a></li>
-                                                                        <li><a href="peep-toe/49-0-125-0-0-0-0" title="Rendeira">Rendeira</a></li>
-                                                                        <li><a href="peep-toe/49-0-319-0-0-0-0" title="Rima">Rima</a></li>
-                                                                        <li><a href="peep-toe/49-0-320-0-0-0-0" title="Suzy">Suzy</a></li>
-                                                                        <li><a href="peep-toe/49-0-19-0-0-0-0" title="Tabita">Tabita</a></li>
-                                                                        <li><a href="peep-toe/49-0-169-0-0-0-0" title="Tanara">Tanara</a></li>
-                                                                        <li><a href="peep-toe/49-0-24-0-0-0-0" title="Usaflex">Usaflex</a></li>
-                                                                        <li><a href="peep-toe/49-0-227-0-0-0-0" title="Via Marte">Via Marte</a></li>
-                                                                        <li><a href="peep-toe/49-0-18-0-0-0-0" title="Via Uno">Via Uno</a></li>
-                                                                        <li><a href="peep-toe/49-0-70-0-0-0-0" title="Vizzano">Vizzano</a></li>
-                                                                        <li><a href="peep-toe/49-0-68-0-0-0-0" title="Werner">Werner</a></li>
-                                                                        <li><a href="peep-toe/49-0-225-0-0-0-0" title="Why Wait">Why Wait</a></li>
-                                                        </ul>
-                            </li>
-                        </ul>
-    
-                        <!-- /MENU MARCAS -->    </div>
-                    <!--// MENU-->
+
+                    </div> <!--// MENU-->
 
                     <!-- Início do Botão do Atendimento ao Vivo! -->
                       <div id="chatAoVivo"></div>

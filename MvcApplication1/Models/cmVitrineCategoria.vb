@@ -80,7 +80,24 @@
         c.Produtos.Add(p)
         c.Produtos.Add(p)
         c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
+        c.Produtos.Add(p)
         Categorias.Add(c)
+
 
     End Sub
 
@@ -217,7 +234,7 @@
             html.Append("<span class=""cada-filtro"">")
 
             'Cria link para retirar o filtro
-            html.Append(HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorCategoria(kFiltro_TodasCategorias)))
+            'html.Append(HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorCategoria(kFiltro_TodasCategorias)))
 
             'Cria link para filtrar somente por 1 critério
             Dim novoFiltro As New cmFiltro(Me.Filtro.categoria_param, kFiltro_TodosTamanhos, kFiltro_TodasCores)
@@ -309,6 +326,17 @@
         Return html.ToString()
     End Function
 
+    Public Function PathToFolder_Images(ByVal target As String) As String
+        Return "/images/" & target
+    End Function
+
+    Public Function PathTo_Produto(ByVal target As String) As String
+        Return "/Produto/" & target
+    End Function
+
+    Public Function PathTo_Categorias(ByVal target As String) As String
+        Return "/Vitrine/" & target
+    End Function
 
     Class cmFiltro
         Public categoria_param As String
