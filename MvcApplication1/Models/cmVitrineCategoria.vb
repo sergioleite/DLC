@@ -19,9 +19,10 @@
         'Registra os filtro utilizados na página
         Filtro = New cmFiltro(categoria, tamanho, cor)
 
-        CriaCategorias()
-
 #If CONFIG = "Simulacao 1" Then
+        CriaCategoria()
+
+
         'Simula tamanhos disponíveis para o filtro selecionado
 
         TamanhosDisponiveis.Add(New cmTamanho("33"))
@@ -54,7 +55,7 @@
 
     End Sub
 
-    Private Sub CriaCategorias()
+    Private Sub CriaCategoria()
         Dim c As cmCategoria
         Dim p As cmProduto
 
