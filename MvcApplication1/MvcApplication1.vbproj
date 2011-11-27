@@ -120,6 +120,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ccProdutoController.vb" />
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -153,6 +161,9 @@
     <EmbeddedResource Include="Diagramas\VitrineCategoria.sequencediagram.layout">
       <DependentUpon>VitrineCategoria.sequencediagram</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Message1.sequencediagram.layout">
+      <DependentUpon>Message1.sequencediagram</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -161,7 +172,19 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Diagramas\VitrineCategoria.sequencediagram" />
+    <None Include="Message1.sequencediagram" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -178,6 +201,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="departamentos_20110818.css" />
+    <Content Include="Diagramas\DLC1_DDL_DML.sql" />
     <Content Include="geral.css" />
     <Content Include="Global.asax" />
     <Content Include="images\bgs.png" />
