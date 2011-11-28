@@ -112,10 +112,10 @@
 									    <div class="titulo"><%= p.Title %></div>
 								    </a>
                                     <%If p.isEmPromocao() Then%>
-								    <span class="de">De: R$ <del><%= FormatNumber(p.PrecoDe, 2)%></del></span>
-								    <span class="preco">Por: R$ <%= FormatNumber(p.PrecoPor, 2)%></span>
+								        <span class="de">De: R$ <del><%= FormatNumber(p.PrecoNormal, 2)%></del></span>
+								        <span class="preco">Por: R$ <%= FormatNumber(p.PrecoPromocional, 2)%></span>
                                     <%Else%>
-								    <span class="preco">R$ <%= FormatNumber(p.PrecoPor, 2)%></span>
+								        <span class="preco">R$ <%= FormatNumber(p.PrecoNormal, 2)%></span>
                                     <%End If%>
 								    <span class="parcelamento">ou <%= p.ParcelasQtde%>X de <b>R$ <%= FormatNumber(p.ParcelaValor, 2)%></b></span>
 								    <span class="semjuros"></span>

@@ -7,39 +7,47 @@ Public Class cmVitrine                    ' ===>  Modelo da View
     Public Sub New()
 
         'Carrega a coleção de categorias que preencherá a vitrine
-        CriaCategorias()
+        Categorias = cmCategorias.GetCategorias()
 
         'Como só há um produto por categoria, duplica calçados para encher uma linha da vitrine com 4 produtos iguais por categoria. 
         'Apenas para fins de teste de navegação.
-        DuplicaProdutosNasCategorias()
+        CarregaProdutosDeCadaCategoria()
 
     End Sub
 
-    Private Sub CriaCategorias()
+    'Private Sub CriaCategorias()
 
-        Me.Categorias = cmCategorias.GetCategoriasParaVitrine()
+    '    Me.Categorias = cmCategorias.GetCategoriasParaVitrine()
+
+    '    Dim c As cmCategoria
+    '    For Each c In Me.Categorias
+    '        c.GetProdutos_ParaVitrine()
+    '    Next
+
+    'End Sub
+
+    Private Sub CarregaProdutosDeCadaCategoria()
 
         Dim c As cmCategoria
+
         For Each c In Me.Categorias
-            c.GetProdutos_ParaVitrine()
+            c.GetProdutos()
         Next
 
     End Sub
 
-    Private Sub DuplicaProdutosNasCategorias()
-        Dim p As cmProduto
+    'Private Sub DuplicaProdutosNasCategorias()
+    '    Dim p As cmProduto
 
-        Dim c As cmCategoria
+    '    Dim c As cmCategoria
 
-        For Each c In Me.Categorias
-            For i As Integer = 1 To 4 - c.Produtos.Count
-                p = c.Produtos(1)
-                c.Produtos.Add(p)
-            Next
-        Next
-
-
-    End Sub
+    '    For Each c In Me.Categorias
+    '        For i As Integer = 1 To 4 - c.Produtos.Count
+    '            p = c.Produtos(1)
+    '            c.Produtos.Add(p)
+    '        Next
+    '    Next
+    'End Sub
 
     Public Function PathToFolder_Images(ByVal target As String) As String
         Return "../../images/" & target

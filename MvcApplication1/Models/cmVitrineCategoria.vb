@@ -1,5 +1,5 @@
 ﻿Public Class cmVitrineCategoria
-    Public Categorias As Collection
+    Public Categoria As cmCategoria
     Public TamanhosDisponiveis As Collection
     Public CoresDisponiveis As Collection
 
@@ -9,18 +9,26 @@
     Const kFiltro_TodosTamanhos As String = "todos-tamanhos"
     Const kFiltro_TodasCores As String = "todas-cores"
 
+    Private Sub ArmazenaParametrosFiltro(ByVal categoria As String, ByVal tamanho As String, ByVal cor As String)
+        'Registra os filtro utilizados na página
+        Filtro = New cmFiltro(categoria, tamanho, cor)
+    End Sub
 
     Public Sub New(ByVal categoria As String, ByVal tamanho As String, ByVal cor As String)
 
-        Categorias = New Collection()
+        'Inicializa as coleções
+
         TamanhosDisponiveis = New Collection
         CoresDisponiveis = New Collection
 
         'Registra os filtro utilizados na página
-        Filtro = New cmFiltro(categoria, tamanho, cor)
+        ArmazenaParametrosFiltro(categoria, tamanho, cor)
+
+        'Carrega produtos da vitrine
+        CarregaDadosVitrine()
 
 #If CONFIG = "Simulacao 1" Then
-        CriaCategoria()
+        'CriaCategoria()
 
 
         'Simula tamanhos disponíveis para o filtro selecionado
@@ -55,52 +63,61 @@
 
     End Sub
 
-    Private Sub CriaCategoria()
-        Dim c As cmCategoria
-        Dim p As cmProduto
+    Private Sub CarregaDadosVitrine()
+        'Obtem a categoria baseada na URL passada como parametro na pagina
+        Me.Categoria = cmCategorias.GetCategoriaByURLAmigavel(Me.Filtro.categoria_param)
 
-        c = New cmCategoria
-        'c.href = "tenis-de-corrida"
-        c.href = "Scarpins"
-        c.Title = "Scarpins"
-        p = New cmProduto()
-        'p.BackgroundImageUrl = "http://static.anitaonline.com.br/arquivos/chuteira-masculina-umbro-prime-cup-site_produtos-922831559_pequena.jpg"
-        p.BackgroundImageUrl = "../../images/sapato-carmim-zenia-23009-site_produtos-1893985385_pequena.jpg"
-        'p.Href = "http://www.anitaonline.com.br/scarpin-carmim-nude-pastel-118674"
-        p.Href = "Produto1"
-        p.Title = "Scarpin Carmim Nude"
-        p.PrecoDe = 1
-        p.PrecoPor = 1
-        p.ParcelasQtde = 4
-        p.ParcelaValor = 3
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        c.Produtos.Add(p)
-        Categorias.Add(c)
-
+        'Obtem uma coleção de produtos da categoria em questão
+        Me.Categoria.GetProdutos()
 
     End Sub
+
+    'Private Sub CriaCategoria()
+    '    Dim c As cmCategoria
+    '    Dim p As cmProduto
+
+    '    c = New cmCategoria
+    '    'c.href = "tenis-de-corrida"
+    '    c.href = "Scarpins"
+    '    c.Title = "Scarpins"
+    '    p = New cmProduto()
+    '    'p.BackgroundImageUrl = "http://static.anitaonline.com.br/arquivos/chuteira-masculina-umbro-prime-cup-site_produtos-922831559_pequena.jpg"
+    '    p.BackgroundImageUrl = "../../images/sapato-carmim-zenia-23009-site_produtos-1893985385_pequena.jpg"
+    '    'p.Href = "http://www.anitaonline.com.br/scarpin-carmim-nude-pastel-118674"
+    '    p.Href = "Produto1"
+    '    p.Title = "Scarpin Carmim Nude"
+    '    p.PrecoDe = 1
+    '    p.PrecoPor = 1
+    '    p.ParcelasQtde = 4
+    '    p.ParcelaValor = 3
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    c.Produtos.Add(p)
+    '    Categorias.Add(c)
+
+
+    'End Sub
 
 
     Public Function HTML_TamanhosDisponiveis() As String
@@ -340,13 +357,19 @@
     End Function
 
     Class cmFiltro
+        '------------------------------------------------------------------------------------------
+        'ATRIBUTOS DA CLASSE
+
+        'IDs internos
         Public categoria_param As String
         Public tamanho_param As String
         Public cor_param As String
-        'String que é exibida para o usuário poder retirar os filtros
+
+        'Strings que são exibidas para o usuário poder retirar os filtros
         Public categoria_Label As String
         Public tamanho_Label As String
         Public cor_Label As String
+        '------------------------------------------------------------------------------------------
 
         Public Sub New(ByVal categoria As String, ByVal tamanho As String, ByVal cor As String)
             Me.categoria_param = categoria
