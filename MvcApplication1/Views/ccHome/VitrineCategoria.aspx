@@ -96,7 +96,9 @@
 
                 	    <!-- Divisão de Categorias -->
                     <% 
-                        For Each c As cmCategoria In v.Categorias
+                        Dim c As cmCategoria
+                        c = v.Categoria
+                        
                     %>
                         <div id="tituloCatalogo">
                         	<h1>
@@ -115,10 +117,10 @@
 									    <div class="titulo"><%= p.Title %></div>
 								    </a>
                                     <%If p.isEmPromocao() Then%>
-								    <span class="de">De: R$ <del><%= FormatNumber(p.PrecoDe, 2)%></del></span>
-								    <span class="preco">Por: R$ <%= FormatNumber(p.PrecoPor, 2)%></span>
+								    <span class="de">De: R$ <del><%= FormatNumber(p.PrecoNormal, 2)%></del></span>
+								    <span class="preco">Por: R$ <%= FormatNumber(p.PrecoPromocional, 2)%></span>
                                     <%Else%>
-								    <span class="preco">R$ <%= FormatNumber(p.PrecoPor, 2)%></span>
+								    <span class="preco">R$ <%= FormatNumber(p.PrecoPromocional, 2)%></span>
                                     <%End If%>
 								    <span class="parcelamento">ou <%= p.ParcelasQtde%>X de <b>R$ <%= FormatNumber(p.ParcelaValor, 2)%></b></span>
 								    <span class="semjuros"></span>
@@ -149,9 +151,7 @@
                             </ul>
                             <!--// PRODUTOS DA CATEGORIA -->
                         </div>
-                    <%
-                    Next
-                    %>
+
 
 
                     </div>
@@ -170,7 +170,7 @@
                       <!-- MENU DEPARTAMENTOS -->
                       <!-- FILTROS --> 
                           <!-- Categoria --->
-                        <% For Each c As cmCategoria In v.Categorias%>
+                        <% c = v.Categoria%>
                         <ul class="nivel1">
        		                <li>
         		      	        <h2 class="titulos"> <a href="<%= v.PathTo_Categorias(c.href)%>" title="<%= c.Title%>"><%=c.Title%></a></h2>
@@ -181,7 +181,7 @@
 	                    <ul class="nivel2">
 		                    <li><a href="/">Voltar para Feminino</a></li>
 	 			        </ul>
-                        <% Next%>
+                        
                         <!-- TAMANHO -->
                         <ul class="nivel1">
                         </ul>
