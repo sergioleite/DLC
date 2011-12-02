@@ -1,6 +1,6 @@
 ﻿Public Class cmVitrineCategoria
     Public Categoria As cmCategoria
-    Public TamanhosDisponiveis As Collection
+    Public TamanhosDisponiveis As SortedSet(Of String)
     Public CoresDisponiveis As Collection
 
     Private Filtro As cmFiltro
@@ -16,9 +16,9 @@
 
     Public Sub New(ByVal categoria As String, ByVal tamanho As String, ByVal cor As String)
 
-        'Inicializa as coleções
+        'Inicializa as coleções da classe
 
-        TamanhosDisponiveis = New Collection
+        TamanhosDisponiveis = New SortedSet(Of String)
         CoresDisponiveis = New Collection
 
         'Registra os filtro utilizados na página
@@ -67,8 +67,31 @@
         'Obtem a categoria baseada na URL passada como parametro na pagina
         Me.Categoria = cmCategorias.GetCategoriaByURLAmigavel(Me.Filtro.categoria_param)
 
-        'Obtem uma coleção de produtos da categoria em questão
-        Me.Categoria.GetProdutos()
+        If Me.Filtro.categoria_param <> kFiltro_TodasCategorias Then
+            If Me.Filtro.cor_param = kFiltro_TodasCores And Me.Filtro.tamanho_param = kFiltro_TodosTamanhos Then
+                'filtra somente por categoria
+                Me.Categoria.Produtos = cmProdutos.GetProdutos_Categoria(Me.Categoria.Id)
+            ElseIf Me.Filtro.cor_param <> kFiltro_TodasCores And Me.Filtro.tamanho_param <> kFiltro_TodosTamanhos Then
+                'filtra por categoria, cor e tamanho
+                Me.Categoria.Produtos = cmProdutos.GetProdutos_Categoria_Cor_Tamanho(Me.Categoria.Id, Me.Filtro.tamanho_param, Me.Filtro.cor_param)
+            ElseIf Me.Filtro.cor_param <> kFiltro_TodasCores And Me.Filtro.tamanho_param = kFiltro_TodosTamanhos Then
+                'filtra por categoria e cor
+                Me.Categoria.Produtos = cmProdutos.GetProdutos_Categoria_Cor(Me.Categoria.Id, Me.Filtro.cor_param)
+            ElseIf Me.Filtro.cor_param = kFiltro_TodasCores And Me.Filtro.tamanho_param <> kFiltro_TodosTamanhos Then
+                'filtra por categoria e tamanho
+                Me.Categoria.Produtos = cmProdutos.GetProdutos_Categoria_Tamanho(Me.Categoria.Id, Me.Filtro.tamanho_param)
+            End If
+        End If
+
+
+        'Carrega os tamanhos disponíveis para os produtos exibidos
+        For Each p As cmProduto In Me.Categoria.Produtos
+            For Each t As cmTamanho In p.TamanhosDisponiveis
+                If Me.TamanhosDisponiveis.Contains(t.URL_Amigavel) = False Then
+                    Me.TamanhosDisponiveis.Add(t.URL_Amigavel)
+                End If
+            Next
+        Next
 
     End Sub
 
@@ -121,20 +144,24 @@
 
 
     Public Function HTML_TamanhosDisponiveis() As String
-        Dim t As cmTamanho
+        Dim t As String
         Dim html As New StringBuilder()
 
         For Each t In Me.TamanhosDisponiveis
             html.Append("<li><a href=")
-            html.Append(PathTo_FiltroPorTamanho(t.ID))
+            html.Append(PathTo_FiltroPorTamanho(t))
             html.Append(">")
-            html.Append(t.Sigla)
+            html.Append(ExtraiTituloDaNumeracao(t))
             html.Append("</a></li>")
             html.Append(Chr(13))
         Next
 
         Return html.ToString()
 
+    End Function
+
+    Private Function ExtraiTituloDaNumeracao(ByRef url_amigavel_filtro_tamanho As String)
+        Return url_amigavel_filtro_tamanho.Substring(url_amigavel_filtro_tamanho.LastIndexOf("-") + 1, (url_amigavel_filtro_tamanho.Length() - url_amigavel_filtro_tamanho.LastIndexOf("-") - 1))
     End Function
 
     Public Function HTML_CoresDisponiveis() As String
@@ -212,7 +239,7 @@
     End Function
 
     Public Function HTML_EliminarFiltros() As String
-        Dim t As cmTamanho
+        Dim t As String
         Dim html As New StringBuilder()
 
 

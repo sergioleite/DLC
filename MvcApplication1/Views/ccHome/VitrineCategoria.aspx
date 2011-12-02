@@ -120,7 +120,7 @@
 								    <span class="de">De: R$ <del><%= FormatNumber(p.PrecoNormal, 2)%></del></span>
 								    <span class="preco">Por: R$ <%= FormatNumber(p.PrecoPromocional, 2)%></span>
                                     <%Else%>
-								    <span class="preco">R$ <%= FormatNumber(p.PrecoPromocional, 2)%></span>
+								    <span class="preco">R$ <%= FormatNumber(p.PrecoNormal, 2)%></span>
                                     <%End If%>
 								    <span class="parcelamento">ou <%= p.ParcelasQtde%>X de <b>R$ <%= FormatNumber(p.ParcelaValor, 2)%></b></span>
 								    <span class="semjuros"></span>
@@ -602,7 +602,7 @@
             <div id="buscaNovo" style="margin-top:25px;">
                 <form method="GET" onsubmit="return enviaBusca(document.getElementById('buscaRodape').value)">
                     <input id="buscaRodape" class="buscaInputNovo" style="border:none;float:left" type="text">
-                    <input src="../../images/btn-buscar-novo.png" style="float:right;margin-top:3px;margin-right:5px;" type="image">
+                    <input src="/images/btn-buscar-novo.png" style="float:right;margin-top:3px;margin-right:5px;" type="image">
                 </form>
             </div>
             <!--   <ul id="maisBuscadosNovo"><li><span>+Buscados:</span></li><li><a href="#">Sandálias,</a></li><li><a href="#">Nike Shox,</a></li><li><a href="#">Nike Shox,</a></li><li><a href="#">Nike Shox,</a></li></ul>--><!--Busca Rodape-->
@@ -647,7 +647,7 @@
                             <input name="nome" id="nome" value="Nome" class="formRodapeNovo" onfocus="focar('Nome',this);" onblur="desfocar('Nome',this);" style="margin-top:5px;" type="text">
                             <div> 
                                 <input name="email" id="email" value="Email" class="formRodapeNovo" onfocus="focar('Email',this);" onblur="desfocar('Email',this);" style="display:block;margin-top:5px;float:left" type="text"> 
-                                <input src="../../images/BTN-OK.png" style="margin-top:5px;float:left;margin-left:10px" type="image">
+                                <input src="/images/BTN-OK.png" style="margin-top:5px;float:left;margin-left:10px" type="image">
                             </div>
                             <div class="clear">
                             </div>

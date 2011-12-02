@@ -9,32 +9,39 @@ Public Class cmCategoria
 
     Public Sub New()
         Me.Produtos = New Collection()
-
     End Sub
 
     Public Sub New(ByRef dr As SqlDataReader)
+        Me.Produtos = New Collection()
+
         Me.Id = dr.GetInt32(dr.GetOrdinal("CATEGORIA__ID"))
         Me.Title = dr.GetString(dr.GetOrdinal("CATEGORIA__NOME"))
         Me.href = dr.GetString(dr.GetOrdinal("CATEGORIA__WEBVIEW_URL_AMIGAVEL"))
     End Sub
 
+    'Public Function Produtos() As Collection
+    '    If _Produtos.Count = 0 Then
+    '        LoadProdutos()
+    '    End If
+
+    '    Return Me._Produtos
+    'End Function
 
     'Public Function GetProdutos_ParaVitrine() As Collection
     '    Me.Produtos = cmProdutos.getProdutosPorCategoria(Me)
     '    Return Me.Produtos
     'End Function
 
-    Public Function GetProdutos() As Collection
+    Private Sub LoadProdutos()
+
         'retorna os produtos desta categoria - apenas os que tenham estoque?
-
-        Me.Produtos = New Collection
-
         Dim sql As New StringBuilder()
 
         sql.Append("SELECT        PRODUTOS_CORES.PRODUTO_COR__ID ")
         sql.Append(" FROM            PRODUTOS INNER JOIN ")
         sql.Append(" PRODUTOS_CORES ON PRODUTOS.PRODUTO__ID = PRODUTOS_CORES.PRODUTO__ID ")
-        sql.Append(" WHERE        (PRODUTOS.CATEGORIA__ID = @1)")
+        sql.Append(" WHERE        (PRODUTOS.CATEGORIA__ID = @1) AND PRODUTOS_CORES.PRODUTO_COR__LIBERADA_VENDA = 'S'")
+
 
         sql.Replace("@1", Me.Id)
 
@@ -47,19 +54,18 @@ Public Class cmCategoria
 
         Dim p As cmProduto
 
-        If dr.Read() Then
+        While dr.Read()
 
             p = New cmProduto(dr.GetInt32(dr.GetOrdinal("PRODUTO_COR__ID")))
             Me.Produtos.Add(p)
 
-        End If
+        End While
 
 
-        dr.Close()
-        con.Close()
+            dr.Close()
+            con.Close()
 
-        Return Me.Produtos
-    End Function
+    End Sub
 
 
 End Class

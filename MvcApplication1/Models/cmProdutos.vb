@@ -1,39 +1,159 @@
-﻿Public Class cmProdutos
-    'Public Shared Function getProdutosPorCategoria(ByVal aCategoria As cmCategoria) As Collection
-    '    Dim produtos As New Collection()
-    '    Dim p As cmProduto
+﻿Imports System.Data.SqlClient
 
-    '    If aCategoria.Id = 1 Then
-    '        p = New cmProduto()
-    '        p.Codigo = 1001
-    '        'p.BackgroundImageUrl = "http://static.anitaonline.com.br/arquivos/chuteira-masculina-umbro-prime-cup-site_produtos-922831559_pequena.jpg"
-    '        p.BackgroundImageUrl = "sapato-carmim-zenia-23009-site_produtos-1893985385_pequena.jpg"
-    '        p.Title = "Scarpin Carmim Nude"
-    '        p.Href = "../Produto/" & p.NomeProdutoURL() & "/" & p.Codigo
-    '        p.PrecoDe = 1
-    '        p.PrecoPor = 1
-    '        p.ParcelasQtde = 4
-    '        p.ParcelaValor = 3
+Public Class cmProdutos
+    Public Shared Function GetProdutos_Categoria(ByVal CATEGORIA_ID As Int16) As Collection
+        Dim produtos As New Collection
 
-    '        produtos.Add(p)
-    '    End If
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim reader As SqlDataReader
 
-    '    If aCategoria.Id > 1 Then
-    '        p = New cmProduto()
-    '        p.Codigo = 1002
-    '        p.BackgroundImageUrl = "anabela-ferrette-roxa-site_produtos-1621959831_pequena.jpg"
-    '        p.Title = "Anabela Ferrete Roxa"
-    '        p.Href = "../Produto/" & p.NomeProdutoURL() & "/" & p.Codigo
-    '        p.PrecoDe = 10D
-    '        p.PrecoPor = 5D
-    '        p.ParcelasQtde = 4
-    '        p.ParcelaValor = 30D
+        Try
 
-    '        produtos.Add(p)
-    '    End If
+            cmd.CommandText = "dbo.get_produtos_liberadosparavenda_categoriaunica"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@CATEGORIA__ID", CATEGORIA_ID)
+            cmd.Connection = sqlConnection1
 
-    '    Return produtos
+            sqlConnection1.Open()
 
-    'End Function
+            reader = cmd.ExecuteReader()
 
+            Dim p As cmProduto
+            Dim idProduto As Int16
+
+            While reader.Read()
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("PRODUTO_COR__ID"))
+                p = New cmProduto(idProduto)
+                produtos.Add(p)
+            End While
+
+            reader.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
+
+        Return produtos
+
+    End Function
+
+    Public Shared Function GetProdutos_Categoria_Tamanho(ByVal CATEGORIA_ID As Int16, ByVal TAMANHO__WEBVIEW_URL_AMIGAVEL As String) As Collection
+        Dim produtos As New Collection
+
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim reader As SqlDataReader
+
+        Try
+
+            cmd.CommandText = "dbo.get_produtos_liberadosparavenda_categoriaunica_tamanhounico"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@CATEGORIA__ID", CATEGORIA_ID)
+            cmd.Parameters.AddWithValue("@TAMANHO__WEBVIEW_URL_AMIGAVEL", TAMANHO__WEBVIEW_URL_AMIGAVEL)
+            cmd.Connection = sqlConnection1
+
+            sqlConnection1.Open()
+
+            reader = cmd.ExecuteReader()
+
+            Dim p As cmProduto
+            Dim idProduto As Int16
+
+            While reader.Read()
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("PRODUTO_COR__ID"))
+                p = New cmProduto(idProduto)
+                produtos.Add(p)
+            End While
+
+            reader.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
+
+        Return produtos
+
+    End Function
+
+    Public Shared Function GetProdutos_Categoria_Cor(ByVal CATEGORIA_ID As Int16, ByVal COR__WEBVIEW_URL_AMIGAVEL As String) As Collection
+        Dim produtos As New Collection
+
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim reader As SqlDataReader
+
+        Try
+
+            cmd.CommandText = "dbo.get_produtos_liberadosparavenda_categoriaunica_corunica"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@CATEGORIA__ID", CATEGORIA_ID)
+            cmd.Parameters.AddWithValue("@COR__WEBVIEW_URL_AMIGAVEL", COR__WEBVIEW_URL_AMIGAVEL)
+            cmd.Connection = sqlConnection1
+
+            sqlConnection1.Open()
+
+            reader = cmd.ExecuteReader()
+
+            Dim p As cmProduto
+            Dim idProduto As Int16
+
+            While reader.Read()
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("PRODUTO_COR__ID"))
+                p = New cmProduto(idProduto)
+                produtos.Add(p)
+            End While
+
+            reader.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
+
+        Return produtos
+
+    End Function
+
+    Public Shared Function GetProdutos_Categoria_Cor_Tamanho(ByVal CATEGORIA_ID As Int16, ByVal TAMANHO__WEBVIEW_URL_AMIGAVEL As String, ByVal COR__WEBVIEW_URL_AMIGAVEL As String) As Collection
+        Dim produtos As New Collection
+
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim reader As SqlDataReader
+
+        Try
+
+            cmd.CommandText = "dbo.get_produtos_liberadosparavenda_categoriaunica_corunica_tamanho_unico"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@CATEGORIA__ID", CATEGORIA_ID)
+            cmd.Parameters.AddWithValue("@TAMANHO__WEBVIEW_URL_AMIGAVEL", TAMANHO__WEBVIEW_URL_AMIGAVEL)
+            cmd.Parameters.AddWithValue("@COR__WEBVIEW_URL_AMIGAVEL", COR__WEBVIEW_URL_AMIGAVEL)
+            cmd.Connection = sqlConnection1
+
+            sqlConnection1.Open()
+
+            reader = cmd.ExecuteReader()
+
+            Dim p As cmProduto
+            Dim idProduto As Int16
+
+            While reader.Read()
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("PRODUTO_COR__ID"))
+                p = New cmProduto(idProduto)
+                produtos.Add(p)
+            End While
+
+            reader.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
+
+        Return produtos
+
+    End Function
 End Class

@@ -1,4 +1,4 @@
-﻿Imports MvcApplication1.cProduto
+﻿Imports MvcApplication1.cmProduto
 
 Public Class cmVitrine                    ' ===>  Modelo da View
 
@@ -8,10 +8,6 @@ Public Class cmVitrine                    ' ===>  Modelo da View
 
         'Carrega a coleção de categorias que preencherá a vitrine
         Categorias = cmCategorias.GetCategorias()
-
-        'Como só há um produto por categoria, duplica calçados para encher uma linha da vitrine com 4 produtos iguais por categoria. 
-        'Apenas para fins de teste de navegação.
-        CarregaProdutosDeCadaCategoria()
 
     End Sub
 
@@ -26,15 +22,15 @@ Public Class cmVitrine                    ' ===>  Modelo da View
 
     'End Sub
 
-    Private Sub CarregaProdutosDeCadaCategoria()
+    'Private Sub CarregaProdutosDeCadaCategoria()
 
-        Dim c As cmCategoria
+    '    Dim c As cmCategoria
 
-        For Each c In Me.Categorias
-            c.GetProdutos()
-        Next
+    '    For Each c In Me.Categorias
+    '        c.GetProdutos()
+    '    Next
 
-    End Sub
+    'End Sub
 
     'Private Sub DuplicaProdutosNasCategorias()
     '    Dim p As cmProduto

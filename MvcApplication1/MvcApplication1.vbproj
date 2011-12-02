@@ -137,6 +137,7 @@
     <Compile Include="Models\cmProdutos.vb" />
     <Compile Include="Models\cmProduto_Cor.vb" />
     <Compile Include="Models\cmTamanho.vb" />
+    <Compile Include="Models\cmTamanhos.vb" />
     <Compile Include="Models\cmVitrineCategoria.vb" />
     <Compile Include="Models\cmVitrine.vb" />
     <Compile Include="Models\cmVitrineFiltrada.vb" />
@@ -156,6 +157,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Controllers\ccHomeController.vb" />
+    <Compile Include="Settings.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Diagramas\VitrineCategoria.sequencediagram.layout">

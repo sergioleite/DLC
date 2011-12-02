@@ -10,6 +10,8 @@ Public Class cmProduto
     Public ParcelaValor As Double 'DINAMICO
     Public Codigo As Int16 'DB-> produtos_cores.produto_cor__id
 
+    Private _Tamanhos As Collection
+
 
     Public Function isEmPromocao() As Boolean
         Dim bReturn As Boolean
@@ -45,6 +47,7 @@ Public Class cmProduto
 
     Public Sub New(ByRef CodigoProduto As Int16)
 
+        Me._Tamanhos = New Collection
         Me.Codigo = CodigoProduto
 
         Dim sql As String
@@ -83,7 +86,22 @@ Public Class cmProduto
         End If
 
         dr.Close()
+
         con.Close()
 
     End Sub
+
+    Private Sub LoadTamanhosDisponiveis()
+        Me._Tamanhos = cmTamanhos.GetTamanhosDisponiveis_ProdutoCor(Me.Codigo)
+    End Sub
+
+    Public Function TamanhosDisponiveis() As Collection
+
+        If Me._Tamanhos.Count = 0 Then
+            LoadTamanhosDisponiveis()
+        End If
+
+        Return Me._Tamanhos
+
+    End Function
 End Class
