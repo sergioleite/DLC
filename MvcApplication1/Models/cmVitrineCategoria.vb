@@ -285,7 +285,7 @@
             Dim novoFiltro As New cmFiltro(Me.Filtro.categoria_param, kFiltro_TodosTamanhos, kFiltro_TodasCores)
 
             'Concatena os dois links
-            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.categoria_Label))
+            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.GetLabel_Categoria))
 
             html.Append("</span>")
             html.Append("<!-- HTML_MigalhaFiltro_Categoria FIM -->")
@@ -305,11 +305,11 @@
             'Cria link para retirar o filtro
             html.Append(HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorTamanho(kFiltro_TodosTamanhos)))
 
-            'Cria link para filtrar somente por 1 critério
-            Dim novoFiltro As New cmFiltro(kFiltro_TodasCategorias, Me.Filtro.tamanho_param, kFiltro_TodasCores)
+            'Cria link para filtrar somente por 1 critério, mais a Categoria (que é sempre presente neste filtro)
+            Dim novoFiltro As New cmFiltro(Me.Filtro.categoria_param, Me.Filtro.tamanho_param, kFiltro_TodasCores)
 
             'Concatena os dois links
-            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.tamanho_Label))
+            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.GetLabel_Tamanho))
 
             html.Append("</span>")
             html.Append("<!-- HTML_MigalhaFiltro_Tamanho FIM -->")
@@ -328,11 +328,11 @@
             'Cria link para retirar o filtro
             html.Append(HTML_MigalhaFiltro_RetirarFiltro(PathTo_FiltroPorCor(kFiltro_TodasCores)))
 
-            'Cria link para filtrar somente por 1 critério
-            Dim novoFiltro As New cmFiltro(kFiltro_TodasCategorias, kFiltro_TodosTamanhos, Me.Filtro.cor_param)
+            'Cria link para filtrar somente por 1 critério, mais a Categoria (que é sempre presente neste filtro)
+            Dim novoFiltro As New cmFiltro(Me.Filtro.categoria_param, kFiltro_TodosTamanhos, Me.Filtro.cor_param)
 
             'Concatena os dois links
-            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.cor_Label))
+            html.Append(HTML_MigalhaFiltro_FiltarSomentePorEsteCriterio(novoFiltro, novoFiltro.GetLabel_Cor))
 
             html.Append("</span>")
             html.Append("<!-- HTML_MigalhaFiltro_Cor FIM -->")
@@ -392,16 +392,65 @@
         Public tamanho_param As String
         Public cor_param As String
 
+        Public categoria As cmCategoria
+        Public tamanho As cmTamanho
+        Public cor As cmCor
+
         'Strings que são exibidas para o usuário poder retirar os filtros
-        Public categoria_Label As String
-        Public tamanho_Label As String
-        Public cor_Label As String
+        Private categoria_Label As String
+        Private tamanho_Label As String
+        Private cor_Label As String
         '------------------------------------------------------------------------------------------
 
-        Public Sub New(ByVal categoria As String, ByVal tamanho As String, ByVal cor As String)
-            Me.categoria_param = categoria
-            Me.tamanho_param = tamanho
-            Me.cor_param = cor
+        Public Function GetLabel_Categoria() As String
+            If Me.categoria_param = kFiltro_TodasCategorias Then
+                GetLabel_Categoria = "Todas as Categorias"
+            Else
+                If IsNothing(Me.categoria) Then
+                    Me.categoria = cmCategorias.GetCategoriaByURLAmigavel(Me.categoria_param)
+                End If
+                GetLabel_Categoria = Me.categoria.Title
+            End If
+        End Function
+
+        Public Function GetLabel_Tamanho() As String
+            If Me.categoria_param = kFiltro_TodosTamanhos Then
+                GetLabel_Tamanho = "Todas os Tamanhos"
+            Else
+                If IsNothing(Me.tamanho) Then
+                    Me.tamanho = cmTamanhos.GetTamanhoByURLAmigavel(Me.tamanho_param)
+                End If
+                GetLabel_Tamanho = "Tamanho " & Me.tamanho.Sigla
+            End If
+        End Function
+
+        Public Function GetLabel_Cor() As String
+            If Me.categoria_param = kFiltro_TodasCores Then
+                GetLabel_Cor = "Todas as Cores"
+            Else
+                If IsNothing(Me.cor) Then
+                    Me.cor = cmCores.GetCorByURLAmigavel(Me.cor_param)
+                End If
+                GetLabel_Cor = Me.cor.Nome
+            End If
+        End Function
+
+        Public Sub New(ByVal URLAmigavel_Categoria As String, ByVal URLAmigavel_Tamanho As String, ByVal URLAmigavel_Cor As String)
+            Me.categoria_param = URLAmigavel_Categoria
+            Me.tamanho_param = URLAmigavel_Tamanho
+            Me.cor_param = URLAmigavel_Cor
+
+            If URLAmigavel_Categoria <> kFiltro_TodasCategorias Then
+                Me.categoria = cmCategorias.GetCategoriaByURLAmigavel(URLAmigavel_Categoria)
+            End If
+
+            If URLAmigavel_Cor <> kFiltro_TodasCores Then
+                Me.cor = cmCores.GetCorByURLAmigavel(URLAmigavel_Cor)
+            End If
+
+            If URLAmigavel_Tamanho <> kFiltro_TodosTamanhos Then
+                Me.tamanho = cmTamanhos.GetTamanhoByURLAmigavel(URLAmigavel_Tamanho)
+            End If
 
 #If CONFIG = "Simulacao 1" Then
             Me.categoria_Label = Me.categoria_param

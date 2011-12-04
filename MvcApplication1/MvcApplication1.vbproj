@@ -133,6 +133,8 @@
     </Compile>
     <Compile Include="Models\cmCategoria.vb" />
     <Compile Include="Models\cmCategorias.vb" />
+    <Compile Include="Models\cmCor.vb" />
+    <Compile Include="Models\cmCores.vb" />
     <Compile Include="Models\cmProduto.vb" />
     <Compile Include="Models\cmProdutos.vb" />
     <Compile Include="Models\cmProduto_Cor.vb" />

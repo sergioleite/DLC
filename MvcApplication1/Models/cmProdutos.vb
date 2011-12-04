@@ -23,7 +23,7 @@ Public Class cmProdutos
             Dim idProduto As Int16
 
             While reader.Read()
-                idProduto = reader.GetSqlInt32(reader.GetOrdinal("PRODUTO_COR__ID"))
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("ID"))
                 p = New cmProduto(idProduto)
                 produtos.Add(p)
             End While
@@ -62,7 +62,7 @@ Public Class cmProdutos
             Dim idProduto As Int16
 
             While reader.Read()
-                idProduto = reader.GetSqlInt32(reader.GetOrdinal("PRODUTO_COR__ID"))
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("ID"))
                 p = New cmProduto(idProduto)
                 produtos.Add(p)
             End While
@@ -101,7 +101,7 @@ Public Class cmProdutos
             Dim idProduto As Int16
 
             While reader.Read()
-                idProduto = reader.GetSqlInt32(reader.GetOrdinal("PRODUTO_COR__ID"))
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("ID"))
                 p = New cmProduto(idProduto)
                 produtos.Add(p)
             End While
@@ -141,7 +141,7 @@ Public Class cmProdutos
             Dim idProduto As Int16
 
             While reader.Read()
-                idProduto = reader.GetSqlInt32(reader.GetOrdinal("PRODUTO_COR__ID"))
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("ID"))
                 p = New cmProduto(idProduto)
                 produtos.Add(p)
             End While

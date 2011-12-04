@@ -50,46 +50,53 @@ Public Class cmProduto
         Me._Tamanhos = New Collection
         Me.Codigo = CodigoProduto
 
-        Dim sql As String
-        sql = " SELECT        PRODUTOS.PRODUTO__PRECO_NORMAL, PRODUTOS.PRODUTO__PRECO_PROMOCIONAL, PRODUTOS.PRODUTO__PARCELAS_QTDE, " & _
-                " PRODUTOS_CORES.PRODUTO_COR__WEBVIEW_URL_AMIGAVEL, PRODUTOS_CORES.PRODUTO_COR__NOME, PRODUTOS_CORES.PRODUTO_COR__ID, " & _
-        " PRODUTOS_CORES_IMAGENS.PRODUTO_COR_IMAGEM__NOMEARQUIVO " & _
-" FROM            PRODUTOS INNER JOIN" & _
-                         " PRODUTOS_CORES ON PRODUTOS.PRODUTO__ID = PRODUTOS_CORES.PRODUTO__ID INNER JOIN " & _
-                         " PRODUTOS_CORES_IMAGENS ON PRODUTOS_CORES.PRODUTO_COR__ID = PRODUTOS_CORES_IMAGENS.PRODUTO_COR__ID " & _
-" WHERE        (PRODUTOS_CORES.PRODUTO_COR__ID = @1) AND (PRODUTOS_CORES_IMAGENS.PRODUTO_COR_IMAGEM__PERSPECTIVA = 1) AND  " & _
-                         " (PRODUTOS_CORES_IMAGENS.PRODUTO_COR_IMAGEM__TAMANHO = 'P') "
+        load(Me.Codigo)
+    End Sub
 
-        sql = sql.Replace("@1", Me.Codigo)
+    Private Sub load(ByVal modelo_id As Int16)
 
-        Dim con As New SqlConnection(My.Settings.db_connection_string)
-        Dim cmd As New SqlCommand(sql, con)
+        'Carrega os dados de um produto baseado em seu ID
 
-        cmd.Connection.Open()
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim dr As SqlDataReader
 
-        Dim dr As SqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+        Try
 
-        If dr.Read() Then
+            cmd.CommandText = "dbo.get_modelo"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@modelo_id", modelo_id)
+            cmd.Connection = sqlConnection1
 
-            Me.BackgroundImageUrl = dr.GetString(dr.GetOrdinal("PRODUTO_COR_IMAGEM__NOMEARQUIVO"))
-            Me.Href = dr.GetString(dr.GetOrdinal("PRODUTO_COR__WEBVIEW_URL_AMIGAVEL"))
-            Me.Title = dr.GetString(dr.GetOrdinal("PRODUTO_COR__NOME"))
-            Me.PrecoNormal = dr.GetSqlMoney(dr.GetOrdinal("PRODUTO__PRECO_NORMAL"))
-            Me.PrecoPromocional = dr.GetSqlMoney(dr.GetOrdinal("PRODUTO__PRECO_PROMOCIONAL"))
-            Me.ParcelasQtde = dr.GetSqlInt32(dr.GetOrdinal("PRODUTO__PARCELAS_QTDE"))
-            If (PrecoPromocional <> 0) Then
-                ParcelaValor = Me.PrecoPromocional / Me.ParcelasQtde
-            Else
-                ParcelaValor = Me.PrecoNormal / Me.ParcelasQtde
+            sqlConnection1.Open()
+
+            dr = cmd.ExecuteReader()
+
+            If dr.Read() Then
+
+                Me.BackgroundImageUrl = dr.GetString(dr.GetOrdinal("NOMEARQUIVO"))
+                Me.Href = dr.GetString(dr.GetOrdinal("WEBVIEW_URL_AMIGAVEL"))
+                Me.Title = dr.GetString(dr.GetOrdinal("NOME"))
+                Me.PrecoNormal = dr.GetSqlMoney(dr.GetOrdinal("PRECO_NORMAL"))
+                Me.PrecoPromocional = dr.GetSqlMoney(dr.GetOrdinal("PRECO_PROMOCIONAL"))
+                Me.ParcelasQtde = dr.GetSqlInt32(dr.GetOrdinal("PARCELAS_QTDE"))
+                If (PrecoPromocional <> 0) Then
+                    ParcelaValor = Me.PrecoPromocional / Me.ParcelasQtde
+                Else
+                    ParcelaValor = Me.PrecoNormal / Me.ParcelasQtde
+                End If
             End If
 
-        End If
+            dr.Close()
+        Catch ex As Exception
 
-        dr.Close()
-
-        con.Close()
+        Finally
+            sqlConnection1.Close()
+        End Try
 
     End Sub
+
+
 
     Private Sub LoadTamanhosDisponiveis()
         Me._Tamanhos = cmTamanhos.GetTamanhosDisponiveis_ProdutoCor(Me.Codigo)

@@ -29,46 +29,73 @@ Public Class cmCategorias
 
 
     Public Shared Function GetCategoriaByURLAmigavel(ByVal URLAmigavel As String) As cmCategoria
-        Dim con As New SqlConnection(My.Settings.db_connection_string)
-        Dim cmd As New SqlCommand("select * from dbo.CATEGORIAS where CATEGORIA__WEBVIEW_URL_AMIGAVEL = '" & URLAmigavel & "'", con)
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim reader As SqlDataReader
 
-        cmd.Connection.Open()
+        Dim c As New cmCategoria
 
-        Dim dr As SqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+        Try
 
-        Dim c As cmCategoria
+            cmd.CommandText = "dbo.get_categoria_por_urlamigavel"
+            cmd.Parameters.AddWithValue("@URLAmigavel", URLAmigavel)
+            cmd.CommandType = CommandType.StoredProcedure
 
-        If dr.Read() Then
-            c = New cmCategoria(dr)
-        End If
+            cmd.Connection = sqlConnection1
 
-        dr.Close()
-        con.Close()
+            sqlConnection1.Open()
+
+            reader = cmd.ExecuteReader()
+
+            If reader.Read() Then
+                c = New cmCategoria(reader)
+            End If
+
+            reader.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
 
         Return c
 
     End Function
 
+    
     Public Shared Function GetCategorias() As Collection
 
         GetCategorias = New Collection()
 
-        Dim con As New SqlConnection(My.Settings.db_connection_string)
-        Dim cmd As New SqlCommand("select * from dbo.CATEGORIAS order by CATEGORIA__NOME", con)
+        Dim produtos As New Collection
 
-        cmd.Connection.Open()
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim reader As SqlDataReader
 
-        Dim dr As SqlDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection)
+        Try
 
-        Dim c As cmCategoria
+            cmd.CommandText = "dbo.get_categorias"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = sqlConnection1
 
-        If dr.Read() Then
-            c = New cmCategoria(dr)
-            GetCategorias.Add(c)
-        End If
+            sqlConnection1.Open()
 
-        dr.Close()
-        con.Close()
+            reader = cmd.ExecuteReader()
+
+            Dim c As cmCategoria
+
+            While reader.Read()
+                c = New cmCategoria(reader)
+                GetCategorias.Add(c)
+            End While
+
+            reader.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
 
         Return GetCategorias
 

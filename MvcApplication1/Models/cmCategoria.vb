@@ -14,9 +14,9 @@ Public Class cmCategoria
     Public Sub New(ByRef dr As SqlDataReader)
         Me.Produtos = New Collection()
 
-        Me.Id = dr.GetInt32(dr.GetOrdinal("CATEGORIA__ID"))
-        Me.Title = dr.GetString(dr.GetOrdinal("CATEGORIA__NOME"))
-        Me.href = dr.GetString(dr.GetOrdinal("CATEGORIA__WEBVIEW_URL_AMIGAVEL"))
+        Me.Id = dr.GetInt32(dr.GetOrdinal("ID"))
+        Me.Title = dr.GetString(dr.GetOrdinal("NOME"))
+        Me.href = dr.GetString(dr.GetOrdinal("WEBVIEW_URL_AMIGAVEL"))
     End Sub
 
     'Public Function Produtos() As Collection
