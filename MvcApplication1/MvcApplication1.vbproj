@@ -137,7 +137,6 @@
     <Compile Include="Models\cmCores.vb" />
     <Compile Include="Models\cmProduto.vb" />
     <Compile Include="Models\cmProdutos.vb" />
-    <Compile Include="Models\cmProduto_Cor.vb" />
     <Compile Include="Models\cmTamanho.vb" />
     <Compile Include="Models\cmTamanhos.vb" />
     <Compile Include="Models\cmVitrineCategoria.vb" />

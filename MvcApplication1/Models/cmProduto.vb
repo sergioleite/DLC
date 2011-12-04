@@ -11,6 +11,7 @@ Public Class cmProduto
     Public Codigo As Int16 'DB-> produtos_cores.produto_cor__id
 
     Private _Tamanhos As Collection
+    Private _Cores As Collection
 
 
     Public Function isEmPromocao() As Boolean
@@ -49,6 +50,7 @@ Public Class cmProduto
 
         Me._Tamanhos = New Collection
         Me.Codigo = CodigoProduto
+        Me._Cores = New Collection
 
         load(Me.Codigo)
     End Sub
@@ -99,8 +101,20 @@ Public Class cmProduto
 
 
     Private Sub LoadTamanhosDisponiveis()
-        Me._Tamanhos = cmTamanhos.GetTamanhosDisponiveis_ProdutoCor(Me.Codigo)
+        Me._Tamanhos = cmTamanhos.GetTamanhosDisponiveis(Me.Codigo)
     End Sub
+
+    Private Sub LoadCoresDisponiveis()
+        Me._Cores = cmCores.GetCoresDisponiveis(Me.Codigo)
+    End Sub
+
+    Public Function CoresDisponiveis() As Collection
+        If Me._Cores.Count = 0 Then
+            LoadCoresDisponiveis()
+        End If
+
+        Return Me._Cores
+    End Function
 
     Public Function TamanhosDisponiveis() As Collection
 

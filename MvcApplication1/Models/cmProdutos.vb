@@ -126,7 +126,7 @@ Public Class cmProdutos
 
         Try
 
-            cmd.CommandText = "dbo.get_produtos_liberadosparavenda_categoriaunica_corunica_tamanho_unico"
+            cmd.CommandText = "dbo.get_produtos_liberadosparavenda_categoriaunica_tamanhounico_corunica"
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@CATEGORIA__ID", CATEGORIA_ID)
             cmd.Parameters.AddWithValue("@TAMANHO__WEBVIEW_URL_AMIGAVEL", TAMANHO__WEBVIEW_URL_AMIGAVEL)

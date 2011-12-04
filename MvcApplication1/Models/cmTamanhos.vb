@@ -2,7 +2,7 @@
 
 Public Class cmTamanhos
 
-    Public Shared Function GetTamanhosDisponiveis_ProdutoCor(ByVal modelo_id As Int16) As Collection
+    Public Shared Function GetTamanhosDisponiveis(ByVal modelo_id As Int16) As Collection
         Dim tamanhos As New Collection
 
         Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
