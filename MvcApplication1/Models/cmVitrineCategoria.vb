@@ -65,9 +65,9 @@
 
     Private Sub CarregaDadosVitrine()
         'Obtem a categoria baseada na URL passada como parametro na pagina
-        Me.Categoria = cmCategorias.GetCategoriaByURLAmigavel(Me.Filtro.GetLabel_Categoria())
+        Me.Categoria = cmCategorias.GetCategoriaByURLAmigavel(Me.Filtro.GetURLAmigavel_Categoria())
 
-        If Me.Filtro.GetLabel_Categoria() <> kFiltro_TodasCategorias Then
+        If Me.Filtro.GetURLAmigavel_Categoria() <> kFiltro_TodasCategorias Then
             If Me.Filtro.GetURLAmigavel_Cor = kFiltro_TodasCores And Me.Filtro.GetURLAmigavel_Tamanho = kFiltro_TodosTamanhos Then
                 'filtra somente por categoria
                 Me.Categoria.Produtos = cmProdutos.GetProdutos_Categoria(Me.Categoria.Id)

@@ -9,6 +9,13 @@ Public Class cmVitrine                    ' ===>  Modelo da View
         'Carrega a coleção de categorias que preencherá a vitrine
         Categorias = cmCategorias.GetCategorias()
 
+        Dim c As cmCategoria
+
+        'Carrega os produtos de cada categoria
+        For Each c In Me.Categorias
+            c.Produtos = cmProdutos.GetProdutos_Categoria(c.Id)
+        Next
+
     End Sub
 
     'Private Sub CriaCategorias()
