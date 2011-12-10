@@ -16,7 +16,7 @@ Public Class MvcApplication
         routes.MapRoute( _
             "Produto", _
             "Produto/{produto}/{id}", _
-            New With {.controller = "ccProduto", .action = "Produto1", .produto = "xxx", .id = 0} _
+            New With {.controller = "ccProduto", .action = "ProdutoDetalhamento", .url_amigavel_nomeproduto = "", .id_modelo = 0} _
         )
 
         routes.MapRoute( _

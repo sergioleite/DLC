@@ -106,9 +106,9 @@
                                 For Each p As cmProduto In c.Produtos%>
                         	    <li>
                         		    <h3 class="newlink sprite" style="background-image:url(<%= v.PathToFolder_Images(p.BackgroundImageUrl) %>);">
-                        			    <a href="<%= v.PathTo_Produto(p.href) %>" title="<%= p.Title %>"><%= p.Title%></a>
+                        			    <a href="<%= v.PathTo_Produto(p) %>" title="<%= p.Title %>"><%= p.Title%></a>
     							    </h3>
-    							    <a href="<%= v.PathTo_Produto(p.href) %>" title="<%= p.Title %>">
+    							    <a href="<%= v.PathTo_Produto(p) %>" title="<%= p.Title %>">
 									    <div class="titulo"><%= p.Title %></div>
 								    </a>
                                     <%If p.isEmPromocao() Then%>
@@ -130,12 +130,12 @@
 								    <!-- dica -->
                                     <%If p.isEmPromocao() Then%>
 								    <div class="iconPromocao">
-           							    <a href="<%= v.PathTo_Produto(p.Href) %>" title="Item em Promoção">Promoção</a>
+           							    <a href="<%= v.PathTo_Produto(p) %>" title="Item em Promoção">Promoção</a>
         						    </div>
                                     <%End If%>
                                     <%If p.isFreteGratis() Then%>
                                     <div class="iconFrete">
-                                        <a title="Frete Grátis" href="<%= v.PathTo_Produto(p.href) %>">Frete Grátis</a>
+                                        <a title="Frete Grátis" href="<%= v.PathTo_Produto(p) %>">Frete Grátis</a>
                                     </div>
                                     <% End If%>
                                 </li>

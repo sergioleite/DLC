@@ -56,8 +56,12 @@ Public Class cmVitrine                    ' ===>  Modelo da View
         Return "../../images/" & target
     End Function
 
-    Public Function PathTo_Produto(ByVal target As String) As String
-        Return "../Produto/" & target
+    'Public Function PathTo_Produto(ByVal target As String) As String
+    '    Return "../Produto/" & target
+    'End Function
+
+    Public Function PathTo_Produto(ByRef p As cmProduto) As String
+        Return "../Produto/" & p.Href & "/" & p.Codigo
     End Function
 
     Public Function PathTo_Categorias(ByVal target As String) As String

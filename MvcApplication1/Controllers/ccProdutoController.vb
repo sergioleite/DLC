@@ -13,11 +13,15 @@ Namespace MvcApplication1
         '
         ' GET: /Produto
 
-        Function Produto1() As ActionResult
+        Function ProdutoDetalhamento(ByVal url_amigavel_nomeproduto As String, ByVal id_modelo As Int16) As ActionResult
             'ByVal produto As String, Optional ByVal id As Long = 0
             'Optional ByVal prodId As Long = 0
 
-            ViewData.Model = New cmVitrine()
+            Dim dm As New cmProdutoDetalhamento(id_modelo)
+
+            'ViewData.Model = New cmVitrine()
+
+            ViewData.Model = dm
 
             Return View()
         End Function

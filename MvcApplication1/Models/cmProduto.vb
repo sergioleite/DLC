@@ -12,6 +12,8 @@ Public Class cmProduto
 
     Private _Tamanhos As Collection
     Private _Cores As Collection
+    Private _Imagens As Collection
+
 
 
     Public Function isEmPromocao() As Boolean
@@ -40,12 +42,7 @@ Public Class cmProduto
         Return Title.Replace(" ", "-")
     End Function
 
-    'Public Sub New(ByRef dr As SqlDataReader)
-    '    Me.Codigo = dr.GetInt32(dr.GetOrdinal("PRODUTO__ID"))
-    '    Me.Title = dr.GetString(dr.GetOrdinal("CATEGORIA__NOME"))
-    '    Me.Href = dr.GetString(dr.GetOrdinal("CATEGORIA_WEBVIEW_URL_AMIGAVEL"))
-    'End Sub
-
+ 
     Public Sub New(ByRef CodigoProduto As Int16)
 
         Me._Tamanhos = New Collection
@@ -100,6 +97,7 @@ Public Class cmProduto
 
 
 
+
     Private Sub LoadTamanhosDisponiveis()
         Me._Tamanhos = cmTamanhos.GetTamanhosDisponiveis(Me.Codigo)
     End Sub
@@ -123,6 +121,54 @@ Public Class cmProduto
         End If
 
         Return Me._Tamanhos
+
+    End Function
+
+
+    Private Function Imagens() As Collection
+
+        If Not IsNothing(Me._Imagens) Then
+            Return Me._Imagens
+        End If
+
+        Me._Imagens = New Collection
+        Dim img As cmImagemModelo
+
+        'Carrega os dados de um produto baseado em seu ID
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim dr As SqlDataReader
+
+        Try
+
+            cmd.CommandText = "dbo.get_imagens_modelo"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@modelo_id", Me.Codigo)
+            cmd.Connection = sqlConnection1
+
+            sqlConnection1.Open()
+
+            dr = cmd.ExecuteReader()
+
+            If dr.Read() Then
+
+                img.Perspectiva = dr.GetString(dr.GetOrdinal("PERSPECTIVA"))
+                img.NomeArquivo = dr.GetString(dr.GetOrdinal("NOMEARQUIVO"))
+                img.Tamanho = dr.GetSqlInt32(dr.GetOrdinal("TAMANHO"))
+
+                Me._Imagens.Add(img)
+
+            End If
+
+            dr.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+
+        End Try
+
+        Return Me._Imagens
 
     End Function
 End Class

@@ -1,5 +1,9 @@
 ﻿<%@ Import Namespace="MvcApplication1" %>
-<%@ Import Namespace="Vitrine" %>
+<%@ Import Namespace="cmProdutoDetalhamento" %>
+<%
+    Dim v As cmProdutoDetalhamento
+    v = ViewData.Model
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -534,7 +538,7 @@
                         <h2 class="titulos">Navegue por aqui</h2>
                         <ul class="nivel2">
                             <li><h3><a href="novidades" title="Novidades">Novidades</a></h3></li>
-                            <li><h3><a href="promocoes" title="Promoções">Promoções</a></h3></li>
+                            <li><h3><a href="promocoes" title="Promoções">Promoções</a></h3></li> <!-- TODO SLS -->
                         </ul>
                     </li>
                 </ul>
@@ -544,16 +548,11 @@
                 <ul class="nivel1">
                     <li>
                         <h2 class="titulos"><a href="calcados-femininos">Feminino</a></h2>
-                        <ul class="nivel2">
-                        <%
-                            Dim v As cmVitrine
-                            v = ViewData.Model
-
-                            For Each c As cmCategoria In v.Categorias
-                        %>
-                    	    <li><a href=<%= c.href %>><%= c.Title%></a></li> 
+                            <ul class="nivel2">
+                        <%  For Each c1 In v.Categorias%>
+                    	        <li><a href=<%=v.PathTo_Categorias(c1.href) %>> <%=c1.Title%></a></li> 
                         <%Next%>
-                        </ul>
+                            </ul>
                     </li>
                 </ul>
     
@@ -577,8 +576,10 @@
 
             <div id="contProdutoMeio">
                 
+                <!-- TODO SLS -->
+                <!--
                 <div id="migalhasProduto">
-                    <a href="http://www.anitaonline.com.br/index.php">Página Inicial </a>
+                    <a href="http://www.deboraleite.com.br/index.php">Página Inicial </a>
                     &nbsp; &gt;
                     <a href="calcados-femininos">Feminino</a>
                     &nbsp; &gt;
@@ -586,7 +587,8 @@
                     &nbsp; &gt;
                     <a href="ferrette">Marca: Ferrette</a>
                 </div>
-                
+                -->
+
                 <div id="containerAll" style="clear:both;overflow:hidden;display:block">
                     <div id="Temp" style="float:left; display:block; overflow:hidden; width:410px;height:480px; ">
                         <div class="viewProdutoFoto2">

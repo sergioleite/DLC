@@ -135,13 +135,14 @@
     <Compile Include="Models\cmCategorias.vb" />
     <Compile Include="Models\cmCor.vb" />
     <Compile Include="Models\cmCores.vb" />
+    <Compile Include="Models\cmImagemModelo.vb" />
     <Compile Include="Models\cmProduto.vb" />
+    <Compile Include="Models\cmProdutoDetalhamento.vb" />
     <Compile Include="Models\cmProdutos.vb" />
     <Compile Include="Models\cmTamanho.vb" />
     <Compile Include="Models\cmTamanhos.vb" />
     <Compile Include="Models\cmVitrineCategoria.vb" />
     <Compile Include="Models\cmVitrine.vb" />
-    <Compile Include="Models\cmVitrineFiltrada.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -239,10 +240,8 @@
     <Content Include="theme.css" />
     <Content Include="thickbox.css" />
     <Content Include="Views\ccHome\VitrineCategoria.aspx" />
-    <Content Include="Views\ccHome\VitrineFiltrada.aspx" />
-    <Content Include="Views\ccProduto\Produto1.aspx" />
+    <Content Include="Views\ccProduto\ProdutoDetalhamento.aspx" />
     <Content Include="Views\ccHome\Vitrine.aspx" />
-    <Content Include="Views\ccProduto\ProdutoTeste.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -263,8 +262,6 @@
     <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
-    <Content Include="Views\ccHome\About.aspx" />
-    <Content Include="Views\ccHome\Index.aspx" />
     <Content Include="Views\Shared\Error.aspx" />
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
