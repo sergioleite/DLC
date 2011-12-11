@@ -156,4 +156,42 @@ Public Class cmProdutos
         Return produtos
 
     End Function
+
+    Public Shared Function Get_OutrosModelos_MesmoProduto(ByRef Produto As cmProduto) As Collection
+        Dim produtos As New Collection
+
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim reader As SqlDataReader
+
+        Try
+
+            cmd.CommandText = "dbo.get_outro_modelos_mesmo_produto"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@modelo_id", Produto.Codigo)
+            cmd.Connection = sqlConnection1
+
+            sqlConnection1.Open()
+
+            reader = cmd.ExecuteReader()
+
+            Dim p As cmProduto
+            Dim idProduto As Int16
+
+            While reader.Read()
+                idProduto = reader.GetSqlInt32(reader.GetOrdinal("ID"))
+                p = New cmProduto(idProduto)
+                produtos.Add(p)
+            End While
+
+            reader.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
+
+        Return produtos
+
+    End Function
 End Class

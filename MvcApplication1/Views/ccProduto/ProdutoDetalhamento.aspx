@@ -698,15 +698,17 @@
                                     Mais opções deste modelo
                                 </div>
                                 <div class="viewProdutoOpcoesFotos"> <!-- subst -->
-                                    <a title="PELE" class="cada-opcao-cor" href="scarpin-ferrette-marrom-pele-119361">
-                                        <img width="60" height="60" alt="PELE" style="margin-top:3px;" src="http://static.anitaonline.com.br/arquivos/scarpin-feminino-ferrette-marrom-site_produtos-931227492_pequena.jpg">
+                                <%
+                                    Dim outrosModelos As Collection
+                                    outrosModelos = cmProdutos.Get_OutrosModelos_MesmoProduto(v.Produto)
+                                    Dim modelo As cmProduto
+                                    
+                                    For Each modelo In outrosModelos
+                                %>
+                                    <a title="<%=modelo.Title %>" class="cada-opcao-cor" href="<%=v.PathTo_Produto(modelo) %>">
+                                        <img width="60" height="60" alt="<%=modelo.Title %>" style="margin-top:3px;" src="<%="/images/" & modelo.BackgroundImageUrl %>">
                                     </a>                                
-                                    <a title="AMOR" class="cada-opcao-cor" href="scarpin-ferrette-vermelho-amor-119361">
-                                        <img width="60" height="60" alt="AMOR" style="margin-top:3px;" src="http://static.anitaonline.com.br/arquivos/scarpin-ferrette-vermelho-site_produtos-2107744158_pequena.jpg">
-                                    </a>
-                                    <a title="PRETO" class="cada-opcao-cor" href="scarpin-ferrette-preto-preto-119361">
-                                        <img width="60" height="60" alt="PRETO" style="margin-top:3px;" src="http://static.anitaonline.com.br/arquivos/scarpin-feminino-ferrette-preto-site_produtos-210488140_pequena.jpg">
-                                    </a>                              
+                                <%  Next%>
                                 </div>
                             </div>
 
@@ -716,34 +718,18 @@
                                     <img id="txtTamanhos" alt="TAMANHOS DISPONÍVEIS" src="http://static.anitaonline.com.br/images/txt_tamanhos_disponiveis.gif">
                                     <input id="focus" type="text" style="display:none" name="focus">
                                     <input id="tamanho" type="text" style="display:none" name="tamanho">
-                                    <div id="num_34" class="numeracao">
+                                    <%
+                                        Dim tamanho As cmTamanho
+                                        For Each tamanho In v.Produto.TamanhosDisponiveis
+                                    %>
+                                    <div id="num_<%=tamanho.ID%>" class="numeracao">
                                         <div  class="naoSelecionado">
-                                           <a href="javascript:void(0);" onclick="ToggleClass(this,34);">
-                                            34 
+                                           <a href="javascript:void(0);" onclick="ToggleClass(this,<%=tamanho.ID%>);">
+                                            <%= tamanho.ID%> 
                                             </a>
                                         </div>
                                     </div>
-                                    <div id="num_35" class="numeracao">
-                                        <div class="naoSelecionado">
-                                            <a href="javascript:void(0);" onclick="ToggleClass(this,35);">
-                                            35
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div id="Div1" class="numeracao">
-                                        <div class="naoSelecionado">
-                                            <a href="javascript:void(0);" onclick="ToggleClass(this,36);">
-                                            36
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div id="Div2" class="numeracao">
-                                        <div class="naoSelecionado">
-                                            <a href="javascript:void(0);" onclick="ToggleClass(this,37);">
-                                            37
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <%Next%>
                                 </div>
                             </div>
                             

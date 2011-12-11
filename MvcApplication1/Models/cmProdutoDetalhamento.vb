@@ -1,11 +1,13 @@
 ﻿Public Class cmProdutoDetalhamento
     Public Produto As cmProduto
     Public Categorias As Collection
+    Public OutrosModelos_MesmoProduto As Collection
 
     Public Sub New(ByVal id_modelo As Int16)
         Me.Produto = New cmProduto(id_modelo)
         'Carrega a coleção de categorias que preencherá a vitrine
         Categorias = cmCategorias.GetCategorias()
+        Me.OutrosModelos_MesmoProduto = cmProdutos.Get_OutrosModelos_MesmoProduto(Me.Produto)
 
     End Sub
 
@@ -33,4 +35,11 @@
         Return sReturn
 
     End Function
+
+    Public Shared Function PathTo_Produto(ByRef p As cmProduto) As String
+        Return "/Produto/" & p.Href & "/" & p.Codigo
+    End Function
+
+
+
 End Class
