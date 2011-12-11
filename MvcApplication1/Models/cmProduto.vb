@@ -125,7 +125,7 @@ Public Class cmProduto
     End Function
 
 
-    Private Function Imagens() As Collection
+    Public Function Imagens() As Collection
 
         If Not IsNothing(Me._Imagens) Then
             Return Me._Imagens
@@ -150,15 +150,17 @@ Public Class cmProduto
 
             dr = cmd.ExecuteReader()
 
-            If dr.Read() Then
+            While dr.Read()
 
-                img.Perspectiva = dr.GetString(dr.GetOrdinal("PERSPECTIVA"))
-                img.NomeArquivo = dr.GetString(dr.GetOrdinal("NOMEARQUIVO"))
-                img.Tamanho = dr.GetSqlInt32(dr.GetOrdinal("TAMANHO"))
+                img = New cmImagemModelo( _
+                        dr.GetSqlInt32(dr.GetOrdinal("PERSPECTIVA")), _
+                        dr.GetString(dr.GetOrdinal("NOMEARQUIVO")), _
+                        dr.GetString(dr.GetOrdinal("TAMANHO")) _
+                )
 
-                Me._Imagens.Add(img)
+                Me._Imagens.Add(img, img.Perspectiva.ToString() & img.Tamanho)
 
-            End If
+            End While
 
             dr.Close()
         Catch ex As Exception
@@ -170,5 +172,9 @@ Public Class cmProduto
 
         Return Me._Imagens
 
+    End Function
+
+    Public Function GetImagem(ByVal Perspectiva As Int16, ByVal TamanhoImagem As String) As cmImagemModelo
+        Return Imagens(Perspectiva.ToString() & TamanhoImagem)
     End Function
 End Class

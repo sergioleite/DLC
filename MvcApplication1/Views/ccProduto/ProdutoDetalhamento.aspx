@@ -1,8 +1,10 @@
 ﻿<%@ Import Namespace="MvcApplication1" %>
 <%@ Import Namespace="cmProdutoDetalhamento" %>
+<%=""%>
 <%
     Dim v As cmProdutoDetalhamento
     v = ViewData.Model
+    Dim categoria As cmCategoria
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
@@ -549,8 +551,8 @@
                     <li>
                         <h2 class="titulos"><a href="calcados-femininos">Feminino</a></h2>
                             <ul class="nivel2">
-                        <%  For Each c1 In v.Categorias%>
-                    	        <li><a href=<%=v.PathTo_Categorias(c1.href) %>> <%=c1.Title%></a></li> 
+                        <%  For Each categoria In v.Categorias%>
+                    	        <li><a href=<%=v.PathTo_Categorias(categoria.href) %>> <%= categoria.Title%></a></li> 
                         <%Next%>
                             </ul>
                     </li>
@@ -601,13 +603,18 @@
                                     </span>
                                 </div>
                                 <span class="tozoom">
-                                            <a href="../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714.jpg" class="jqzoom" rel='gal1'> 
-                                                <img src="../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714_media.jpg"  title="triumph"  style="border: 0px solid #666;" height="410px"; width="410px">
+                                            <!--<a href="../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714.jpg" class="jqzoom" rel='gal1'> -->
+                                            <a href="<%=v.GetNomeArquivoImagem(1,"G") %>" class="jqzoom" rel='gal1'> 
+                                                <img src="<%=v.GetNomeArquivoImagem(1,"M") %>"  title="triumph"  style="border: 0px solid #666;" height="410px"; width="410px">
                                             </a>
                                 </span>
                             </div>
                             <table>
                                 <tr>
+                                <%  
+                                    Dim img As cmImagemModelo
+                                    For Each img In v.Produto.Imagens
+                                 %>
                                 <td class="fotoMiniaturaSelect">
                                     <a alt="Foto" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714_media.jpg',largeimage: '../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714.jpg'}">
                                         <img src='../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714_pequena.jpg'  width="50px" height="50px"/>
@@ -640,21 +647,37 @@
                         </div>
                     </div>
                     <div id="Ola"style="float: right; display:block; overflow:hidden; height:100%; width:390px;">
-                        <h1 class="viewProdutoTitulo"> Scarpin Ferrette Branco</h1>
+                        <h1 class="viewProdutoTitulo"><%=v.Produto.Title%>  </h1>
                         <div class="viewProdutoInfo">
+                            <!-- preco promocional -->
                             <div class="containerPrecos">
+                                <%If v.Produto.PrecoPromocional <> 0.0 Then%>
+                                <div class="viewProdutoDe">
+                                    de: R$ <%= v.Produto.PrecoNormal%> &nbsp
+                                </div>  
+                                <%End If%>
+
+
+                                <!-- Preco normal -->
                                 <div class="viewProdutoPor">
-                                    por: <!-- subst: será que sempre terá "por"? Denota promoção!?-->
-                                    <span class="preco">R$ 139,99</span> <!-- subst-->
+                                    por: 
+                                    <%If v.Produto.PrecoPromocional <> 0.0 Then%>
+                                        <span class="preco">R$ <%= v.Produto.PrecoPromocional%> </span> <!-- subst-->
+                                    <%Else%>
+                                        <span class="preco">R$ <%= v.Produto.PrecoNormal%> </span> <!-- subst-->
+                                    <%End If%>
+                                </div>  
+                                            
+                                <!-- Qtde parcelas -->          
+                                <div class="viewProdutoParcelas">
+                                    &nbsp
+                                    Em <%=v.Produto.ParcelasQtde%>x de <!-- subst-->
+                                    <strong>R$ <%= FormatNumber(v.Produto.ParcelaValor, 2)%> </strong> <!-- subst-->
+                                    sem juros no cartão
                                 </div>
                             </div>
-
-                            <div class="viewProdutoParcelas">
-                                Em 7x de <!-- subst-->
-                                <strong>R$ 19,99</strong> <!-- subst-->
-                                sem juros no cartão
-                            </div>
-
+                            
+                            <!-- Passo Um -->
                             <div class="produtoPassoUm">
                                 <div class="viewProdutoOpcoes">
                                     Mais opções deste modelo
@@ -672,6 +695,7 @@
                                 </div>
                             </div>
 
+                            <!-- Passo Dois -->
                             <div class="produtoPassoDois">
                                 <div class="viewProdutoOpcoes">
                                     <img id="txtTamanhos" alt="TAMANHOS DISPONÍVEIS" src="http://static.anitaonline.com.br/images/txt_tamanhos_disponiveis.gif">
