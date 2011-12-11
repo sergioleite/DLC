@@ -13,6 +13,7 @@ Public Class cmProduto
     Private _Tamanhos As Collection
     Private _Cores As Collection
     Private _Imagens As Collection
+    Private _Perspectivas_De_Imagens As Collection
 
 
 
@@ -176,5 +177,48 @@ Public Class cmProduto
 
     Public Function GetImagem(ByVal Perspectiva As Int16, ByVal TamanhoImagem As String) As cmImagemModelo
         Return Imagens(Perspectiva.ToString() & TamanhoImagem)
+    End Function
+
+    Public Function Perspectivas() As Collection
+
+        If Not IsNothing(Me._Perspectivas_De_Imagens) Then
+            Return Me._Perspectivas_De_Imagens
+        End If
+
+        Me._Perspectivas_De_Imagens = New Collection
+        Dim perspectiva As String
+
+        'Carrega os dados de um produto baseado em seu ID
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+        Dim dr As SqlDataReader
+
+        Try
+
+            cmd.CommandText = "dbo.get_perspectivas_imagens_modelo"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@modelo_id", Me.Codigo)
+            cmd.Connection = sqlConnection1
+
+            sqlConnection1.Open()
+
+            dr = cmd.ExecuteReader()
+
+            While dr.Read()
+                perspectiva = dr.GetSqlInt32(dr.GetOrdinal("PERSPECTIVA"))
+
+                Me._Perspectivas_De_Imagens.Add(perspectiva)
+            End While
+
+            dr.Close()
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+
+        End Try
+
+        Return Me._Perspectivas_De_Imagens
+
     End Function
 End Class

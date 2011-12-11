@@ -613,16 +613,30 @@
                                 <tr>
                                 <%  
                                     Dim img As cmImagemModelo
-                                    For Each img In v.Produto.Imagens
-                                 %>
-                                <td class="fotoMiniaturaSelect">
-                                    <a alt="Foto" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714_media.jpg',largeimage: '../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714.jpg'}">
-                                        <img src='../../images/scarpin-feminino-ferrette-branco-site_produtos-1459211714_pequena.jpg'  width="50px" height="50px"/>
-                                    </a>
-                                </td>
-                
-                                <td width="4px;"></td>
+                                    Dim imgIndex As Int16
+                                    Dim nomeClass = New String("fotoMiniaturaSelect")
+                                    Dim perspectiva As Object
+                                    Dim arquivo_pequeno As String
+                                    Dim arquivo_medio As String
+                                    Dim arquivo_grande As String
 
+                                    For Each perspectiva In v.Produto.Perspectivas
+                                        arquivo_pequeno = v.GetNomeArquivoImagem(perspectiva.ToString(), "P")
+                                        arquivo_medio = v.GetNomeArquivoImagem(perspectiva.ToString(), "M")
+                                        arquivo_grande = v.GetNomeArquivoImagem(perspectiva.ToString(), "G")
+                                        %>
+                                        <td class="<%=nomeClass %>">
+                                            <a alt="Foto" href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '<%=arquivo_medio%>',largeimage: '<%=arquivo_grande%>'}">
+                                                <img src='<%=arquivo_pequeno%>'  width="50px" height="50px"/>
+                                            </a>
+                                        </td>
+                
+                                        <td width="4px;"></td>
+                                <%  
+                                    nomeClass = "fotoMiniatura"
+                                    Next
+                                %>
+<%--
                                 <td class="fotoMiniatura">
                                     <a alt="Foto"  href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: '../../images/scarpin-feminino-ferrette-branco-site_produtos-214482278_media.jpg',largeimage: '../../images/scarpin-feminino-ferrette-branco-site_produtos-214482278.jpg'}">
                                         <img src='../../images/scarpin-feminino-ferrette-branco-site_produtos-214482278_pequena.jpg'  width="50px" height="50px"/>
@@ -642,6 +656,7 @@
                                         <img src='../../images/scarpin-feminino-ferrette-branco-site_produtos-1792023476_pequena.jpg'  width="50px" height="50px"/>
                                     </a>
                                 </td>
+--%>
                               </tr>
                             </table>
                         </div>
