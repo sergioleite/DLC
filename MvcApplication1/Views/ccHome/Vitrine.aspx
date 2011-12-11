@@ -29,7 +29,7 @@
             <div id="topo2009">
         	    <!-- Logo -->
         	    <h1 id="logoNovo">
-            	    <a href="http://www.anitaonline.com.br/" title="Anita Online">Calçados femininos, calçados masculinos, tênis e esporte - Anita Online - A sua loja de calçados online
+            	    <a href="/" title="Débora Leite">Calçados femininos e acessórios - Débora Leite - A moda online em calçados 
                     </a>
                 </h1>
                 <!-- //Logo -->
@@ -37,17 +37,17 @@
                 <!-- TODO: Checar a montagem do menu -->
                 <div id="menuAuxiliar">
             	    <ul>
-                	    <li id="menuAuxiliar5" class="sprite"><a href="contato.php" title="Contato">Contato</a></li>
-                        <li id="menuAuxiliar4" class="sprite"><a href="institucional.php" title="Institucional">Institucional</a></li>
-                        <li id="menuAuxiliar3" class="sprite"><a href="receba_novidades.php" title="Receba Novidades">Receba Novidades</a> </li>
-                        <li id="menuAuxiliar2" class="sprite"><a href="atendimento" title="Dúvidas Frequentes">Dúvidas Frequentes</a></li>
-                        <li id="menuAuxiliar6" style="height:15px;margin:3px 15px 0px 0px;" class="sprite"><a href="http://www.anitaonline.com.br/atendimento/?action=answer&amp;cat=201871&amp;id=3431881&amp;GroupIdentifier=19055187&amp;match_number=1&amp;question=Como+fa%E7o+uma+troca%3F" title="Troca fácil">Troca fácil</a></li><li id="menuAuxiliar1" class="sprite">Televendas</li>
+                	    <li id="menuAuxiliar5" class="sprite"><a href="/" title="Contato">Contato</a></li>
+                        <li id="menuAuxiliar4" class="sprite"><a href="/" title="Institucional">Institucional</a></li>
+                        <li id="menuAuxiliar3" class="sprite"><a href="/" title="Receba Novidades">Receba Novidades</a> </li>
+                        <li id="menuAuxiliar2" class="sprite"><a href="/" title="Dúvidas Frequentes">Dúvidas Frequentes</a></li>
+                        <li id="menuAuxiliar6" style="height:15px;margin:3px 15px 0px 0px;" class="sprite"><a href="/" title="Troca fácil">Troca fácil</a></li><li id="menuAuxiliar1" class="sprite">Televendas</li>
                     </ul>
                 </div>
                 <!-- //Menu Auxiliar -->
                 <div id="barraVermelha">
                     <div id="carrinho">
-                        <a title="Ir para o carrinho" href="carrinho.php"> Vazio</a>
+                        <a title="Ir para o carrinho" href="/"> Vazio</a>
                     </div>
                     <div id="busca">
                         <fieldset id="buscaFildset">
@@ -63,15 +63,15 @@
                 <div style="float:right;overflow:hidden;width:790px;padding-top:3px;">
                     <div id="usuario">
                         Seja bem vindo! Clique 
-                        <a title="Login" href="https://www.anitaonline.com.br/login.php?goto=">aqui</a>
+                        <a title="Login" href="/">aqui</a>
                         para identificar-se.
                     </div>
                     <ul id="topoBotoes">
                         <li id="meusPedidos">
-                            <a title="Meus Pedidos" href="http://www.anitaonline.com.br/requests.php">Meus Pedidos</a>
+                            <a title="Meus Pedidos" href="/">Meus Pedidos</a>
                         </li>
                         <li id="minhaConta">
-                            <a title="Minha Conta" href="http://www.anitaonline.com.br/account.php">Minha Conta</a>
+                            <a title="Minha Conta" href="/">Minha Conta</a>
                         </li>
                     </ul>
                     <div id="logoutAction"></div>
@@ -184,8 +184,8 @@
                         <li>
                             <h2 class="titulos">Navegue por aqui</h2>
                             <ul class="nivel2">
-                                <li><h3><a href="novidades" title="Novidades">Novidades</a></h3></li>
-                                <li><h3><a href="promocoes" title="Promoções">Promoções</a></h3></li>
+                                <li><h3><a href="/" title="Novidades">Novidades</a></h3></li>
+                                <li><h3><a href="/" title="Promoções">Promoções</a></h3></li>
                             </ul>
                         </li>
                     </ul>
@@ -221,209 +221,25 @@
         </div>
         <!-- MENU PRINCIPAL-->         
         <div id="menuPrincipal" >
-			<ul id="navMenu">
-
-			
-				<li class="navSpace"></li>
-               
-                <li>
-					<div id="navItemEsporte"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-e-esporte')" title="Tênis e Esporte">Tênis e Esporte</span></div>
-					<ul>
-						<li>
-							<div class="navContainerMaster">
-								<div id="navItemEsporteOver"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-e-esporte')" title="Tênis e Esporte"></span></div>
-								<div class="navContainer" style="width:700px; height:300px;">
-
-									<div class="navBorder">
-										
-										
-                                        <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:10px;">
-                                            <li class="navListagemDestaque"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis+e+esporte/4-0-0-0-4-0')" title="Lançamentos">Lançamentos</span></li>
-                                            <li class="navListagemDestaque"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/acessorios-esportivos')" title="Acessórios">Acessórios</span></li> 
-                                                     
-                                                  
-                                        	<li class="navListagemTitulo">Tênis e Esporte</li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-academia')" title="Academia">Academia</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/asics')" title="Asics">Asics</span></li>
-
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-de-aventura')" title="Aventura">Aventura</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-casual')" title="Casual">Casual</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-de-corrida')" title="Corrida">Corrida</span></li>                                            
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/especial-tenis')" title="Especial Tênis">Especial Tênis</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/futebol')" title="Futebol">Futebol</span></li>                                 
-                                    	  	<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-de-quadra')" title="Quadra">Quadra</span></li>
-                                        </ul>
-
-                                        
-                                        <ul class="navListagem" style="left:0px; position:relative;float:left; "> 
-                                        	<li class="navListagemTitulo">Marcas</li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/adidas')" title="Adidas">Adidas</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/asics')" title="Asics">Asics</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/braddock')" title="Braddock">Braddock</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/boots-company')" title="Boots Company">Boots Company</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/bull-terrier')" title="Bull Terrier">Bull Terrier</span></li>
-
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/caterpillar')" title="Caterpillar">Caterpillar</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/cavalera')" title="Cavalera">Cavalera</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/coca-cola')" title="Coca Cola">Coca Cola</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/converse-all-star')" title="Converse All Star">Converse All Star</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/dal-ponte')" title="Dal Ponte">Dal Ponte</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/diadora')" title="Diadora">Diadora</span></li>
-
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/ecko')" title="Ecko">Ecko</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/kolosh')" title="Kolosh">Kolosh</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/lacoste')" title="Lacoste">Lacoste</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/lotto')" title="Lotto">Lotto</span></li>
-                                            
-                                            
-                                            
-                                        </ul>
-                                       
-                                         <ul class="navListagem last" style="left:0px; position:relative;float:left; padding-top:15px;  ">
-                                         	<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/mac-boot')" title="Mac Boot">Mac Boot</span></li>
-
-                                        	<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/mary-jane')" title="Mary Jane">Mary Jane</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/mizuno')" title="Mizuno">Mizuno</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/new-balance')" title="New Balance">New Balance</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/nike')" title="Nike">Nike</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/olympikus')" title="Olympikus">Olympikus</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/penalty')" title="Penalty">Penalty</span></li>
-
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/puma')" title="Puma">Puma</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/qix')" title="Qix">Qix</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/rainha')" title="Rainha">Rainha</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/reebok')" title="Reebok">Reebok</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/stadium')" title="Stadium">Stadium</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/schio')" title="Schio">Schio</span></li>
-
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/skechers')" title="Skechers">Skechers</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sneakers')" title="Sneakers">Sneakers</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/timberland')" title="Timberland">Timberland</span></li>
-                                         </ul>
-                                         
-                                         <ul class="navListagem last" style="left:0px; position:relative;float:left;">
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/topper')" title="Topper">Topper</span></li>
-                                          	<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/umbro')" title="Umbro">Umbro</span></li>
-
-                                         	<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/wilson')" title="Wilson">Wilson</span></li>
-                                        	 <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/yonex')" title="Yonex">Yonex</span></li>
-                                            <li class="navListagemTitulo">Faixa de pre&ccedil;o</li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-e-esporte/4-0-0-0-0-1-0')" title="Calçados esportivos até R$99,99"> at&eacute; R$ 99,90</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-e-esporte/4-0-0-0-0-100-0')" title="Calçados esportivos de R$ 100 a R$ 199,90">R$ 100 a R$ 199,90</span></li>
-
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-e-esporte/4-0-0-0-0-200-0')" title="Calçados esportivos de R$ 200 a R$ 299,90">R$ 200 a R$ 299,90</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-e-esporte/4-0-0-0-0-300-0')" title="Calçados esportivos de R$ 300 a R$ 399,90">R$ 300 a R$ 399,90</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-e-esporte/4-0-0-0-0-400-0')" title="Calçados esportivos de R$ 400 a R$ 499,90">R$ 400 a R$ 499,90</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tenis-e-esporte/4-0-0-0-0-500-0')" title="Calçados esportivos de R$ 500 aR$ 599,90">R$ 500 aR$ 599,90</span></li>
-                                   		 </ul>               
-                                       
-                                          
-									
-										
-									</div>
-								</div>
-
-								<div class="navShadow" style="width:700px;height:300px;"></div>
-							</div>
-						</li>
-					</ul>
-				</li>
-				
+			<ul id="navMenu">				
 				<li class="navSpace"></li>
 				<li>
-					<div id="navItemFeminino"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos')" title="Calçados Femininos">Calçados Femininos</span></div>
+					<div id="navItemFeminino"><span onclick="abrePaginaMenu('')" title="Calçados Femininos">Calçados Femininos</span></div>
 
 					<ul id="navHidden">
 						<li>
 							<div class="navContainerMaster">
-								<div id="navItemFemininoOver"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos')" title="Departamento Feminino"></span></div>
+								<div id="navItemFemininoOver"><span onclick="abrePaginaMenu('')" title="Departamento Feminino"></span></div>
 								<div class="navContainer" style="width:720px;height:295px;">
 									<div class="navBorder">
 										
-                                     <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:10px; ">                                             
-                                        <li class="navListagemDestaque"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/novidades-feminino')" title="Novidades Feminino">Novidades Feminino</span></li>
-                                        <li class="navListagemDestaque"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-8')" title="Promo&ccedil;&otilde;es Feminino">Promo&ccedil;&otilde;es Feminino</span></li>                                       
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/anabelas')" title="Anabela">Anabela</span></li>
-
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/bolsas-e-acessorios')" title="Bolsas">Bolsas</span></li>
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/botas')" title="Botas">Botas</span></li>  
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/carteira-')" title="Carteiras">Carteiras</span></li>
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/cinto-feminino')" title="Cintos">Cintos</span></li>                  
-                                        <!--<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-de-festa')" title="Festa">Festa</span></li>-->
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/noiva')" title="Noiva">Noiva</span></li>
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/peep-toe')" title="Peep Toe">Peep Toe</span></li>
-
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/rasteiras')" title="Rasteiras">Rasteiras</span></li>
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sandalias-femininas')" title="Sand&aacute;lias">Sand&aacute;lias</span></li>
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sapatilhas')" title="Sapatilhas">Sapatilhas</span></li>
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sapatos-femininos')" title="Sapatos">Sapatos</span></li>
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sapato-oxford')" title="Sapato Oxford">Oxford</span></li>
-                                        <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/scarpins')" title="Scarpins">Scarpins</span></li>
-
-                                    </ul> 
-                                    
-                                    <ul class="navListagem" style="left:0px; position:relative;float:left; ">  
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/open-boot')" title="Open Boot">Open Boot</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tamancos')" title="Tamancos">Tamancos</span></li>                                           
-                                      <li class="navListagemTitulo">Marcas</li>   
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/beira-rio')" title="Beira Rio">Beira Rio</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/bottero')" title="Bottero">Bottero</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/carmim')" title="Carmim">Carmim</span></li>
-
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/capodarte')" title="Capodarte">Capodarte</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/charmant')" title="Charmant">Charmant</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/claudina')" title="Claudina">Claudina</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/dakota')" title="Dakota">Dakota</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/ferrette')" title="Ferrette">Ferrette</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/jorge-bischoff')" title="Jorge Bischoff">Jorge Bischoff</span></li>
-
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/julia-mezzetti')" title="Julia Mezzetti">Julia Mezzetti</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/laori')" title="Laôri">Laôri</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/laura-porto')" title="Laura Porto">Laura Porto</span></li>                             
-                                    </ul> 
-                                    
-
-                                    <ul class="navListagem" style="left:0px; position:relative;float:left;padding-top:15px;">
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/lille')" title="Lille">Lille</span></li>  
-									  <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/luz-da-lua')" title="Luz da Lua">Luz da Lua</span></li>  
-                                      <!--<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/luiza-barcelos" title="Luiza Barcelos">Luiza Barcelos</span></li>-->
-
-                                      
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/masiero')" title="Masiero">Masiero</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/mezzo-punto')" title="Mezzo Punto">Mezzo Punto</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/miezko')" title="Miezko">Miezko</span></li>   
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/ramarim')" title="Ramarim">Ramarim</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/rendeira')" title="Rendeira">Rendeira</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/ricarelly')" title="Ricarelly">Ricarelly</span></li>
-
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/tabita')" title="Tabita">Tabita</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/usaflex')" title="Usaflex">Usaflex</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/via-mart')" title="Via Marte">Via Marte</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/Vizzano')" title="Vizzano">Vizzano</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/via-uno')" title="Calçados Via Uno">Via Uno</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/werner')" title="Werner">Werner</span></li>                                                                   
-                                    </ul>                                          
-                                                                            
-									 
-                                     <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:15px; ">                                      
-                                      <li class="navListagemTitulo">Faixa de Preço</li>                 
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-0-1-0')" title="Produtos femininos até R$ 99,99"> at&eacute; R$ 99,90</span></li>
-
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-0-100-0')" title="Produtos femininos de R$ 100 a R$ 199,90">R$ 100 a R$ 199,90</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-0-200-0')" title="Produtos femininos de R$ 200 a R$ 299,90">R$ 200 a R$ 299,90</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-0-300-0')" title="Produtos femininos de R$ 300 a R$ 399,90">R$ 300 a R$ 399,90</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-0-400-0')" title="Produtos femininos de R$ 400 a R$ 499,90">R$ 400 a R$ 499,90</span></li>
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-0-500-0')" title="Produtos femininos de R$ 500 a R$ 599,90">R$ 500 a R$ 599,90</span></li>   
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-0-600-0')" title="Produtos femininos de R$ 600 a R$ 699,90">R$ 600 a R$ 699,90</span></li>
-
-                                      <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-femininos/6-0-0-0-0-700-0')" title="Produtos femininos de R$ 700 a R$ 799,90">R$ 700 a R$ 799,90</span></li>              
-                                    </ul> 
-                                     
-                                    
-                                    
+                                         <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:10px; "> 
+                                     <%For Each categoriaMenu As cmCategoria In v.Categorias%>                                            
+                                                <li class="navListagemNormal"><span onclick="abrePaginaMenu('/Vitrine/<%=categoriaMenu.href%>')" title="<%=categoriaMenu.Title %>"><%=categoriaMenu.Title %></span></li>
+                                     <%Next%>
+                                        </ul> 
                                     </div>
-                                    
-                                  </div>  
+                                </div>  
 								<div class="navShadow" style="width:720px;height:295px;"></div>
 							</div>
 						</li>
@@ -431,154 +247,15 @@
 				</li>
 				
 				<li class="navSpace"></li>
-
-				<li>
-					<div id="navItemMasculino"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-masculinos')" title="Calçados Masculinos">Calçados Masculinos</span></div>
-					<ul>
-						<li>
-							<div class="navContainerMaster">
-								<div id="navItemMasculinoOver"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-masculinos')" title="Sapatos Masculinos"></span></div>
-								<div class="navContainer" style="width:560px; height:220px;">
-									<div class="navBorder">
-
-                                    	
-                                                                                  
-                                     <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:10px; ">
-                                       <li class="navListagemDestaque"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/novidades-masculino')" title="Novidades">Novidades</span></li>
-                                       <li class="navListagemDestaque"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-masculino/2-0-0-0-9')" title="Promo&ccedil;&otilde;es">Promo&ccedil;&otilde;es</span></li>
-										
-                                        
-                                       <li class="navListagemTitulo">Calçados Masculinos</li>
-                                       <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/exclusiva-democrata')" title="Exclusiva Democrata">Exclusiva Democrata</span></li>
-                                       <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/exclusiva-ferracini')" title="Exclusiva Ferracini">Exclusiva Ferracini</span></li>
-
-                                       <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/exclusiva-freeway')" title="Exclusiva Freeway">Exclusiva Freeway</span></li>
-                                       <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/acessorios-masculinos')" title="Botas">Acessórios</span></li>
-                                       <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/botas-masculinas')" title="Botas">Botas</span></li>
-                                       <!--<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/carteiras')" title="Carteiras">Carteiras</span></li>-->
-                                       <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/chinelos')" title="Chinelos">Chinelos</span></li>
-                                       <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/cintos')" title="Cintos">Cintos</span></li>	
-                                       <!--<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sandalias-masculinas" title="Sand&aacute;lias">Sand&aacute;lias</span></li>--> 
-                                      </ul> 
-                                       
-                                       
-                                        <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:10px; ">
-
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sapatos-masculinos')" title="Sapatos">Sapatos</span></li>
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sapatenis')" title="Sapat&ecirc;nis">Sapat&ecirc;nis</span></li>	
-                                          <li class="navListagemTitulo">Marcas</li> 
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/adidas')" title="Adidas">Adidas</span></li>
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/democrata')" title="Democrata">Democrata</span></li>
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/ferracini')" title="Ferracini">Ferracini</span></li>
-
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/goyazes')" title="Goyazes">Goyazes</span></li>
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/italianinho')" title="Italianinho">Italianinho</span></li>
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/macboot')" title="Macboot">Macboot</span></li>
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/opananken')" title="Opananken">Opananken</span></li>
-                                          <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/pegada')" title="Pegada">Pegada</span></li>
-                                            
-                                         
-                                        </ul> 
-                                        
-                                         
-                                        <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:10px; ">
-
-                                       
-                                         <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/picolotto')" title="Picolotto">Picolotto</span></li> 
-                                         <li class="navListagemTitulo">Faixa de pre&ccedil;o</li>
-        
-                                         <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-masculinos/2-0-0-0-0-1-0')" title="Calçados masculinos at&eacute; R$ 99,90"> at&eacute; R$ 99,90</span></li>
-                                         <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-masculinos/2-0-0-0-0-100-0')" title="Calçados masculinos de R$ 100 R$ 199,90">R$ 100 R$ 199,90</span></li>
-                                         <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-masculinos/2-0-0-0-0-200-0')" title="Calçados masculinos de R$ 200 R$ 299,90">R$ 200 R$ 299,90</span></li>
-
-                                         <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-masculinos/2-0-0-0-0-300-0')" title="Calçados masculinos de R$ 300 R$ 399,90">R$ 300 R$ 399,90</span></li>
-                                       
-                                         </ul> 
-                                         
-                                         
-                                    </div>
-								</div>
-								<div class="navShadow" style="width:560px; height:190px;"></div>
-							</div>
-						</li>
-					</ul>
-				</li>
-
-				<li class="navSpace"></li>
-				<li>
-					<div id="navItemKids"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-infantis')" title="Calçados Infantis">Calçados Infantis</span></div>
-					<ul>
-						<li>
-							<div class="navContainerMaster">
-								<div id="navItemKidsOver"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-infantis')" title="Kids"></span></div>
-								<div class="navContainer" style="width:350px; height:280px;">
-
-									<div class="navBorder">
-                                    	
-                                                                                  
-                                       <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:10px; ">
-                                       
-                                            <li class="navListagemDestaque"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/Kids/90-0-0-0-34')" title="Novidades">Novidades</span></li>
-                                            <li class="navListagemDestaque"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/Kids/90-0-0-0-35')" title="Promo&ccedil;&otilde;es">Promo&ccedil;&otilde;es</span></li>
-                                            
-                                            <li class="navListagemTitulo">Calcados Infantis</li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/acessorios-infantis')" title="Acessórios">Acessórios</span></li>  
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/baby')" title="Baby">Baby</span></li>
-
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/casual-infantil')" title="Casual">Casual</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/esporte-infantil')" title="Esporte">Esporte</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/menina')" title="Menina">Menina</span></li>
-                                            <li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/menino')" title="Menino">Menino</span></li>
-											<li class="navListagemTitulo">Faixa de pre&ccedil;o</li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-infantis/90-0-0-0-0-1-0')" title="Calçados infantis at&eacute; R$ 99,90"> at&eacute; R$ 99,90</span></li>
-
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-infantis/90-0-0-0-0-100-0')" title="Calçados infantis de R$ 100 R$ 199,90">R$ 100 R$ 199,90</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-infantis/90-0-0-0-0-200-0')" title="Calçados infantis de R$ 200 R$ 299,90">R$ 200 R$ 299,90</span></li>
-                                       
-                                      </ul>
-                                       
-                                       
-                                        <ul class="navListagem" style="left:0px; position:relative;float:left; padding-top:10px; ">
-										
-											<li class="navListagemTitulo">Marcas</li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-infantis/90-0-4-0-0-0-0')" title="Adidas">Adidas</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/bee-happy')" title="Bee Happy">Bee Happy</span></li>
-
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/bibi')" title="Bibi">Bibi</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/casual-infantil/92-0-11-0-0-0-0')" title="Converse All Star">Converse All Star</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/ferrettinha')" title="Ferrettinha">Ferrettinha</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/gambo')" title="Gambo Baby">Gambo Baby</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/calcados-infantis/90-0-213-0-0-0-0')" title="Grendene">Grendene</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/havaianas-infantil')" title="Havaianas">Havaianas</span></li>
-
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/hokibaby')" title="Hokibaby">Hokibaby</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/ortope')" title="Ortopé">Ortopé</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/Kids/90-0-1-0-32-0')" title="Nike">Nike</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/pe-com-pe')" title="Pé com Pé">Pé com Pé</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/sonho-de-crianca')" title="Sonho de Criança">Sonho de Criança</span></li>
-											<li class="navListagemNormal"><span onclick="abrePaginaMenu('http://www.anitaonline.com.br/esporte-infantil/91-0-14-0-0-0-0')" title="Umbro">Umbro</span></li>
-
-											
-                                         </ul>
-
-                                    </div>
-								</div>
-								<div class="navShadow" style="width:350px; height:280px;"></div>
-							</div>
-						</li>
-					</ul>
-				</li>
-
-				<li class="navSpace"></li>
 				
 				<li>
-					<div id="navItemNovidades"><span onclick="abrePaginaMenu('novidades')" title="Novidades">Lançamentos de Calçados</span></div>
+					<div id="navItemNovidades"><span onclick="abrePaginaMenu('/')" title="Novidades">Lançamentos de Calçados</span></div>
 				</li>
 				
 				<li class="navSpace"></li>
 				
 				<li>
-					<div id="navItemPromocoes"><span onclick="abrePaginaMenu('promocoes')" title="Promoção de Calçados">Calçados em Promoção</span></div>
+					<div id="navItemPromocoes"><span onclick="abrePaginaMenu('/')" title="Promoção de Calçados">Calçados em Promoção</span></div>
 
 				</li>
 				

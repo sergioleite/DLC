@@ -11,6 +11,9 @@
 
     End Sub
 
+    Public Function GetCategorias() As Collection
+        Return cmCategorias.GetCategorias()
+    End Function
 
     Public Function PathTo_Categorias(ByVal target As String) As String
         Return "/Vitrine/" & target

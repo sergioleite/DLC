@@ -1,4 +1,6 @@
-﻿Public Class cmVitrineCategoria
+﻿
+
+Public Class cmVitrineCategoria
     Public Categoria As cmCategoria
     Public TamanhosDisponiveis As SortedSet(Of String)
     Public CoresDisponiveis As Collection
@@ -107,6 +109,10 @@
             Next
         Next
     End Sub
+
+    Public Function GetCategorias() As Collection
+        Return cmCategorias.GetCategorias()
+    End Function
 
     'Private Sub CriaCategoria()
     '    Dim c As cmCategoria

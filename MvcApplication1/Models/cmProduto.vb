@@ -9,6 +9,7 @@ Public Class cmProduto
     Public ParcelasQtde As Int16 'produtos.PRODUTO__PARCELAS_QTDE
     Public ParcelaValor As Double 'DINAMICO
     Public Codigo As Int16 'DB-> produtos_cores.produto_cor__id
+    Public Descricao_HTML As String 'Descricao do produto em HTML
 
     Private _Tamanhos As Collection
     Private _Cores As Collection
@@ -80,6 +81,7 @@ Public Class cmProduto
                 Me.PrecoNormal = dr.GetSqlMoney(dr.GetOrdinal("PRECO_NORMAL"))
                 Me.PrecoPromocional = dr.GetSqlMoney(dr.GetOrdinal("PRECO_PROMOCIONAL"))
                 Me.ParcelasQtde = dr.GetSqlInt32(dr.GetOrdinal("PARCELAS_QTDE"))
+                Me.Descricao_HTML = dr.GetString(dr.GetOrdinal("WEBVIEW_DESCRICAO_PRODUTO"))
                 If (PrecoPromocional <> 0) Then
                     ParcelaValor = Me.PrecoPromocional / Me.ParcelasQtde
                 Else
