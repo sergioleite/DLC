@@ -30,24 +30,25 @@
             <div id="topo2009">
         	    <!-- Logo -->
         	    <h1 id="logoNovo">
-            	    <a href="http://www.anitaonline.com.br/" title="Anita Online">Calçados femininos, calçados masculinos, tênis e esporte - Anita Online - A sua loja de calçados online
+            	    <a href="/" title="Débora Leite">Calçados femininos e acessórios - Débora Leite - A moda online em calçados 
                     </a>
                 </h1>
                 <!-- //Logo -->
                 <!-- MENU AUXILIAR-->
+                <!-- TODO: Checar a montagem do menu -->
                 <div id="menuAuxiliar">
             	    <ul>
-                	    <li id="menuAuxiliar5" class="sprite"><a href="contato.php" title="Contato">Contato</a></li>
-                        <li id="menuAuxiliar4" class="sprite"><a href="institucional.php" title="Institucional">Institucional</a></li>
-                        <li id="menuAuxiliar3" class="sprite"><a href="receba_novidades.php" title="Receba Novidades">Receba Novidades</a> </li>
-                        <li id="menuAuxiliar2" class="sprite"><a href="atendimento" title="Dúvidas Frequentes">Dúvidas Frequentes</a></li>
-                        <li id="menuAuxiliar6" style="height:15px;margin:3px 15px 0px 0px;" class="sprite"><a href="http://www.anitaonline.com.br/atendimento/?action=answer&amp;cat=201871&amp;id=3431881&amp;GroupIdentifier=19055187&amp;match_number=1&amp;question=Como+fa%E7o+uma+troca%3F" title="Troca fácil">Troca fácil</a></li><li id="menuAuxiliar1" class="sprite">Televendas</li>
+                	    <li id="menuAuxiliar5" class="sprite"><a href="/" title="Contato">Contato</a></li>
+                        <li id="menuAuxiliar4" class="sprite"><a href="/" title="Institucional">Institucional</a></li>
+                        <li id="menuAuxiliar3" class="sprite"><a href="/" title="Receba Novidades">Receba Novidades</a> </li>
+                        <li id="menuAuxiliar2" class="sprite"><a href="/" title="Dúvidas Frequentes">Dúvidas Frequentes</a></li>
+                        <li id="menuAuxiliar6" style="height:15px;margin:3px 15px 0px 0px;" class="sprite"><a href="/" title="Troca fácil">Troca fácil</a></li><li id="menuAuxiliar1" class="sprite">Televendas</li>
                     </ul>
                 </div>
                 <!-- //Menu Auxiliar -->
                 <div id="barraVermelha">
                     <div id="carrinho">
-                        <a title="Ir para o carrinho" href="carrinho.php"> Vazio</a>
+                        <a title="Ir para o carrinho" href="/"> Vazio</a>
                     </div>
                     <div id="busca">
                         <fieldset id="buscaFildset">
@@ -63,15 +64,15 @@
                 <div style="float:right;overflow:hidden;width:790px;padding-top:3px;">
                     <div id="usuario">
                         Seja bem vindo! Clique 
-                        <a title="Login" href="https://www.anitaonline.com.br/login.php?goto=">aqui</a>
+                        <a title="Login" href="/">aqui</a>
                         para identificar-se.
                     </div>
                     <ul id="topoBotoes">
                         <li id="meusPedidos">
-                            <a title="Meus Pedidos" href="http://www.anitaonline.com.br/requests.php">Meus Pedidos</a>
+                            <a title="Meus Pedidos" href="/">Meus Pedidos</a>
                         </li>
                         <li id="minhaConta">
-                            <a title="Minha Conta" href="http://www.anitaonline.com.br/account.php">Minha Conta</a>
+                            <a title="Minha Conta" href="/">Minha Conta</a>
                         </li>
                     </ul>
                     <div id="logoutAction"></div>
@@ -274,7 +275,7 @@
     </div>
     <!-- // principal -->
 
-    <div id="rodape2009" style="background:url(http://static.anitaonline.com.br/images/2011/bg-rodape-prov-2.png) repeat-x">
+    <div id="rodape2009" style="background:url(/images/2011/bg-rodape-prov-2.png) repeat-x">
         <div id="containerRodapeNovo">
             <!--Busca Rodape-->
             <div id="buscaNovo" style="margin-top:25px;">
@@ -289,17 +290,17 @@
                 <div id="containerEsquerdaRodape">
                     <div id="rodapeNovoAtencdimento">
                         <span>Central de Atendimento e Televendas:</span>
-                        <strong>(11) 4063-5001</strong>
-                        <strong>(21) 4063-5001</strong><br>
-                        <strong>(67) 3389-4290</strong>
+                        <strong>(XX) XXXX-XXXX</strong><br>
+                        <strong>(XX) XXXX-XXXX</strong><br>
+                        <strong>(XX) XXXX-XXXX</strong>
                         <p>Horário de atendimento:<br>Segunda à Sexta, das 09:00 às 18:00 e aos Sábados das 09:00 às 13:00 (horário de Brasília).</p>
                     </div>
                     <div id="rodapeNovoOutrosAtt">
                         <h3>Mais opções de Atendimento:</h3>
                         <ul>
-                            <li><a href="contato.php">Central de Atendimento</a></li>
-                            <li><a onclick=" window.open('http://anitaonline.mysuite.com.br/clientvivo.php?param=sochat_chatdep&amp;inf=&amp;sl=ant&amp;redirect=http://anitaonline.mysuite.com.br/empresas/ant/atendimento.php','Atendimento','toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=450');" href="javascript:void(false);">Chat ao Vivo</a></li>
-                            <li><a href="atendimento" title="Dúvidas Frequentes">Dúvidas Frequentes</a></li>
+                            <li><a href="/">Central de Atendimento</a></li>
+                            <li><a onclick=" window.open('/','Atendimento','toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=450');" href="javascript:void(false);">Chat ao Vivo</a></li>
+                            <li><a href="/" title="Dúvidas Frequentes">Dúvidas Frequentes</a></li>
                         </ul>
                     </div>
                 </div>
@@ -309,18 +310,18 @@
                     <div id="rodapeNovoInstitucional">
                         <h3>Institucional:</h3>
                         <ul style="border-right:1px solid #DDD;">
-                            <li><a href="institucional.php" title="Empresa">Empresa</a></li>
-                            <li><a href="lojas.php" title="Lojas">Lojas</a></li>
-                            <li><a href="trabalhe_conosco.php" title="Trabalhe Conosco">Trabalhe Conosco</a></li>
+                            <li><a href="/" title="Empresa">Empresa</a></li>
+                            <li><a href="/" title="Lojas">Lojas</a></li>
+                            <li><a href="/" title="Trabalhe Conosco">Trabalhe Conosco</a></li>
                         </ul>
                         <ul style="width:178px;margin-left:20px;">
-                            <li><a href="politica_de_uso.php" title="Política de Uso">Política de Uso</a></li>
-                            <li><a href="politica_de_devolucao.php" title="Política de troca e devolução">Política de troca e devolução</a></li><li><a href="seguranca_e_privacidade.php" title="Segurança e Privacidade">Segurança e Privacidade</a></li>
+                            <li><a href="/" title="Política de Uso">Política de Uso</a></li>
+                            <li><a href="/" title="Política de troca e devolução">Política de troca e devolução</a></li><li><a href="/" title="Segurança e Privacidade">Segurança e Privacidade</a></li>
                         </ul>
                     </div>
                     <div id="rodapeNovoNewsletter">
                         <h3>Receba ofertas exclusivas:</h3>
-                        <form action="receba_novidades.php" method="POST">
+                        <form action="/" method="POST">
                             <input name="act" value="registering" type="Hidden">
                             <input name="nome" id="nome" value="Nome" class="formRodapeNovo" onfocus="focar('Nome',this);" onblur="desfocar('Nome',this);" style="margin-top:5px;" type="text">
                             <div> 
@@ -329,9 +330,6 @@
                             </div>
                             <div class="clear">
                             </div>
-                            <input name="sexo" value="Masculino" id="idMasculino" class="formpadrao_radio" style="border:none;" type="radio">
-                            <label for="idMasculino" class="cadastro_label_dentro" style="font-weight: normal;">Masculino</label>
-                            <input name="sexo" checked="checked" value="Feminino" id="idFeminino" class="formpadrao_radio" style="border:none;" type="radio"><label for="idFeminino" class="cadastro_label_dentro" style="font-weight: normal;">Feminino</label>
                         </form>
                     </div>
                 </div>
@@ -363,10 +361,10 @@
             <div id="blocoBaixoRodapeNovo2" style="border-bottom:1px solid #F3F3F3;">
                 <div id="rodapeRedeSocialNovo">
                     <h3>Redes Sociais</h3>
-                    <p>Acompanhe a AnitaOnline nas Redes Sociais</p>
+                    <p>Acompanhe Débora Leite Calçados nas Redes Sociais</p>
                     <ul class="linksSocial">
-                        <li class="sprite" id="twitterNovo"><a href="http://twitter.com/siteAnitaOnline" title="Twitter" target="_blank">Twitter</a></li><li class="sprite" id="facebookNovo"><a href="http://www.facebook.com/AnitaOnlineOficial" title="Facebook" target="_blank">Facebook</a></li><li class="sprite" id="youtubeNovo"><a href="http://www.youtube.com/user/AnitaOnlineOficial" title="Youtube" target="_blank">Youtube</a></li>
-                        <li class="sprite" id="orkutNovo"><a href="http://www.orkut.com.br/Main#Community.aspx?cmm=73750109" title="Orkut" target="_blank">Orkut</a></li><li class="sprite" id="blogNovo"><a href="http://www.anitaonline.com.br/anitaacontece/" title="Blog Anita Acontece" target="_blank">Anita Acontece</a></li>
+                        <li class="sprite" id="twitterNovo"><a href="http://twitter.com/DeboraLeiteCalcados" title="Twitter" target="_blank">Twitter</a></li><li class="sprite" id="facebookNovo"><a href="http://www.facebook.com/DeboraLeite" title="Facebook" target="_blank">Facebook</a></li><li class="sprite" id="youtubeNovo"><a href="http://www.youtube.com/user/DeboraLeite" title="Youtube" target="_blank">Youtube</a></li>
+                        <li class="sprite" id="orkutNovo"><a href="http://www.orkut.com.br/Main#Community.aspx?cmm=0" title="Orkut" target="_blank">Orkut</a></li><li class="sprite" id="blogNovo"><a href="/" title="Débora Leite Calçados - Blog" target="_blank">Débora Leite Calçados - Blog</a></li>
                     </ul>
                 </div>
                 <div id="rodapeFormasNovo">
@@ -375,13 +373,12 @@
                 <div id="rodapeSegurancaNovo">
                     <h3>Compre com segurança</h3>
                 </div>
-                <div id="rodapeEmpresaAmigoNovo" class="sprite">
+<%--                <div id="rodapeEmpresaAmigoNovo" class="sprite">
                     <a href="http://www.aacc-ms.org.br/view/home/" target="_blank">Empresa Amiga</a>
-                </div>
+                </div>--%>
             </div>
-            <div id="creditos"><a href="http://www.maisempresas.com/" title="Desenvolvimento de Sites">Tecnologia: Mais Empresas</a>
+            <%--<div id="creditos"><a href="http://www.maisempresas.com/" title="Desenvolvimento de Sites">Tecnologia: Mais Empresas</a>--%>
             </div>
         </div>
-    </div>
 </body>
 </html>

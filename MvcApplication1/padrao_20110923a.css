@@ -491,7 +491,7 @@ a, a:visited, a:link{
 		}
 			#meusPedidos a, #minhaConta a, #meuAtendimento a {
 				display:block;
-				color:#D80000;
+				color:#DFCD01;
 				font-weight:bold;
 				font-size:12px;	
 				padding:5px 0px 0px 23px;
@@ -683,7 +683,7 @@ a, a:visited, a:link{
 				font-size:13px;
 				background:url(../../images/2011/bg-titulo.gif) no-repeat bottom #EEE;
 				margin:0px 2px 5px 1px;
-				color:#C10000;
+				color:#DFCD01;
 				overflow:hidden;
 			}
 			.nivel1 .titulosSel {
@@ -709,7 +709,7 @@ a, a:visited, a:link{
 				}
 			.nivel1 .titulos a {
 				font-size:13px;
-				color:#C10000;
+				color:#DFCD01;
 			}
 			
 			.nivel1 .menuDestaque{
@@ -788,7 +788,7 @@ a, a:visited, a:link{
 		}
 		.menuTamanhos li a:hover{
 			background-color: #EEE;
-			color:#CC0000;	
+			color:#DFCD01;	
 			display: block;
 		}
 
@@ -922,7 +922,7 @@ a, a:visited, a:link{
 			text-align:center;
 			font-size:12px;
 			font-weight:bold;
-			color:#CC0000;
+			color:#DFCD01;
 			padding:4px 5px 0px 5px;
 			text-align:center;	
 		}
@@ -1040,10 +1040,10 @@ a, a:visited, a:link{
 	}
 		.iconFrete a {
 			font-size:12px;
-			color:#CC0000;
+			color:#DFCD01;
 			}
 		.iconFrete a:hover {
-			color:#CC0000;
+			color:#DFCD01;
 		}
 /************************************
 		DIVISÂO DE CATEGORIAS
@@ -1060,7 +1060,7 @@ a, a:visited, a:link{
 		font-size:14px;
 		font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
 		font-weight:bold;
-		color:#CC0000;
+		color:#DFCD01;
 		padding:5px 22px 0px 6px;
 		margin:0px 0px 0px 6px;
 		text-decoration:none;
@@ -1070,7 +1070,7 @@ a, a:visited, a:link{
 		}	
 		
 		.titCategorias a{	
-			color:#CC0000;					
+			color:#DFCD01;					
 		}
 		
 /************************************
@@ -1152,7 +1152,7 @@ a, a:visited, a:link{
 	#rodape2009 #menuRodape {
 		display:block;
 		margin:22px 0px 20px 20px;	
-		color:#CC0000;
+		color:#DFCD01;
 		font-weight:bold;
 		width:600px;
 		float:left;
@@ -1164,7 +1164,7 @@ a, a:visited, a:link{
 			font-weight: normal;	
 		}
 		#rodape2009 #menuRodape a:hover {
-			color: #CC0000;
+			color: #DFCD01;
 			font-weight: normal;	
 		}
 		
@@ -1547,7 +1547,7 @@ a, a:visited, a:link{
 	#cloudLateral a.tag10 { font-size:20px; line-height:20px}	
 	#cloudLateral { padding: 10px 4px 0px 4px;  text-align: center; margin: 0;}
 	#cloudLateral a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color:#999999}
-	#cloudLateral a:hover { background-color:#CC0000; color:#FFFFFF }
+	#cloudLateral a:hover { background-color:#DFCD01; color:#FFFFFF }
 	#cloudLateral li { display: inline; }
 	
 	
@@ -1580,7 +1580,7 @@ a, a:visited, a:link{
 	#cloud a.tag10 { font-size:32px; line-height:32px}	
 	#cloud { padding: 5px 4px 0px 4px;  text-align: center; border:0px solid; }
 	#cloud a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color: #999999 }
-	#cloud a:hover { background-color:#CC0000; color:#FFFFFF }	
+	#cloud a:hover { background-color:#DFCD01; color:#FFFFFF }	
 	#cloud { margin: 0; }
 	#cloud li { display: inline; }
 
@@ -1798,7 +1798,7 @@ a, a:visited, a:link{
 		padding:3px;
 	}
 		.viewProdutoParcelamento a:HOVER {
-			color:#cc0000;
+			color:#DFCD01;
 		}
 
 /*****************************  
@@ -1832,7 +1832,7 @@ a, a:visited, a:link{
 		/*width:60px;*/
 		}		
 		.viewProdutoOpcoesFotos a:hover img{	
-			border:1px solid #CC0000;			
+			border:1px solid #DFCD01;			
 			}					
 	.viewProdutoOpcoes .descricao{		
 		margin-left:15px;
@@ -1935,7 +1935,7 @@ a, a:visited, a:link{
 	}
     
     .avisos_cadastro{
-		color:#cc0000;
+		color:#DFCD01;
 		font-weight:bold;
 		padding:3px;
         margin-top:0px;
@@ -1952,7 +1952,7 @@ a, a:visited, a:link{
 	border-bottom:dotted 1px #ccc;
 	font-size:20px;
 	font-family:Arial, Helvetica, sans-serif;
-	color:#cc0000;
+	color:#DFCD01;
 	letter-spacing:1px;
 }
 	.cadastroTitle strong {
@@ -2288,7 +2288,7 @@ div.jqZoomTitle{
 	#rodape2011 #menuRodape {
 		display:block;
 		margin:12px 0px 20px 20px;	
-		color:#CC0000;
+		color:#DFCD01;
 		font-weight:bold;
 		width:600px;
 		float:left;
@@ -2300,7 +2300,7 @@ div.jqZoomTitle{
 			font-weight: normal;	
 		}
 		#rodape2011 #menuRodape a:hover {
-			color: #CC0000;
+			color: #DFCD01;
 			font-weight: normal;	
 		}
 		

@@ -676,7 +676,7 @@ font-size:12px;
 }
 .menuTamanhos li a:hover{
 background-color: #EEE;
-color:#CC0000;
+color:#DFCD01;
 display: block;
 }
 /************************************
@@ -796,7 +796,7 @@ overflow:hidden;
 text-align:center;
 font-size:12px;
 font-weight:bold;
-color:#CC0000;
+color:#DFCD01;
 padding:4px 5px 0px 5px;
 text-align:center;
 }
@@ -908,10 +908,10 @@ padding-top:4px;
 }
 .iconFrete a {
 font-size:12px;
-color:#CC0000;
+color:#DFCD01;
 }
 .iconFrete a:hover {
-color:#CC0000;
+color:#DFCD01;
 }
 /************************************
 DIVISÂO DE CATEGORIAS
@@ -928,7 +928,7 @@ margin-bottom:5px;
 font-size:14px;
 font-family:arial,freesans,garuda,helvetica,verdana,sans-serif;
 font-weight:bold;
-color:#CC0000;
+color:#DFCD01;
 padding:5px 22px 0px 6px;
 margin:0px 0px 0px 6px;
 text-decoration:none;
@@ -937,7 +937,7 @@ float:left;
 background:url(../../images/tit.png) right no-repeat;
 }
 .titCategorias a{
-color:#CC0000;
+color:#DFCD01;
 }
 /************************************
 CONT MEIO
@@ -1013,7 +1013,7 @@ margin:3px 0px 0px 3px;
 #rodape2009 #menuRodape {
 display:block;
 margin:22px 0px 20px 20px;
-color:#CC0000;
+color:#DFCD01;
 font-weight:bold;
 width:600px;
 float:left;
@@ -1025,7 +1025,7 @@ color: #333333;
 font-weight: normal;
 }
 #rodape2009 #menuRodape a:hover {
-color: #CC0000;
+color: #DFCD01;
 font-weight: normal;
 }
 #rodape2009 #atendimentoRodape {
@@ -1355,7 +1355,7 @@ NUVEM DE TAGS
 #cloudLateral a.tag10 { font-size:20px; line-height:20px}
 #cloudLateral { padding: 10px 4px 0px 4px; text-align: center; margin: 0;}
 #cloudLateral a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color:#999999}
-#cloudLateral a:hover { background-color:#CC0000; color:#FFFFFF }
+#cloudLateral a:hover { background-color:#DFCD01; color:#FFFFFF }
 #cloudLateral li { display: inline; }
 /***** CLOUD RODAPE *****/
 #tagCloud {
@@ -1385,7 +1385,7 @@ border-top:solid 1px #DDD;
 #cloud a.tag10 { font-size:32px; line-height:32px}
 #cloud { padding: 5px 4px 0px 4px; text-align: center; border:0px solid; }
 #cloud a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color: #999999 }
-#cloud a:hover { background-color:#CC0000; color:#FFFFFF }
+#cloud a:hover { background-color:#DFCD01; color:#FFFFFF }
 #cloud { margin: 0; }
 #cloud li { display: inline; }
 /************************************
@@ -1586,7 +1586,7 @@ width:128px;
 padding:3px;
 }
 .viewProdutoParcelamento a:HOVER {
-color:#cc0000;
+color:#DFCD01;
 }
 /*****************************
 OPÇÔES DO PRODUTO
@@ -1619,7 +1619,7 @@ border:1px solid #ddd;
 /*width:60px;*/
 }
 .viewProdutoOpcoesFotos a:hover img{
-border:1px solid #CC0000;
+border:1px solid #DFCD01;
 }
 .viewProdutoOpcoes .descricao{
 margin-left:15px;
@@ -1706,7 +1706,7 @@ margin:5px 3px 3px 150px ;
 overflow:hidden;
 }
 .avisos_cadastro{
-color:#cc0000;
+color:#DFCD01;
 font-weight:bold;
 padding:3px;
 margin-top:0px;
@@ -1717,7 +1717,7 @@ padding:15px;
 border-bottom:dotted 1px #ccc;
 font-size:20px;
 font-family:Arial, Helvetica, sans-serif;
-color:#cc0000;
+color:#DFCD01;
 letter-spacing:1px;
 }
 .cadastroTitle strong {
@@ -2005,7 +2005,7 @@ margin-top:20px;
 #rodape2011 #menuRodape {
 display:block;
 margin:12px 0px 20px 20px;
-color:#CC0000;
+color:#DFCD01;
 font-weight:bold;
 width:600px;
 float:left;
@@ -2017,7 +2017,7 @@ color: #333333;
 font-weight: normal;
 }
 #rodape2011 #menuRodape a:hover {
-color: #CC0000;
+color: #DFCD01;
 font-weight: normal;
 }
 #rodape2011 #atendimentoRodape {
