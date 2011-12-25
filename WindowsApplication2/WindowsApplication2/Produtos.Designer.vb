@@ -33,7 +33,7 @@ Partial Class Produtos
         Me.REFERENCIA = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FABRICANTE = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ButtonNovoProduto = New System.Windows.Forms.Button()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewModelos = New System.Windows.Forms.DataGridView()
         Me.Modelo_Nome = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MODELO_LIBERADOVENDA = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MODELO_COR = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,15 +41,42 @@ Partial Class Produtos
         Me.ButtonNovoModelo = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.ButtonNovaImagem = New System.Windows.Forms.Button()
+        Me.DataGridViewPerspectivas = New System.Windows.Forms.DataGridView()
         Me.IMAGEM_PERSPECTIVA = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton_LiberadoVenda_Sim = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_LiberadoVenda_Nao = New System.Windows.Forms.RadioButton()
+        Me.TextBox_NomeModelo = New System.Windows.Forms.TextBox()
+        Me.ComboBoxCores = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.TextBoxEstoque33 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEstoque34 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEstoque35 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEstoque36 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEstoque37 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEstoque38 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEstoque39 = New System.Windows.Forms.TextBox()
+        Me.TextBoxEstoque40 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.TextBoxURL = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewModelos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridViewPerspectivas, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -63,7 +90,7 @@ Partial Class Produtos
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(978, 163)
+        Me.DataGridView1.Size = New System.Drawing.Size(1008, 163)
         Me.DataGridView1.TabIndex = 0
         '
         'NOME_CATEGORIA
@@ -131,16 +158,17 @@ Partial Class Produtos
         Me.ButtonNovoProduto.Text = "Novo Produto"
         Me.ButtonNovoProduto.UseVisualStyleBackColor = True
         '
-        'DataGridView2
+        'DataGridViewModelos
         '
-        Me.DataGridView2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.DataGridViewModelos.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Modelo_Nome, Me.MODELO_LIBERADOVENDA, Me.MODELO_COR, Me.MODELO_URL})
-        Me.DataGridView2.Location = New System.Drawing.Point(0, 200)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(417, 274)
-        Me.DataGridView2.TabIndex = 2
+        Me.DataGridViewModelos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewModelos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Modelo_Nome, Me.MODELO_LIBERADOVENDA, Me.MODELO_COR, Me.MODELO_URL})
+        Me.DataGridViewModelos.Location = New System.Drawing.Point(0, 200)
+        Me.DataGridViewModelos.MultiSelect = False
+        Me.DataGridViewModelos.Name = "DataGridViewModelos"
+        Me.DataGridViewModelos.Size = New System.Drawing.Size(417, 492)
+        Me.DataGridViewModelos.TabIndex = 2
         '
         'Modelo_Nome
         '
@@ -177,7 +205,7 @@ Partial Class Produtos
         'ButtonNovoModelo
         '
         Me.ButtonNovoModelo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonNovoModelo.Location = New System.Drawing.Point(0, 480)
+        Me.ButtonNovoModelo.Location = New System.Drawing.Point(0, 698)
         Me.ButtonNovoModelo.Name = "ButtonNovoModelo"
         Me.ButtonNovoModelo.Size = New System.Drawing.Size(88, 23)
         Me.ButtonNovoModelo.TabIndex = 3
@@ -191,51 +219,66 @@ Partial Class Produtos
         Me.TabControl1.Location = New System.Drawing.Point(452, 171)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(525, 331)
+        Me.TabControl1.Size = New System.Drawing.Size(525, 409)
         Me.TabControl1.TabIndex = 4
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.TextBoxURL)
+        Me.TabPage1.Controls.Add(Me.Label11)
+        Me.TabPage1.Controls.Add(Me.TextBoxEstoque40)
+        Me.TabPage1.Controls.Add(Me.TextBoxEstoque39)
+        Me.TabPage1.Controls.Add(Me.TextBoxEstoque38)
+        Me.TabPage1.Controls.Add(Me.TextBoxEstoque37)
+        Me.TabPage1.Controls.Add(Me.TextBoxEstoque36)
+        Me.TabPage1.Controls.Add(Me.TextBoxEstoque35)
+        Me.TabPage1.Controls.Add(Me.TextBoxEstoque34)
+        Me.TabPage1.Controls.Add(Me.TextBoxEstoque33)
+        Me.TabPage1.Controls.Add(Me.Label10)
+        Me.TabPage1.Controls.Add(Me.Label9)
+        Me.TabPage1.Controls.Add(Me.Label8)
+        Me.TabPage1.Controls.Add(Me.Label7)
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.Label5)
+        Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.ComboBoxCores)
+        Me.TabPage1.Controls.Add(Me.TextBox_NomeModelo)
+        Me.TabPage1.Controls.Add(Me.GroupBox1)
+        Me.TabPage1.Controls.Add(Me.Label1)
         Me.TabPage1.Controls.Add(Me.ButtonNovaImagem)
-        Me.TabPage1.Controls.Add(Me.DataGridView3)
+        Me.TabPage1.Controls.Add(Me.DataGridViewPerspectivas)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(517, 305)
+        Me.TabPage1.Size = New System.Drawing.Size(517, 383)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(517, 305)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.AllowUserToAddRows = False
-        Me.DataGridView3.AllowUserToDeleteRows = False
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IMAGEM_PERSPECTIVA})
-        Me.DataGridView3.Location = New System.Drawing.Point(7, 7)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.ReadOnly = True
-        Me.DataGridView3.Size = New System.Drawing.Size(245, 150)
-        Me.DataGridView3.TabIndex = 0
         '
         'ButtonNovaImagem
         '
         Me.ButtonNovaImagem.Location = New System.Drawing.Point(7, 164)
         Me.ButtonNovaImagem.Name = "ButtonNovaImagem"
-        Me.ButtonNovaImagem.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonNovaImagem.Size = New System.Drawing.Size(82, 23)
         Me.ButtonNovaImagem.TabIndex = 1
-        Me.ButtonNovaImagem.Text = "Button1"
+        Me.ButtonNovaImagem.Text = "Nova Imagem"
         Me.ButtonNovaImagem.UseVisualStyleBackColor = True
+        '
+        'DataGridViewPerspectivas
+        '
+        Me.DataGridViewPerspectivas.AllowUserToAddRows = False
+        Me.DataGridViewPerspectivas.AllowUserToDeleteRows = False
+        Me.DataGridViewPerspectivas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewPerspectivas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IMAGEM_PERSPECTIVA})
+        Me.DataGridViewPerspectivas.Location = New System.Drawing.Point(7, 7)
+        Me.DataGridViewPerspectivas.MultiSelect = False
+        Me.DataGridViewPerspectivas.Name = "DataGridViewPerspectivas"
+        Me.DataGridViewPerspectivas.ReadOnly = True
+        Me.DataGridViewPerspectivas.Size = New System.Drawing.Size(245, 150)
+        Me.DataGridViewPerspectivas.TabIndex = 0
         '
         'IMAGEM_PERSPECTIVA
         '
@@ -243,24 +286,256 @@ Partial Class Produtos
         Me.IMAGEM_PERSPECTIVA.Name = "IMAGEM_PERSPECTIVA"
         Me.IMAGEM_PERSPECTIVA.ReadOnly = True
         '
+        'TabPage2
+        '
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(517, 341)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "TabPage2"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(7, 200)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(76, 13)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Nome Modelo:"
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RadioButton_LiberadoVenda_Nao)
+        Me.GroupBox1.Controls.Add(Me.RadioButton_LiberadoVenda_Sim)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 221)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(229, 40)
+        Me.GroupBox1.TabIndex = 3
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Modelo Liberado para Venda?"
+        '
+        'RadioButton_LiberadoVenda_Sim
+        '
+        Me.RadioButton_LiberadoVenda_Sim.AutoSize = True
+        Me.RadioButton_LiberadoVenda_Sim.Location = New System.Drawing.Point(7, 17)
+        Me.RadioButton_LiberadoVenda_Sim.Name = "RadioButton_LiberadoVenda_Sim"
+        Me.RadioButton_LiberadoVenda_Sim.Size = New System.Drawing.Size(42, 17)
+        Me.RadioButton_LiberadoVenda_Sim.TabIndex = 0
+        Me.RadioButton_LiberadoVenda_Sim.Text = "Sim"
+        Me.RadioButton_LiberadoVenda_Sim.UseVisualStyleBackColor = True
+        '
+        'RadioButton_LiberadoVenda_Nao
+        '
+        Me.RadioButton_LiberadoVenda_Nao.AutoSize = True
+        Me.RadioButton_LiberadoVenda_Nao.Checked = True
+        Me.RadioButton_LiberadoVenda_Nao.Location = New System.Drawing.Point(75, 17)
+        Me.RadioButton_LiberadoVenda_Nao.Name = "RadioButton_LiberadoVenda_Nao"
+        Me.RadioButton_LiberadoVenda_Nao.Size = New System.Drawing.Size(45, 17)
+        Me.RadioButton_LiberadoVenda_Nao.TabIndex = 1
+        Me.RadioButton_LiberadoVenda_Nao.TabStop = True
+        Me.RadioButton_LiberadoVenda_Nao.Text = "Não"
+        Me.RadioButton_LiberadoVenda_Nao.UseVisualStyleBackColor = True
+        '
+        'TextBox_NomeModelo
+        '
+        Me.TextBox_NomeModelo.Location = New System.Drawing.Point(79, 197)
+        Me.TextBox_NomeModelo.Name = "TextBox_NomeModelo"
+        Me.TextBox_NomeModelo.Size = New System.Drawing.Size(312, 20)
+        Me.TextBox_NomeModelo.TabIndex = 4
+        '
+        'ComboBoxCores
+        '
+        Me.ComboBoxCores.FormattingEnabled = True
+        Me.ComboBoxCores.Location = New System.Drawing.Point(40, 265)
+        Me.ComboBoxCores.Name = "ComboBoxCores"
+        Me.ComboBoxCores.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxCores.TabIndex = 5
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(8, 270)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(26, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Cor:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(265, 6)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Estoque No 33"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(265, 27)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(78, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Estoque No 34"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(265, 48)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(78, 13)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Estoque No 35"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(265, 69)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(78, 13)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Estoque No 36"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(265, 90)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(78, 13)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "Estoque No 37"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(265, 111)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(78, 13)
+        Me.Label8.TabIndex = 12
+        Me.Label8.Text = "Estoque No 38"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(265, 132)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(78, 13)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "Estoque No 39"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(265, 153)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(78, 13)
+        Me.Label10.TabIndex = 14
+        Me.Label10.Text = "Estoque No 40"
+        '
+        'TextBoxEstoque33
+        '
+        Me.TextBoxEstoque33.Location = New System.Drawing.Point(349, 0)
+        Me.TextBoxEstoque33.Name = "TextBoxEstoque33"
+        Me.TextBoxEstoque33.Size = New System.Drawing.Size(59, 20)
+        Me.TextBoxEstoque33.TabIndex = 15
+        '
+        'TextBoxEstoque34
+        '
+        Me.TextBoxEstoque34.Location = New System.Drawing.Point(349, 21)
+        Me.TextBoxEstoque34.Name = "TextBoxEstoque34"
+        Me.TextBoxEstoque34.Size = New System.Drawing.Size(59, 20)
+        Me.TextBoxEstoque34.TabIndex = 16
+        '
+        'TextBoxEstoque35
+        '
+        Me.TextBoxEstoque35.Location = New System.Drawing.Point(349, 44)
+        Me.TextBoxEstoque35.Name = "TextBoxEstoque35"
+        Me.TextBoxEstoque35.Size = New System.Drawing.Size(59, 20)
+        Me.TextBoxEstoque35.TabIndex = 17
+        '
+        'TextBoxEstoque36
+        '
+        Me.TextBoxEstoque36.Location = New System.Drawing.Point(349, 65)
+        Me.TextBoxEstoque36.Name = "TextBoxEstoque36"
+        Me.TextBoxEstoque36.Size = New System.Drawing.Size(59, 20)
+        Me.TextBoxEstoque36.TabIndex = 18
+        '
+        'TextBoxEstoque37
+        '
+        Me.TextBoxEstoque37.Location = New System.Drawing.Point(349, 87)
+        Me.TextBoxEstoque37.Name = "TextBoxEstoque37"
+        Me.TextBoxEstoque37.Size = New System.Drawing.Size(59, 20)
+        Me.TextBoxEstoque37.TabIndex = 19
+        '
+        'TextBoxEstoque38
+        '
+        Me.TextBoxEstoque38.Location = New System.Drawing.Point(349, 108)
+        Me.TextBoxEstoque38.Name = "TextBoxEstoque38"
+        Me.TextBoxEstoque38.Size = New System.Drawing.Size(59, 20)
+        Me.TextBoxEstoque38.TabIndex = 20
+        '
+        'TextBoxEstoque39
+        '
+        Me.TextBoxEstoque39.Location = New System.Drawing.Point(349, 129)
+        Me.TextBoxEstoque39.Name = "TextBoxEstoque39"
+        Me.TextBoxEstoque39.Size = New System.Drawing.Size(59, 20)
+        Me.TextBoxEstoque39.TabIndex = 21
+        '
+        'TextBoxEstoque40
+        '
+        Me.TextBoxEstoque40.Location = New System.Drawing.Point(349, 150)
+        Me.TextBoxEstoque40.Name = "TextBoxEstoque40"
+        Me.TextBoxEstoque40.Size = New System.Drawing.Size(59, 20)
+        Me.TextBoxEstoque40.TabIndex = 22
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(8, 302)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(78, 13)
+        Me.Label11.TabIndex = 23
+        Me.Label11.Text = "URL Amigável:"
+        '
+        'TextBoxURL
+        '
+        Me.TextBoxURL.Location = New System.Drawing.Point(92, 295)
+        Me.TextBoxURL.Name = "TextBoxURL"
+        Me.TextBoxURL.Size = New System.Drawing.Size(316, 20)
+        Me.TextBoxURL.TabIndex = 24
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(4, 333)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(120, 44)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Gravar dados novo modelo"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Produtos
         '
         Me.AllowDrop = True
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(978, 512)
+        Me.ClientSize = New System.Drawing.Size(1008, 730)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.ButtonNovoModelo)
-        Me.Controls.Add(Me.DataGridView2)
+        Me.Controls.Add(Me.DataGridViewModelos)
         Me.Controls.Add(Me.ButtonNovoProduto)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Produtos"
         Me.Text = "Produtos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridViewModelos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.PerformLayout()
+        CType(Me.DataGridViewPerspectivas, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -275,7 +550,7 @@ Partial Class Produtos
     Friend WithEvents REFERENCIA As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents FABRICANTE As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ButtonNovoProduto As System.Windows.Forms.Button
-    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewModelos As System.Windows.Forms.DataGridView
     Friend WithEvents Modelo_Nome As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents MODELO_LIBERADOVENDA As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents MODELO_COR As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -284,7 +559,33 @@ Partial Class Produtos
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
     Friend WithEvents ButtonNovaImagem As System.Windows.Forms.Button
-    Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridViewPerspectivas As System.Windows.Forms.DataGridView
     Friend WithEvents IMAGEM_PERSPECTIVA As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents ComboBoxCores As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox_NomeModelo As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioButton_LiberadoVenda_Nao As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton_LiberadoVenda_Sim As System.Windows.Forms.RadioButton
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxURL As System.Windows.Forms.TextBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents TextBoxEstoque40 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxEstoque39 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxEstoque38 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxEstoque37 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxEstoque36 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxEstoque35 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxEstoque34 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxEstoque33 As System.Windows.Forms.TextBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
