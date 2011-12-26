@@ -35,6 +35,8 @@ Public Class cmProduto
             cmd.Parameters.AddWithValue("@fabricante", Me.Fabricante)
             cmd.Parameters.AddWithValue("@descricao_html", Me.Descricao_HTML)
 
+
+
             cmd.Connection = sqlConnection1
 
             sqlConnection1.Open()

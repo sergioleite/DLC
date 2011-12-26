@@ -1,9 +1,9 @@
 ﻿Public Class Produtos
     Public _Produtos As Collection
     Public _Categorias As Collection
-    Dim _produto As cmProduto
-    Dim _modelo As cmModelo
-    Dim _cores As Collection
+    Public _produto As cmProduto
+    Public _modelo As cmModelo
+    Public _cores As Collection
 
     Private Sub Produtos_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -66,11 +66,12 @@
 
     Private Sub ButtonNovaImagem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonNovaImagem.Click
         Dim frm As New Imagem_Modelo()
+        frm.frmPai = Me
         frm.ShowDialog()
     End Sub
 
     Private Sub ButtonNovoModelo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonNovoModelo.Click
-
+        Me._modelo = New cmModelo()
     End Sub
 
     Private Sub DataGridViewModelos_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewModelos.CellContentClick
@@ -110,5 +111,35 @@
 
         'URL AMIGAVEL MODELO
         TextBoxURL.Text = Me._modelo.URL
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        Dim cor As cmCor
+
+        Me._modelo.Nome = TextBox_NomeModelo.Text
+        Me._modelo.Produto_ID = Me._produto.ID
+
+        cor = Me._cores(Me.ComboBoxCores.SelectedIndex())
+        Me._modelo.CorID = cor.ID
+
+        If RadioButton_LiberadoVenda_Sim.Checked Then
+            Me._modelo.LiberadoVenda = "S"
+        Else
+            Me._modelo.LiberadoVenda = "N"
+        End If
+
+        Me._modelo.URL = TextBoxURL.Text
+
+        Me._modelo.Estoque_33 = TextBoxEstoque33.Text
+        Me._modelo.Estoque_34 = TextBoxEstoque34.Text
+        Me._modelo.Estoque_35 = TextBoxEstoque35.Text
+        Me._modelo.Estoque_36 = TextBoxEstoque36.Text
+        Me._modelo.Estoque_37 = TextBoxEstoque37.Text
+        Me._modelo.Estoque_38 = TextBoxEstoque38.Text
+        Me._modelo.Estoque_39 = TextBoxEstoque39.Text
+        Me._modelo.Estoque_40 = TextBoxEstoque40.Text
+
+        Me._modelo.Insert()
     End Sub
 End Class

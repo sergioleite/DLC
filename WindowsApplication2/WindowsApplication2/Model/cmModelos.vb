@@ -25,11 +25,13 @@ Public Class cmModelos
 
         While reader.Read()
             m = New cmModelo()
+            m.Produto_ID = produto_id
             m.ID = reader.GetInt32(reader.GetOrdinal("ID"))
             m.Nome = reader.GetString(reader.GetOrdinal("NOME"))
             m.NomeCor = reader.GetString(reader.GetOrdinal("COR__NOME"))
             m.LiberadoVenda = reader.GetString(reader.GetOrdinal("LIBERADO_PARA_VENDA"))
             m.URL = reader.GetString(reader.GetOrdinal("WEBVIEW_URL_AMIGAVEL"))
+            m.CorID = reader.GetInt32(reader.GetOrdinal("COR__ID"))
             modelos.Add(m)
         End While
 

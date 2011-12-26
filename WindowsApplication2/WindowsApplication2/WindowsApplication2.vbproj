@@ -101,6 +101,7 @@
     </Compile>
     <Compile Include="Model\cmCor.vb" />
     <Compile Include="Model\cmCores.vb" />
+    <Compile Include="Model\cmEstoque.vb" />
     <Compile Include="Model\cmImagemModelo.vb" />
     <Compile Include="Model\cmImagensModelos.vb" />
     <Compile Include="Model\cmModelo.vb" />

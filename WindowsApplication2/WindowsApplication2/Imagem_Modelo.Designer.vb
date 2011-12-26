@@ -30,6 +30,7 @@ Partial Class Imagem_Modelo
         Me.PictureBoxG = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.ButtonOk = New System.Windows.Forms.Button()
         CType(Me.PictureBoxP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxG, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,11 +104,21 @@ Partial Class Imagem_Modelo
         Me.Button4.Text = "Button4"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'ButtonOk
+        '
+        Me.ButtonOk.Location = New System.Drawing.Point(116, 502)
+        Me.ButtonOk.Name = "ButtonOk"
+        Me.ButtonOk.Size = New System.Drawing.Size(58, 21)
+        Me.ButtonOk.TabIndex = 7
+        Me.ButtonOk.Text = "OK"
+        Me.ButtonOk.UseVisualStyleBackColor = True
+        '
         'Imagem_Modelo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 536)
+        Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PictureBoxG)
@@ -132,4 +143,5 @@ Partial Class Imagem_Modelo
     Friend WithEvents PictureBoxG As System.Windows.Forms.PictureBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents ButtonOk As System.Windows.Forms.Button
 End Class
