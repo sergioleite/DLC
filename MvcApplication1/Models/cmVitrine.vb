@@ -1,4 +1,4 @@
-﻿Imports MvcApplication1.cmProduto
+﻿Imports br.com.deboraleite.cmProduto
 
 Public Class cmVitrine                    ' ===>  Modelo da View
 

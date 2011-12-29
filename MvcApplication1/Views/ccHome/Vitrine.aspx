@@ -1,5 +1,4 @@
-﻿<%@ Import Namespace="MvcApplication1" %>
-<%@ Import Namespace="cVitrine" %>
+﻿<%@ Import Namespace="br.com.deboraleite" %>
 <%=""%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -10,7 +9,7 @@
         Calçados femininos e acessórios - Anita Online - A moda online em calçados
     </title>
 
-    <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
 
     <link rel="stylesheet" type="text/css" href="../../padrao_20110923a.css"/>
     <link rel="stylesheet" type="text/css" href="../../padrao_20110802a.css"/>

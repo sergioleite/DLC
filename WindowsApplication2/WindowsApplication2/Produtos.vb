@@ -51,13 +51,15 @@
 
     Private Sub CarregaGridModelos()
 
-        _produto = Me._Produtos.Item(DataGridView1.CurrentRow.Index + 1)
+        If Me._Produtos.Count > 0 Then
+            _produto = Me._Produtos.Item(DataGridView1.CurrentRow.Index + 1)
 
-        Me.DataGridViewModelos.Rows.Clear()
+            Me.DataGridViewModelos.Rows.Clear()
 
-        For Each m As cmModelo In _produto.Modelos()
-            Me.DataGridViewModelos.Rows.Add(m.Nome, m.LiberadoVenda, m.URL, m.NomeCor)
-        Next
+            For Each m As cmModelo In _produto.Modelos()
+                Me.DataGridViewModelos.Rows.Add(m.Nome, m.LiberadoVenda, m.URL, m.NomeCor)
+            Next
+        End If
 
     End Sub
 
@@ -86,13 +88,15 @@
 
     Private Sub CarregaGridPerspectivas()
 
-        Me._modelo = Me._produto.Modelos(DataGridViewModelos.CurrentRow.Index + 1)
+        If Me._produto.Modelos.Count > 0 Then
+            Me._modelo = Me._produto.Modelos(DataGridViewModelos.CurrentRow.Index + 1)
 
-        Me.DataGridViewPerspectivas.Rows.Clear()
+            Me.DataGridViewPerspectivas.Rows.Clear()
 
-        For Each p As cmPerspectivaImagem In Me._modelo.Perspectivas()
-            Me.DataGridViewPerspectivas.Rows.Add(p.Perspectiva.ToString())
-        Next
+            For Each p As cmPerspectivaImagem In Me._modelo.Perspectivas()
+                Me.DataGridViewPerspectivas.Rows.Add(p.Perspectiva.ToString())
+            Next
+        End If
 
     End Sub
 

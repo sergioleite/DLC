@@ -1,5 +1,4 @@
-﻿Imports MvcApplication1.Produto
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
 
 Public Class cmCategoria
     Public href As String

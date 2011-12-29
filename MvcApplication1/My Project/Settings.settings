@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="db_connection_string" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Data Source=1-PC\SQLEXPRESS;Initial Catalog=DLC1;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=dbsq0004.whservidor.com;Initial Catalog=deboraleit2;Integrated Security=false;User=deboraleit2;Pwd=tanacara</Value>
     </Setting>
     <Setting Name="db_connection_string_bba" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Data Source=1-MV8068\SQLEXPRESS;Initial Catalog=DLC1;Integrated Security=True</Value>

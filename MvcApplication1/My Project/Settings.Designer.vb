@@ -56,7 +56,8 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=1-PC\SQLEXPRESS;Initial Catalog=DLC1;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=dbsq0004.whservidor.com;Initial Catalog=deboraleit2;Integrated Securi"& _ 
+            "ty=false;User=deboraleit2;Pwd=tanacara")>  _
         Public ReadOnly Property db_connection_string() As String
             Get
                 Return CType(Me("db_connection_string"),String)
@@ -82,9 +83,9 @@ Namespace My
     Friend Module MySettingsProperty
         
         <Global.System.ComponentModel.Design.HelpKeywordAttribute("My.Settings")>  _
-        Friend ReadOnly Property Settings() As Global.MvcApplication1.My.MySettings
+        Friend ReadOnly Property Settings() As Global.br.com.deboraleite.My.MySettings
             Get
-                Return Global.MvcApplication1.My.MySettings.Default
+                Return Global.br.com.deboraleite.My.MySettings.Default
             End Get
         End Property
     End Module

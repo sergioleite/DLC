@@ -1,7 +1,4 @@
-﻿'Imports MvcApplication1.Entities
-Imports MvcApplication1.Vitrine
-
-<HandleError()> _
+﻿<HandleError()> _
 Public Class ccHomeController
     Inherits System.Web.Mvc.Controller
 

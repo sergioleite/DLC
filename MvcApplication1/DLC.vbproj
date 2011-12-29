@@ -9,14 +9,15 @@
     <ProjectGuid>{6633DDB6-5B7C-446F-93A6-F9F3347521A6}</ProjectGuid>
     <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>MvcApplication1</RootNamespace>
-    <AssemblyName>MvcApplication1</AssemblyName>
+    <RootNamespace>br.com.deboraleite</RootNamespace>
+    <AssemblyName>DLC</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <OptionExplicit>On</OptionExplicit>
     <OptionCompare>Binary</OptionCompare>
     <OptionStrict>Off</OptionStrict>
     <OptionInfer>On</OptionInfer>
     <MvcBuildViews>false</MvcBuildViews>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,8 +25,11 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>MvcApplication1.xml</DocumentationFile>
+    <DocumentationFile>DLC.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DeployEncryptKey>tanacara</DeployEncryptKey>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,15 +37,18 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>MvcApplication1.xml</DocumentationFile>
+    <DocumentationFile>DLC.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PublishDatabases>true</PublishDatabases>
+    <DeployEncryptKey>Encryption password is used only if any deployment setting is marked as secure</DeployEncryptKey>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Simulacao 1|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\</OutputPath>
-    <DocumentationFile>MvcApplication1.xml</DocumentationFile>
+    <DocumentationFile>DLC.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,31 +64,21 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Web.Extensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Web.Extensions.Design">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -90,6 +87,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -208,7 +206,79 @@
     <Content Include="Diagramas\DLC1_DDL_DML.sql" />
     <Content Include="geral.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\._bgs.png" />
+    <Content Include="images\2010\trocaGratis.gif" />
+    <Content Include="images\2011\._filtros-selecionados.gif" />
+    <Content Include="images\2011\._filtros-selecionados.png" />
+    <Content Include="images\2011\._rodape-midia-social.png" />
+    <Content Include="images\2011\._sprites-topo.png" />
+    <Content Include="images\2011\add-to-cart.gif" />
+    <Content Include="images\2011\anitalogo-26anos.gif" />
+    <Content Include="images\2011\bg-azul-contato.png" />
+    <Content Include="images\2011\bg-busca-rodape.png" />
+    <Content Include="images\2011\bg-central.png" />
+    <Content Include="images\2011\bg-container-login.png" />
+    <Content Include="images\2011\bg-email.png" />
+    <Content Include="images\2011\bg-forma-pagamento.jpg" />
+    <Content Include="images\2011\bg-referencia.gif" />
+    <Content Include="images\2011\bg-rodape-prov-2.png" />
+    <Content Include="images\2011\bg-rodape.png" />
+    <Content Include="images\2011\bg-rosa-contato.png" />
+    <Content Include="images\2011\bg-seguranca.png" />
+    <Content Include="images\2011\bg-tabela-preco.jpg" />
+    <Content Include="images\2011\bg-titulo.gif" />
+    <Content Include="images\2011\btn-aviseme.png" />
+    <Content Include="images\2011\btn-buscar-novo.png" />
+    <Content Include="images\2011\btn-cadastrar-novo.gif" />
+    <Content Include="images\2011\btn-cep-ok.gif" />
+    <Content Include="images\2011\btn-comprar-mais.png" />
+    <Content Include="images\2011\btn-comprar.png" />
+    <Content Include="images\2011\btn-submitcadastro.gif" />
+    <Content Include="images\2011\btn-usarendereco.gif" />
+    <Content Include="images\2011\btnFullbanner.png" />
+    <Content Include="images\2011\carrinho-expresso.png" />
+    <Content Include="images\2011\carrinho-pac.png" />
+    <Content Include="images\2011\contato-title.png" />
+    <Content Include="images\2011\diferencial.jpg" />
+    <Content Include="images\2011\empresa-amiga.png" />
+    <Content Include="images\2011\filtros-selecionados.gif" />
+    <Content Include="images\2011\filtros-selecionados.png" />
+    <Content Include="images\2011\img-cep.gif" />
+    <Content Include="images\2011\img-loja.png" />
+    <Content Include="images\2011\meios-pagamento.gif" />
+    <Content Include="images\2011\meios-pagamento.png" />
+    <Content Include="images\2011\paging_bg2.png" />
+    <Content Include="images\2011\passo1-produto.png" />
+    <Content Include="images\2011\passo2-produto.png" />
+    <Content Include="images\2011\passo3-produto.png" />
+    <Content Include="images\2011\rodape-atendimento-2.png" />
+    <Content Include="images\2011\rodape-fone-ouvido.png" />
+    <Content Include="images\2011\rodape-formas.png" />
+    <Content Include="images\2011\rodape-midia-social.png" />
+    <Content Include="images\2011\rodape-newsletter.png" />
+    <Content Include="images\2011\rodape-seguranca.png" />
+    <Content Include="images\2011\sem-juros.gif" />
+    <Content Include="images\2011\site-seguro.gif" />
+    <Content Include="images\2011\sprite-cartoes.gif" />
+    <Content Include="images\2011\sprite-passos-novo.png" />
+    <Content Include="images\2011\sprite-topo-payment.png" />
+    <Content Include="images\2011\sprites-central-atendimento.png" />
+    <Content Include="images\2011\sprites-icones.png" />
+    <Content Include="images\2011\sprites-title.gif" />
+    <Content Include="images\2011\sprites-topo.png" />
+    <Content Include="images\2011\sprites-tudo.jpg" />
+    <Content Include="images\2011\title-carrinho.png" />
+    <Content Include="images\2011\voltar-contato.png" />
+    <Content Include="images\anabela-ferrette-roxa-site_produtos-1621959831_pequena.jpg" />
     <Content Include="images\bgs.png" />
+    <Content Include="images\bg_abas.gif" />
+    <Content Include="images\btn-buscar-novo.png" />
+    <Content Include="images\BTN-OK.png" />
+    <Content Include="images\bullets.gif" />
+    <Content Include="images\carteiras-femininas--1327419435.jpg" />
+    <Content Include="images\chinelo-feminino-werner-preto-site_produtos-1088044656.jpg" />
+    <Content Include="images\chinelo-feminino-werner-preto-site_produtos-1088044656_media.jpg" />
+    <Content Include="images\chinelo-feminino-werner-preto-site_produtos-1088044656_pequena.jpg" />
     <Content Include="images\cores\cores_amarelos.gif" />
     <Content Include="images\cores\cores_azuis.gif" />
     <Content Include="images\cores\cores_beges.gif" />
@@ -226,6 +296,40 @@
     <Content Include="images\cores\cores_verdes.gif" />
     <Content Include="images\cores\cores_vermelhos.gif" />
     <Content Include="images\favicon.ico" />
+    <Content Include="images\ferrette--982025144.jpg" />
+    <Content Include="images\menu_bg.jpg" />
+    <Content Include="images\menu_sprites.gif" />
+    <Content Include="images\nophoto.jpg" />
+    <Content Include="images\recebaNovidadesSprites.png" />
+    <Content Include="images\sapato-carmim-zenia-23009-site_produtos-1893985385_pequena.jpg" />
+    <Content Include="images\scarpin-anzetutto-vermelho-site_produtos-1836894479_pequena.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1459211714.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1459211714_media.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1459211714_pequena.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1627510854.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1627510854_media.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1627510854_pequena.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1792023476.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1792023476_media.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-1792023476_pequena.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-214482278.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-214482278_media.jpg" />
+    <Content Include="images\scarpin-feminino-ferrette-branco-site_produtos-214482278_pequena.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1344563076.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1344563076_media.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1344563076_pequena.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1792617062.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1792617062_media.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1792617062_pequena.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1964363582.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1964363582_media.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-1964363582_pequena.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-2107744158.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-2107744158_media.jpg" />
+    <Content Include="images\scarpin-ferrette-vermelho-site_produtos-2107744158_pequena.jpg" />
+    <Content Include="images\tit.png" />
+    <Content Include="images\transparentes.png" />
+    <Content Include="images\zoomloader.gif" />
     <Content Include="jquery.jqzoom.css" />
     <Content Include="js\funcoesMenu.js" />
     <Content Include="js\jquery-1.6.js" />

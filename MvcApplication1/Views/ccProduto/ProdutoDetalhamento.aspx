@@ -1,6 +1,6 @@
-﻿<%@ Import Namespace="MvcApplication1" %>
-<%@ Import Namespace="cmProdutoDetalhamento" %>
+﻿<%@ Import Namespace="br.com.deboraleite" %>
 <%=""%>
+
 <%
     Dim v As cmProdutoDetalhamento
     v = ViewData.Model

@@ -40,6 +40,6 @@ Public Class MvcApplication
         AreaRegistration.RegisterAllAreas()
 
         RegisterRoutes(RouteTable.Routes)
-        AppDomain.CurrentDomain.SetData("SQLServerCompactEditionUnderWebHosting", True)
+
     End Sub
 End Class
