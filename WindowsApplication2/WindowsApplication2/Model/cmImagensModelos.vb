@@ -67,7 +67,7 @@ Public Class cmImagensModelos
         While reader.Read()
             img = New cmImagemModelo()
             img.IDModelo = IdModelo
-            img.NomeArquivo = reader.GetString(reader.GetOrdinal("NOMEARQUIVO"))
+            img.NomeArquivoRemoto = reader.GetString(reader.GetOrdinal("NOMEARQUIVO"))
             img.TamanhoPMG = reader.GetString(reader.GetOrdinal("TAMANHO"))
             img.Perspectiva = reader.GetString(reader.GetOrdinal("PERSPECTIVA"))
             imagens.Add(img)

@@ -1,4 +1,4 @@
-﻿Public Class Categoria_Edit
+﻿Public Class Categoria
     Public ParentRow As Int16
     Public Operacao As New String("")
 
@@ -11,7 +11,15 @@
     'Public Original_Dica As String
 
     Private Sub Categoria_Edit_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        If Me.Operacao = "C" Then
+            Me.ButtonInserir.Visible = True
+            Me.ButtonAlterar.Visible = False
+            Me.ButtonExcluir.Visible = False
+        Else
+            Me.ButtonInserir.Visible = False
+            Me.ButtonAlterar.Visible = True
+            Me.ButtonExcluir.Visible = True
+        End If
 
     End Sub
 

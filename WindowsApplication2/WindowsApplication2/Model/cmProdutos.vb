@@ -40,7 +40,7 @@ Public Class cmProdutos
             p.Categoria.ID = reader.GetSqlInt32(reader.GetOrdinal("CATEGORIA__ID"))
             p.Categoria.Nome = reader.GetString(reader.GetOrdinal("CATEGORIA_NOME"))
 
-            produtos.Add(p)
+            produtos.Add(p, p.ID)
         End While
 
         reader.Close()

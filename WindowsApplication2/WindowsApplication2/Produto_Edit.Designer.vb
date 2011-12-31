@@ -30,11 +30,10 @@ Partial Class Produto_Edit
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.CheckBoxPromocao = New System.Windows.Forms.CheckBox()
-        Me.TextBoxPrecoNormal = New System.Windows.Forms.TextBox()
-        Me.TextBoxQtdeParcelas = New System.Windows.Forms.TextBox()
         Me.TextBoxPrecoPromocional = New System.Windows.Forms.TextBox()
+        Me.CheckBoxPromocao = New System.Windows.Forms.CheckBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TextBoxPrecoNormal = New System.Windows.Forms.TextBox()
         Me.TextBoxReferencia = New System.Windows.Forms.TextBox()
         Me.TextBoxFabricante = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -44,16 +43,20 @@ Partial Class Produto_Edit
         Me.ButtonInserir = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TextBoxDescricaoHTML = New System.Windows.Forms.TextBox()
+        Me.TextBoxQtdeParcelas = New System.Windows.Forms.MaskedTextBox()
+        Me.ButtonSaveEdit = New System.Windows.Forms.Button()
+        Me.ButtonExcluirProduto = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ComboBoxCategoria
         '
+        Me.ComboBoxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxCategoria.FormattingEnabled = True
         Me.ComboBoxCategoria.Location = New System.Drawing.Point(105, 36)
         Me.ComboBoxCategoria.Name = "ComboBoxCategoria"
         Me.ComboBoxCategoria.Size = New System.Drawing.Size(208, 21)
-        Me.ComboBoxCategoria.TabIndex = 0
+        Me.ComboBoxCategoria.TabIndex = 1
         '
         'Label1
         '
@@ -61,12 +64,13 @@ Partial Class Produto_Edit
         Me.Label1.Location = New System.Drawing.Point(5, 44)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 1
+        Me.Label1.TabIndex = 11
         Me.Label1.Text = "Categoria:"
         '
         'TextBoxNome
         '
         Me.TextBoxNome.Location = New System.Drawing.Point(105, 64)
+        Me.TextBoxNome.MaxLength = 255
         Me.TextBoxNome.Name = "TextBoxNome"
         Me.TextBoxNome.Size = New System.Drawing.Size(346, 20)
         Me.TextBoxNome.TabIndex = 2
@@ -77,7 +81,7 @@ Partial Class Produto_Edit
         Me.Label2.Location = New System.Drawing.Point(5, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 13)
-        Me.Label2.TabIndex = 3
+        Me.Label2.TabIndex = 12
         Me.Label2.Text = "Nome Produto:"
         '
         'Label3
@@ -95,7 +99,7 @@ Partial Class Produto_Edit
         Me.Label4.Location = New System.Drawing.Point(5, 156)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(74, 13)
-        Me.Label4.TabIndex = 5
+        Me.Label4.TabIndex = 15
         Me.Label4.Text = "Preço Normal:"
         '
         'Label5
@@ -104,7 +108,7 @@ Partial Class Produto_Edit
         Me.Label5.Location = New System.Drawing.Point(5, 182)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 13)
-        Me.Label5.TabIndex = 6
+        Me.Label5.TabIndex = 16
         Me.Label5.Text = "Qtde. Parcelas:"
         '
         'GroupBox1
@@ -115,9 +119,27 @@ Partial Class Produto_Edit
         Me.GroupBox1.Location = New System.Drawing.Point(3, 211)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(227, 73)
-        Me.GroupBox1.TabIndex = 7
+        Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Promoção"
+        '
+        'TextBoxPrecoPromocional
+        '
+        Me.TextBoxPrecoPromocional.Enabled = False
+        Me.TextBoxPrecoPromocional.Location = New System.Drawing.Point(105, 42)
+        Me.TextBoxPrecoPromocional.Name = "TextBoxPrecoPromocional"
+        Me.TextBoxPrecoPromocional.Size = New System.Drawing.Size(100, 20)
+        Me.TextBoxPrecoPromocional.TabIndex = 1
+        '
+        'CheckBoxPromocao
+        '
+        Me.CheckBoxPromocao.AutoSize = True
+        Me.CheckBoxPromocao.Location = New System.Drawing.Point(5, 19)
+        Me.CheckBoxPromocao.Name = "CheckBoxPromocao"
+        Me.CheckBoxPromocao.Size = New System.Drawing.Size(91, 17)
+        Me.CheckBoxPromocao.TabIndex = 0
+        Me.CheckBoxPromocao.Text = "Em promoção"
+        Me.CheckBoxPromocao.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -128,50 +150,28 @@ Partial Class Produto_Edit
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Preço Promocional:"
         '
-        'CheckBoxPromocao
-        '
-        Me.CheckBoxPromocao.AutoSize = True
-        Me.CheckBoxPromocao.Location = New System.Drawing.Point(5, 19)
-        Me.CheckBoxPromocao.Name = "CheckBoxPromocao"
-        Me.CheckBoxPromocao.Size = New System.Drawing.Size(91, 17)
-        Me.CheckBoxPromocao.TabIndex = 9
-        Me.CheckBoxPromocao.Text = "Em promoção"
-        Me.CheckBoxPromocao.UseVisualStyleBackColor = True
-        '
         'TextBoxPrecoNormal
         '
         Me.TextBoxPrecoNormal.Location = New System.Drawing.Point(105, 148)
         Me.TextBoxPrecoNormal.Name = "TextBoxPrecoNormal"
         Me.TextBoxPrecoNormal.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxPrecoNormal.TabIndex = 10
-        '
-        'TextBoxQtdeParcelas
-        '
-        Me.TextBoxQtdeParcelas.Location = New System.Drawing.Point(105, 175)
-        Me.TextBoxQtdeParcelas.Name = "TextBoxQtdeParcelas"
-        Me.TextBoxQtdeParcelas.Size = New System.Drawing.Size(33, 20)
-        Me.TextBoxQtdeParcelas.TabIndex = 11
-        '
-        'TextBoxPrecoPromocional
-        '
-        Me.TextBoxPrecoPromocional.Location = New System.Drawing.Point(105, 42)
-        Me.TextBoxPrecoPromocional.Name = "TextBoxPrecoPromocional"
-        Me.TextBoxPrecoPromocional.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxPrecoPromocional.TabIndex = 12
+        Me.TextBoxPrecoNormal.TabIndex = 5
         '
         'TextBoxReferencia
         '
         Me.TextBoxReferencia.Location = New System.Drawing.Point(105, 91)
+        Me.TextBoxReferencia.MaxLength = 50
         Me.TextBoxReferencia.Name = "TextBoxReferencia"
-        Me.TextBoxReferencia.Size = New System.Drawing.Size(223, 20)
-        Me.TextBoxReferencia.TabIndex = 12
+        Me.TextBoxReferencia.Size = New System.Drawing.Size(346, 20)
+        Me.TextBoxReferencia.TabIndex = 3
         '
         'TextBoxFabricante
         '
         Me.TextBoxFabricante.Location = New System.Drawing.Point(105, 118)
+        Me.TextBoxFabricante.MaxLength = 100
         Me.TextBoxFabricante.Name = "TextBoxFabricante"
         Me.TextBoxFabricante.Size = New System.Drawing.Size(346, 20)
-        Me.TextBoxFabricante.TabIndex = 13
+        Me.TextBoxFabricante.TabIndex = 4
         '
         'Label7
         '
@@ -179,7 +179,7 @@ Partial Class Produto_Edit
         Me.Label7.Location = New System.Drawing.Point(5, 97)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 13)
-        Me.Label7.TabIndex = 14
+        Me.Label7.TabIndex = 13
         Me.Label7.Text = "Referência:"
         '
         'Label8
@@ -188,7 +188,7 @@ Partial Class Produto_Edit
         Me.Label8.Location = New System.Drawing.Point(5, 124)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(60, 13)
-        Me.Label8.TabIndex = 15
+        Me.Label8.TabIndex = 14
         Me.Label8.Text = "Fabricante:"
         '
         'Label9
@@ -197,7 +197,7 @@ Partial Class Produto_Edit
         Me.Label9.Location = New System.Drawing.Point(5, 13)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(69, 13)
-        Me.Label9.TabIndex = 16
+        Me.Label9.TabIndex = 10
         Me.Label9.Text = "Cód.Produto:"
         '
         'TextBoxIDProduto
@@ -205,15 +205,16 @@ Partial Class Produto_Edit
         Me.TextBoxIDProduto.Enabled = False
         Me.TextBoxIDProduto.Location = New System.Drawing.Point(105, 6)
         Me.TextBoxIDProduto.Name = "TextBoxIDProduto"
-        Me.TextBoxIDProduto.Size = New System.Drawing.Size(100, 20)
-        Me.TextBoxIDProduto.TabIndex = 17
+        Me.TextBoxIDProduto.ReadOnly = True
+        Me.TextBoxIDProduto.Size = New System.Drawing.Size(50, 20)
+        Me.TextBoxIDProduto.TabIndex = 0
         '
         'ButtonInserir
         '
         Me.ButtonInserir.Location = New System.Drawing.Point(8, 466)
         Me.ButtonInserir.Name = "ButtonInserir"
         Me.ButtonInserir.Size = New System.Drawing.Size(135, 24)
-        Me.ButtonInserir.TabIndex = 18
+        Me.ButtonInserir.TabIndex = 8
         Me.ButtonInserir.Text = "Gravar novo produto"
         Me.ButtonInserir.UseVisualStyleBackColor = True
         '
@@ -232,13 +233,43 @@ Partial Class Produto_Edit
         Me.TextBoxDescricaoHTML.Multiline = True
         Me.TextBoxDescricaoHTML.Name = "TextBoxDescricaoHTML"
         Me.TextBoxDescricaoHTML.Size = New System.Drawing.Size(542, 134)
-        Me.TextBoxDescricaoHTML.TabIndex = 20
+        Me.TextBoxDescricaoHTML.TabIndex = 7
+        '
+        'TextBoxQtdeParcelas
+        '
+        Me.TextBoxQtdeParcelas.Location = New System.Drawing.Point(105, 175)
+        Me.TextBoxQtdeParcelas.Mask = "99"
+        Me.TextBoxQtdeParcelas.Name = "TextBoxQtdeParcelas"
+        Me.TextBoxQtdeParcelas.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.TextBoxQtdeParcelas.Size = New System.Drawing.Size(31, 20)
+        Me.TextBoxQtdeParcelas.TabIndex = 6
+        '
+        'ButtonSaveEdit
+        '
+        Me.ButtonSaveEdit.Location = New System.Drawing.Point(158, 464)
+        Me.ButtonSaveEdit.Name = "ButtonSaveEdit"
+        Me.ButtonSaveEdit.Size = New System.Drawing.Size(133, 25)
+        Me.ButtonSaveEdit.TabIndex = 9
+        Me.ButtonSaveEdit.Text = "Gravar alterações"
+        Me.ButtonSaveEdit.UseVisualStyleBackColor = True
+        '
+        'ButtonExcluirProduto
+        '
+        Me.ButtonExcluirProduto.Location = New System.Drawing.Point(312, 466)
+        Me.ButtonExcluirProduto.Name = "ButtonExcluirProduto"
+        Me.ButtonExcluirProduto.Size = New System.Drawing.Size(123, 23)
+        Me.ButtonExcluirProduto.TabIndex = 20
+        Me.ButtonExcluirProduto.Text = "Excluir Produto"
+        Me.ButtonExcluirProduto.UseVisualStyleBackColor = True
         '
         'Produto_Edit
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(569, 502)
+        Me.ClientSize = New System.Drawing.Size(568, 496)
+        Me.Controls.Add(Me.ButtonExcluirProduto)
+        Me.Controls.Add(Me.ButtonSaveEdit)
+        Me.Controls.Add(Me.TextBoxQtdeParcelas)
         Me.Controls.Add(Me.TextBoxDescricaoHTML)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.ButtonInserir)
@@ -248,7 +279,6 @@ Partial Class Produto_Edit
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBoxFabricante)
         Me.Controls.Add(Me.TextBoxReferencia)
-        Me.Controls.Add(Me.TextBoxQtdeParcelas)
         Me.Controls.Add(Me.TextBoxPrecoNormal)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
@@ -259,6 +289,7 @@ Partial Class Produto_Edit
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBoxCategoria)
         Me.Name = "Produto_Edit"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cadastro de Produto"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -278,7 +309,6 @@ Partial Class Produto_Edit
     Friend WithEvents CheckBoxPromocao As System.Windows.Forms.CheckBox
     Friend WithEvents TextBoxPrecoPromocional As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxPrecoNormal As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxQtdeParcelas As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxReferencia As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxFabricante As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
@@ -288,4 +318,8 @@ Partial Class Produto_Edit
     Friend WithEvents ButtonInserir As System.Windows.Forms.Button
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents TextBoxDescricaoHTML As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxQtdeParcelas As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents ButtonSaveEdit As System.Windows.Forms.Button
+    Friend WithEvents ButtonExcluirProduto As System.Windows.Forms.Button
+
 End Class

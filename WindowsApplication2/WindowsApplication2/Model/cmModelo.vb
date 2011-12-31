@@ -28,6 +28,48 @@ Public Class cmModelo
     End Function
 
 
+    Public Function Update() As Boolean
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+
+
+        Try
+
+            cmd.CommandText = "dbo.adml_modelo_update"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@ID", Me.ID)
+            cmd.Parameters.AddWithValue("@NOME", Me.Nome)
+            cmd.Parameters.AddWithValue("@WEBVIEW_URL_AMIGAVEL", Me.URL)
+            cmd.Parameters.AddWithValue("@LIBERADO_PARA_VENDA", Me.LiberadoVenda)
+            cmd.Parameters.AddWithValue("@PRODUTO__ID", Me.Produto_ID)
+            cmd.Parameters.AddWithValue("@COR__ID", Me.CorID)
+
+            cmd.Parameters.AddWithValue("@ESTOQUE33", Me.Estoque_33)
+            cmd.Parameters.AddWithValue("@ESTOQUE34", Me.Estoque_34)
+            cmd.Parameters.AddWithValue("@ESTOQUE35", Me.Estoque_35)
+            cmd.Parameters.AddWithValue("@ESTOQUE36", Me.Estoque_36)
+            cmd.Parameters.AddWithValue("@ESTOQUE37", Me.Estoque_37)
+            cmd.Parameters.AddWithValue("@ESTOQUE38", Me.Estoque_38)
+            cmd.Parameters.AddWithValue("@ESTOQUE39", Me.Estoque_39)
+            cmd.Parameters.AddWithValue("@ESTOQUE40", Me.Estoque_40)
+
+            cmd.Connection = sqlConnection1
+
+            sqlConnection1.Open()
+
+            cmd.ExecuteNonQuery()
+
+            Me.ID = Convert.ToInt16(cmd.Parameters("@ID").Value)
+
+            Return True
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
+
+    End Function
+
     Public Function Insert() As Boolean
         Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
         Dim cmd As New SqlCommand
@@ -63,6 +105,30 @@ Public Class cmModelo
             Me.ID = Convert.ToInt16(cmd.Parameters("@ID").Value)
 
             AtualizaIDModeloNasPerspectivas()
+
+            Return True
+        Catch ex As Exception
+
+        Finally
+            sqlConnection1.Close()
+        End Try
+    End Function
+
+    Public Function Delete() As Boolean
+        Dim sqlConnection1 As New SqlConnection(My.Settings.db_connection_string)
+        Dim cmd As New SqlCommand
+
+
+        Try
+
+            cmd.CommandText = "dbo.adml_modelo_delete"
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@MODELO_ID", Me.ID)
+            cmd.Connection = sqlConnection1
+
+            sqlConnection1.Open()
+
+            cmd.ExecuteNonQuery()
 
             Return True
         Catch ex As Exception

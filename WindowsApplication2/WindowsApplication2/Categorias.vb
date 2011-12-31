@@ -54,8 +54,8 @@
     End Sub
 
     Private Sub ButtonNovo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonNovo.Click
-        Dim frmEdit As New Categoria_Edit()
-        frmEdit.Operacao = "I"
+        Dim frmEdit As New Categoria()
+        frmEdit.Operacao = "C"
         frmEdit.ShowDialog()
         Me.CATEGORIATableAdapter.Fill(Me.DLC1DataSet.CATEGORIA)
     End Sub
@@ -69,7 +69,7 @@
     End Sub
 
     Sub Edit(ByVal RowIndex As Int16)
-        Dim frmEdit As New Categoria_Edit()
+        Dim frmEdit As New Categoria()
 
         frmEdit.Operacao = "U"
 

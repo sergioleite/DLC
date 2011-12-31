@@ -29,8 +29,8 @@ Partial Class Imagem_Modelo
         Me.PictureBoxM = New System.Windows.Forms.PictureBox()
         Me.PictureBoxG = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.ButtonOk = New System.Windows.Forms.Button()
+        Me.ButtonCancel = New System.Windows.Forms.Button()
         CType(Me.PictureBoxP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBoxG, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,31 +95,31 @@ Partial Class Imagem_Modelo
         Me.Button3.Text = "Imagem Grande"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(12, 501)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 6
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'ButtonOk
         '
-        Me.ButtonOk.Location = New System.Drawing.Point(116, 502)
+        Me.ButtonOk.Location = New System.Drawing.Point(12, 501)
         Me.ButtonOk.Name = "ButtonOk"
-        Me.ButtonOk.Size = New System.Drawing.Size(58, 21)
+        Me.ButtonOk.Size = New System.Drawing.Size(75, 23)
         Me.ButtonOk.TabIndex = 7
         Me.ButtonOk.Text = "OK"
         Me.ButtonOk.UseVisualStyleBackColor = True
+        '
+        'ButtonCancel
+        '
+        Me.ButtonCancel.Location = New System.Drawing.Point(108, 501)
+        Me.ButtonCancel.Name = "ButtonCancel"
+        Me.ButtonCancel.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonCancel.TabIndex = 8
+        Me.ButtonCancel.Text = "Cancelar"
+        Me.ButtonCancel.UseVisualStyleBackColor = True
         '
         'Imagem_Modelo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 536)
+        Me.Controls.Add(Me.ButtonCancel)
         Me.Controls.Add(Me.ButtonOk)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PictureBoxG)
         Me.Controls.Add(Me.PictureBoxM)
@@ -128,7 +128,7 @@ Partial Class Imagem_Modelo
         Me.Controls.Add(Me.PictureBoxP)
         Me.Name = "Imagem_Modelo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Imagem_Modelo"
+        Me.Text = "Imagens de uma perspectiva"
         CType(Me.PictureBoxP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxM, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBoxG, System.ComponentModel.ISupportInitialize).EndInit()
@@ -142,6 +142,6 @@ Partial Class Imagem_Modelo
     Friend WithEvents PictureBoxM As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBoxG As System.Windows.Forms.PictureBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents ButtonOk As System.Windows.Forms.Button
+    Friend WithEvents ButtonCancel As System.Windows.Forms.Button
 End Class

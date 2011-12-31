@@ -131,6 +131,7 @@ Partial Class Categorias
         Me.Controls.Add(Me.ButtonNovo)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "Categorias"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Categorias"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CATEGORIABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
