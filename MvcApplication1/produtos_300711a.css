@@ -125,7 +125,7 @@ margin-right:6px;
 border:1px solid #F5F5F5;
 }
 .view_produto_maisfotos a:hover img{
-border:1px solid #DFCD01;
+border:1px solid #CC0000;
 }
 .viewProdutoFoto{
 display:block;
@@ -149,7 +149,7 @@ height:50px;
 cursor:pointer;
 }
 #navProduto a.activeSlide {
-border:1px solid #DFCD01;
+border:1px solid #CC0000;
 cursor:pointer;
 }
 #navProduto a {
@@ -189,7 +189,7 @@ float:left;
 margin:10px 0px 0px 10px;
 }
 .jqvideo:hover{
-border:1px solid #DFCD01;
+border:1px solid #CC0000;
 }
 div.jqZoomTitle
 {

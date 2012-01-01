@@ -140,7 +140,7 @@ Nuvem de tags
 #cloudLateral a.tag10 { font-size:20px; line-height:20px}
 #cloudLateral { padding: 0px 4px 0px 4px; text-align: center; }
 #cloudLateral a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color:#0066CC }
-#cloudLateral a:hover { background-color:#DFCD01; color:#FFFFFF }
+#cloudLateral a:hover { background-color:#CC0000; color:#FFFFFF }
 #cloudLateral { margin: 0; }
 #cloudLateral li { display: inline; }
 #cloud a.tag1 { font-size:10px; line-height:10px }
@@ -155,7 +155,7 @@ Nuvem de tags
 #cloud a.tag10 { font-size:32px; line-height:32px}
 #cloud { padding: 0px 4px 0px 4px; text-align: center; }
 #cloud a { padding: 0px; font-family:Arial, Helvetica, sans-serif; color:#0066CC }
-#cloud a:hover { background-color:#DFCD01; color:#FFFFFF }
+#cloud a:hover { background-color:#CC0000; color:#FFFFFF }
 #cloud { margin: 0; }
 #cloud li { display: inline; }
 /* ALTERAï¿½ï¿½ES PRODUTOS IMAGENS */
@@ -166,7 +166,7 @@ cursor:pointer;
 }
 .fotoMiniaturaSelect
 {
-border:1px solid #DFCD01;
+border:1px solid #cc0000;
 cursor:pointer;
 }
 div.zoomdiv {
