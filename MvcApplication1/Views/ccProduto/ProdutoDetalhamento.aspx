@@ -12,7 +12,7 @@
     <!-- http://www.anitaonline.com.br/scarpin-ferrette-branco-offwht-119361?utm_campaign=Destaques-calcados-femininos&utm_medium=Anitaonline-Site&utm_source=calcados-femininos-Linha-1&utm_content=calcados-femininos-Linha-1-Posicao-4-scarpin-ferrette-branco&utm_term= -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
-        Calçados femininos, calçados masculinos, tênis e acessórios - Anita Online - A sua loja de calçados 	online
+        Calçados femininos e acessórios - Débora Leite - A moda online em calçados
     </title>
     <link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon"/>
     

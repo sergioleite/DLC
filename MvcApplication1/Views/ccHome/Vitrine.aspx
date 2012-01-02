@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
-        Calçados femininos e acessórios - Anita Online - A moda online em calçados
+        Calçados femininos e acessórios - Débora Leite - A moda online em calçados
     </title>
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
@@ -351,7 +351,7 @@
             <div id="blocoBaixoRodapeNovo2" style="border-bottom:1px solid #F3F3F3;">
                 <div id="rodapeRedeSocialNovo">
                     <h3>Redes Sociais</h3>
-                    <p>Acompanhe Débora Leite Calçados nas Redes Sociais</p>
+                    <p>Acompanhe Débora Leite Calçados na Rede Social</p>
                     <ul class="linksSocial">
                         <li class="sprite" id="twitterNovo"><a href="http://twitter.com/DeboraLeiteCalcados" title="Twitter" target="_blank">Twitter</a></li><li class="sprite" id="facebookNovo"><a href="http://www.facebook.com/DeboraLeite" title="Facebook" target="_blank">Facebook</a></li><li class="sprite" id="youtubeNovo"><a href="http://www.youtube.com/user/DeboraLeite" title="Youtube" target="_blank">Youtube</a></li>
                         <li class="sprite" id="orkutNovo"><a href="http://www.orkut.com.br/Main#Community.aspx?cmm=0" title="Orkut" target="_blank">Orkut</a></li><li class="sprite" id="blogNovo"><a href="/" title="Débora Leite Calçados - Blog" target="_blank">Débora Leite Calçados - Blog</a></li>

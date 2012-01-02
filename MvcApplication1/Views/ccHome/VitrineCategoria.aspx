@@ -6,7 +6,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>
-        Calçados femininos, calçados masculinos, tênis e acessórios - Anita Online - A sua loja de calçados 	online
+        Calçados femininos e acessórios - Débora Leite - A moda online em calçados
     </title>
 
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
