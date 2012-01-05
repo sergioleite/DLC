@@ -57,8 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=dbsq0004.whservidor.com;Initial Catalog=deboraleit2;User ID=deboralei"& _ 
-            "t2;Password=tanacara")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=1-PC\SQLEXPRESS;Initial Catalog=deboraleit2;Integrated Security=True")>  _
         Public ReadOnly Property DLC1ConnectionString() As String
             Get
                 Return CType(Me("DLC1ConnectionString"),String)
@@ -67,12 +66,36 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=dbsq0004.whservidor.com;Initial Catalog=deboraleit2;Integrated Securi"& _ 
-            "ty=False;User ID=deboraleit2;pwd=tanacara")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=1-PC\SQLEXPRESS;Initial Catalog=deboraleit2;Integrated Security=True")>  _
         Public ReadOnly Property db_connection_string() As String
             Get
                 Return CType(Me("db_connection_string"),String)
             End Get
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=1-PC\SQLEXPRESS;Initial Catalog=deboraleit2;Integrated Security=True")>  _
+        Public Property local() As String
+            Get
+                Return CType(Me("local"),String)
+            End Get
+            Set
+                Me("local") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=dbsq0004.whservidor.com;Initial Catalog=deboraleit2;Integrated Securi"& _ 
+            "ty=False;User ID=deboraleit2;pwd=tanacara")>  _
+        Public Property uolhost() As String
+            Get
+                Return CType(Me("uolhost"),String)
+            End Get
+            Set
+                Me("uolhost") = value
+            End Set
         End Property
     End Class
 End Namespace

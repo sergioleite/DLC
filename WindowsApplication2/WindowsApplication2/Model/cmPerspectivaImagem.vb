@@ -20,8 +20,7 @@
 
     Public Function UploadImages() As Boolean
         Dim Timestamp As String
-        Timestamp = Me._TimeStampCriacao.ToString("YYYYMMDDHHmmSS_")
-        For Each i As cmImagemModelo In Imagens()
+        Timestamp = Me._TimeStampCriacao.ToString("yyyyMMddHHmmss_")        For Each i As cmImagemModelo In Imagens()
             i.NomeArquivoRemoto = Timestamp & i.TamanhoPMG & ".jpg"
             i.Upload()
         Next

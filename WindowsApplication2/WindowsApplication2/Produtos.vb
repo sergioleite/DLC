@@ -158,6 +158,8 @@
 
         If DataGridViewModelos.RowCount > 0 Then
 
+            Me._modelo = Me._produto.Modelos(DataGridViewModelos.CurrentRow.Index + 1)
+
             CarregaGridPerspectivas()
 
             CarregaDados_ObjetoModelo_Tela()
@@ -168,20 +170,11 @@
 
         Me.Cursor = Cursors.WaitCursor
 
-        If Me._produto.Modelos.Count > 0 Then
-            Try
-                Me._modelo = Me._produto.Modelos(DataGridViewModelos.CurrentRow.Index + 1)
+        Me.DataGridViewPerspectivas.Rows.Clear()
 
-                Me.DataGridViewPerspectivas.Rows.Clear()
-
-                For Each p As cmPerspectivaImagem In Me._modelo.Perspectivas()
-                    Me.DataGridViewPerspectivas.Rows.Add(p.Perspectiva.ToString())
-                Next
-
-            Catch ex As Exception
-
-            End Try
-        End If
+        For Each p As cmPerspectivaImagem In Me._modelo.Perspectivas()
+            Me.DataGridViewPerspectivas.Rows.Add(p.Perspectiva.ToString())
+        Next
 
         Me.Cursor = Cursors.Default
 
