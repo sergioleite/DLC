@@ -269,6 +269,7 @@
     <Content Include="images\2011\sprites-tudo.jpg" />
     <Content Include="images\2011\title-carrinho.png" />
     <Content Include="images\2011\voltar-contato.png" />
+    <Content Include="images\2012.jpg" />
     <Content Include="images\bgs.png" />
     <Content Include="images\bg_abas.gif" />
     <Content Include="images\btn-buscar-novo.png" />
@@ -312,6 +313,7 @@
     <Content Include="js\jqzoom.js" />
     <Content Include="theme.css" />
     <Content Include="thickbox.css" />
+    <Content Include="Views\ccHome\Inauguracao.aspx" />
     <Content Include="Views\ccHome\VitrineCategoria.aspx" />
     <Content Include="Views\ccProduto\ProdutoDetalhamento.aspx" />
     <Content Include="Views\ccHome\Vitrine.aspx" />

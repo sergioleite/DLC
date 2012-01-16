@@ -2,7 +2,9 @@
 Public Class ccHomeController
     Inherits System.Web.Mvc.Controller
 
-
+    Function Inauguracao() As ActionResult
+        Return View()
+    End Function
 
     Function Vitrine() As ActionResult
         'http://www.asp.net/mvc/tutorials/creating-model-classes-with-the-entity-framework-cs

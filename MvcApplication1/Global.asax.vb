@@ -13,24 +13,29 @@ Public Class MvcApplication
         ' (2) URL with parameters
         ' (3) Parameter defaults
 
-        routes.MapRoute( _
-            "Produto", _
-            "Produto/{url_amigavel_nomeproduto}/{id_modelo}", _
-            New With {.controller = "ccProduto", .action = "ProdutoDetalhamento", .url_amigavel_nomeproduto = "", .id_modelo = 0} _
-        )
+        'routes.MapRoute( _
+        '    "Produto", _
+        '    "Produto/{url_amigavel_nomeproduto}/{id_modelo}", _
+        '    New With {.controller = "ccProduto", .action = "ProdutoDetalhamento", .url_amigavel_nomeproduto = "", .id_modelo = 0} _
+        ')
 
-        routes.MapRoute( _
-            "Vitrine", _
-            "Vitrine/{categoria}/{tamanho}/{cor}", _
-            New With {.controller = "ccHome", .action = "VitrineCategoria", .categoria = "todas-categorias", .tamanho = "todos-tamanhos", .cor = "todas-cores"} _
-        )
+        'routes.MapRoute( _
+        '    "Vitrine", _
+        '    "Vitrine/{categoria}/{tamanho}/{cor}", _
+        '    New With {.controller = "ccHome", .action = "VitrineCategoria", .categoria = "todas-categorias", .tamanho = "todos-tamanhos", .cor = "todas-cores"} _
+        ')
+
+        'routes.MapRoute( _
+        '    "Default1", _
+        '    "{controller}/{action}/{id}", _
+        '    New With {.controller = "ccHome", .action = "Vitrine", .id = UrlParameter.Optional} _
+        ')
 
         routes.MapRoute( _
             "Default1", _
             "{controller}/{action}/{id}", _
-            New With {.controller = "ccHome", .action = "Vitrine", .id = UrlParameter.Optional} _
+            New With {.controller = "ccHome", .action = "Inauguracao", .id = UrlParameter.Optional} _
         )
-
 
 
 
