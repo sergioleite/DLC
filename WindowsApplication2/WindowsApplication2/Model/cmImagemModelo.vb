@@ -20,14 +20,16 @@ Public Class cmImagemModelo
         Dim request As FtpWebRequest
         request = WebRequest.Create("ftp://ftp.deboraleite.com.br/Web/images/" & Me.NomeArquivoRemoto)
         request.Method = WebRequestMethods.Ftp.UploadFile
+        request.UseBinary = True
 
         request.Credentials = New NetworkCredential("deboraleit", "tanacara")
 
-        Dim sourceStream As New StreamReader(Me.NomeArquivoLocal)
+        'Dim sourceStream As New StreamReader(Me.NomeArquivoLocal)
 
         Dim fileContents As Byte()
-        fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd())
-        sourceStream.Close()
+        'fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd())
+        fileContents = System.IO.File.ReadAllBytes(Me.NomeArquivoLocal)
+        'sourceStream.Close()
         request.ContentLength = fileContents.Length
 
         Dim requestStream As Stream
@@ -42,7 +44,7 @@ Public Class cmImagemModelo
         '226 Transfer complete
         status = response.StatusDescription
 
-        If status.Substring(1, 3) = "226" Then
+        If status.Substring(0, 3) = "226" Then
             Me._Uloaded = True
         End If
 

@@ -57,7 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=1-PC\SQLEXPRESS;Initial Catalog=deboraleit2;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=dbsq0004.whservidor.com;Initial Catalog=deboraleit2;Integrated Securi"& _ 
+            "ty=False;User ID=deboraleit2;pwd=tanacara")>  _
         Public ReadOnly Property DLC1ConnectionString() As String
             Get
                 Return CType(Me("DLC1ConnectionString"),String)
@@ -66,7 +67,8 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=1-PC\SQLEXPRESS;Initial Catalog=deboraleit2;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=dbsq0004.whservidor.com;Initial Catalog=deboraleit2;Integrated Securi"& _ 
+            "ty=False;User ID=deboraleit2;pwd=tanacara")>  _
         Public ReadOnly Property db_connection_string() As String
             Get
                 Return CType(Me("db_connection_string"),String)

@@ -26,7 +26,7 @@ Public Class MvcApplication
         ')
 
         'routes.MapRoute( _
-        '    "Default1", _
+        '    "Home", _
         '    "{controller}/{action}/{id}", _
         '    New With {.controller = "ccHome", .action = "Vitrine", .id = UrlParameter.Optional} _
         ')
